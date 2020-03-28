@@ -1,0 +1,9 @@
+.build
+.next
+.vscode
+node_modules
+coverage
+out
+package.json
+**/*.d.ts
+*.config.js

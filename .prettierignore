@@ -1,0 +1,7 @@
+.build
+.next
+.vscode
+node_modules
+coverage
+out
+package.json
