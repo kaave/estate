@@ -14,6 +14,7 @@
         "baseUrl": ".",
         "paths": {
             "@utils/*": ["./src/utils/*"],
+            "@images/*": ["./public/static/images/*"],
             "~/*": ["./src/*"],
             "@/*": ["./*"]
         },

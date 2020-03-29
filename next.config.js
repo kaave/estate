@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const DotenvWebpack = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
+const withOptimizedImages = require('next-optimized-images');
 
 dotenv.config();
 
@@ -40,13 +41,25 @@ const analyzerOptions = {
   },
 };
 
+const optimizedImagesOptions = {
+  mozjpeg: {
+    quality: 80,
+  },
+  pngquant: {
+    quality: [0.65, 0.8],
+  },
+};
+
 const nextOptions = {
   webpack,
   // ...cssModulesOptions,
   ...analyzerOptions,
-  // ...optimizedImagesOptions,
+  ...optimizedImagesOptions,
   // ...workboxOptions,
 };
 
 // module.exports = [withSass, withOptimizedImages, withOffline, withBundleAnalyzer].reduce(
-module.exports = [withBundleAnalyzer].reduce((acc, fn) => (acc == null ? fn(nextOptions) : fn(acc)), null);
+module.exports = [withOptimizedImages, withBundleAnalyzer].reduce(
+  (acc, fn) => (acc == null ? fn(nextOptions) : fn(acc)),
+  null,
+);
