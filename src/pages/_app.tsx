@@ -2,7 +2,8 @@ import React from 'react';
 // import App, { AppContext } from 'next/app';
 import App from 'next/app';
 
-// import '~/styles/_global.scss?raw';
+import 'normalize.css';
+import '@styles/index.scss';
 
 type Props = {};
 type State = {};
