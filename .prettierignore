@@ -5,3 +5,4 @@ node_modules
 coverage
 out
 package.json
+public/static

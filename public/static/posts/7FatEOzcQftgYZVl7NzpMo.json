@@ -32,7 +32,9 @@
         "published": "2020-03-28T00:00+09:00",
         "title": "2020/3/28",
         "post": "あいうえ",
-        "tags": ["Test"],
+        "tags": [
+            "Test"
+        ],
         "thumbnail": {
             "sys": {
                 "space": {
