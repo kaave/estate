@@ -1,49 +1,31 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": [
-      "ES2018",
-      "ES2017",
-      "ES2016",
-      "ES2015",
-      "DOM"
-    ],
-    "allowJs": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "removeComments": false,
-    "skipLibCheck": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./src/*"
-      ],
-      "@/*": [
-        "./*"
-      ]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "lib": ["ES2018", "ES2017", "ES2016", "ES2015", "DOM"],
+        "allowJs": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "removeComments": false,
+        "skipLibCheck": true,
+        "strict": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@utils/*": ["./src/utils/*"],
+            "~/*": ["./src/*"],
+            "@/*": ["./*"]
+        },
+        "typeRoots": ["./node_modules/@types", "./src/utils/types"],
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
     },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/types"
-    ],
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "preserveConstEnums": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "dist/**/*"
-  ]
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["dist/**/*"]
 }

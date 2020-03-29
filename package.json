@@ -1,26 +1,32 @@
 {
   "name": "next-js-template",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "analyze": "cross-env BUNDLE_ANALYZE=both next build",
     "build": "next build",
-    "start": "next start",
-    "lint-staged": "lint-staged",
-    "typecheck": "tsc --noEmit -p tsconfig.production.json",
+    "dev": "next",
     "fix": "run-p fix:*",
     "fix:json": "prettier --write '**/*.json'",
     "fix:script": "eslint --fix '**/*.{ts,tsx}'",
     "fix:style": "stylelint --fix '**/*.scss'",
     "lint": "run-p lint:*",
+    "lint-staged": "lint-staged",
     "lint:script": "eslint '**/*.{ts,tsx}'",
-    "lint:style": "stylelint '**/*.scss'"
+    "lint:style": "stylelint '**/*.scss'",
+    "start": "next start",
+    "typecheck": "tsc --noEmit -p tsconfig.production.json"
   },
   "husky": {
     "hooks": {
       "pre-commit": "run-p typecheck lint-staged"
     }
+  },
+  "dependencies": {
+    "next": "^9.3.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -36,7 +42,11 @@
     "@types/react-dom": "^16.9.5",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "autoprefixer": "^9.7.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -69,11 +79,7 @@
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.16.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "next": "^9.3.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
   }
 }
