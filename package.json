@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "analyze": "cross-env BUNDLE_ANALYZE=both next build",
+    "prebuild": "npm run createPostData",
     "build": "next build",
+    "createPostData": "node ./tools/createPostJsons",
     "dev": "next",
+    "export": "next export",
     "fix": "run-p fix:*",
     "fix:json": "prettier --write '**/*.json'",
     "fix:script": "eslint --fix '**/*.{ts,tsx}'",
@@ -24,6 +27,7 @@
     }
   },
   "dependencies": {
+    "date-fns": "^2.11.1",
     "next": "^9.3.2",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
@@ -45,6 +49,7 @@
     "@typescript-eslint/parser": "^2.25.0",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "autoprefixer": "^9.7.5",
+    "contentful": "^7.14.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.7.0",
@@ -60,6 +65,7 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-react-redux": "^3.0.3",
     "eslint-plugin-unicorn": "^18.0.1",
+    "fs-extra": "^9.0.0",
     "husky": "^4.2.3",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",

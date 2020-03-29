@@ -1,0 +1,76 @@
+{
+    "sys": {
+        "space": {
+            "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "ktdo3l6vthkl"
+            }
+        },
+        "id": "7v1qCVtjTP7JKfUQbdQAjp",
+        "type": "Entry",
+        "createdAt": "2020-03-28T02:47:52.920Z",
+        "updatedAt": "2020-03-28T02:47:52.920Z",
+        "environment": {
+            "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+            }
+        },
+        "revision": 1,
+        "contentType": {
+            "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "post"
+            }
+        },
+        "locale": "ja-JP"
+    },
+    "fields": {
+        "published": "2018-03-01T00:00+09:00",
+        "title": "2020/3/1です",
+        "post": "2020/3/1ですよ",
+        "thumbnail": {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "ktdo3l6vthkl"
+                    }
+                },
+                "id": "aDlhqazGsMJrf08UOkZ8v",
+                "type": "Asset",
+                "createdAt": "2019-12-14T10:32:06.301Z",
+                "updatedAt": "2019-12-14T10:32:06.301Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "locale": "ja-JP"
+            },
+            "fields": {
+                "title": "久永小太郎",
+                "description": "久永小太郎さん",
+                "file": {
+                    "url": "//images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg",
+                    "details": {
+                        "size": 48074,
+                        "image": {
+                            "width": 720,
+                            "height": 405
+                        }
+                    },
+                    "fileName": "久永小太郎.jpg",
+                    "contentType": "image/jpeg"
+                }
+            }
+        }
+    }
+}

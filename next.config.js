@@ -1,11 +1,8 @@
 const path = require('path');
-const dotenv = require('dotenv');
 const DotenvWebpack = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const withOptimizedImages = require('next-optimized-images');
-
-dotenv.config();
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -52,13 +49,11 @@ const optimizedImagesOptions = {
 
 const nextOptions = {
   webpack,
-  // ...cssModulesOptions,
   ...analyzerOptions,
   ...optimizedImagesOptions,
   // ...workboxOptions,
 };
 
-// module.exports = [withSass, withOptimizedImages, withOffline, withBundleAnalyzer].reduce(
 module.exports = [withOptimizedImages, withBundleAnalyzer].reduce(
   (acc, fn) => (acc == null ? fn(nextOptions) : fn(acc)),
   null,

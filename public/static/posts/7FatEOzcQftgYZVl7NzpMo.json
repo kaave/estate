@@ -1,0 +1,76 @@
+{
+    "sys": {
+        "space": {
+            "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "ktdo3l6vthkl"
+            }
+        },
+        "id": "7FatEOzcQftgYZVl7NzpMo",
+        "type": "Entry",
+        "createdAt": "2020-03-28T02:46:59.494Z",
+        "updatedAt": "2020-03-28T02:46:59.494Z",
+        "environment": {
+            "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+            }
+        },
+        "revision": 1,
+        "contentType": {
+            "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "post"
+            }
+        },
+        "locale": "ja-JP"
+    },
+    "fields": {
+        "published": "2020-03-28T00:00+09:00",
+        "title": "2020/3/28",
+        "post": "あいうえ",
+        "tags": ["Test"],
+        "thumbnail": {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "ktdo3l6vthkl"
+                    }
+                },
+                "id": "1LfkSSxEIZHBHTWUo90ldG",
+                "type": "Asset",
+                "createdAt": "2020-03-28T02:46:47.577Z",
+                "updatedAt": "2020-03-28T02:46:47.577Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 1,
+                "locale": "ja-JP"
+            },
+            "fields": {
+                "title": "MocheGoldNecklace",
+                "file": {
+                    "url": "//images.ctfassets.net/ktdo3l6vthkl/1LfkSSxEIZHBHTWUo90ldG/91b14d7b8a17fb161d51b6706d7e5c9a/MocheGoldNecklace.jpg",
+                    "details": {
+                        "size": 50431,
+                        "image": {
+                            "width": 425,
+                            "height": 297
+                        }
+                    },
+                    "fileName": "MocheGoldNecklace.jpg",
+                    "contentType": "image/jpeg"
+                }
+            }
+        }
+    }
+}

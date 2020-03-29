@@ -183,3 +183,4 @@ $RECYCLE.BIN/
 .vscode
 /dist
 /temp
+/out

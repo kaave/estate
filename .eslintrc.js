@@ -49,6 +49,9 @@ module.exports = {
   rules: {
     // クラスメンバーは改行で区切るが、1行の場合はスルー
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+    // !! でbooleanへキャストするのを警告
+    'no-extra-boolean-cast': ['off'],
+    // useDispatchとuseSelectorは強すぎるので警告
     'no-restricted-imports': [
       'warn',
       {

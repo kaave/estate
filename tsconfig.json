@@ -13,6 +13,8 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
+            "@domains/*": ["./src/domains/*"],
+            "@posts/*": ["./public/static/posts/*"],
             "@utils/*": ["./src/utils/*"],
             "@styles/*": ["./src/styles/*"],
             "@images/*": ["./public/static/images/*"],
