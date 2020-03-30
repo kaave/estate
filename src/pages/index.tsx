@@ -13,21 +13,25 @@ type Props = {
 
 const Page = React.memo(({ posts }: Props) => {
   return (
-    <div>
-      <h1 className={styles.header}>Hello, World!</h1>
+    <main id="main" className={styles.Main} role="main">
+      <h1>Hello, World!</h1>
       <img src={omoriImage} alt="" />
       <img src={unsplashImage} alt="" />
-      <Link href="/second-page">Goto Second Page</Link>
+      <Link href="/second-page">
+        <a>Goto Second Page</a>
+      </Link>
       {!!posts?.length ? (
         <ul>
           {posts.map(({ sys, fields }) => (
             <li key={sys.id}>
-              <Link href={`/posts/${sys.id}`}>{fields.title}</Link>
+              <Link href={`/posts/${sys.id}`}>
+                <a>{fields.title}</a>
+              </Link>
             </li>
           ))}
         </ul>
       ) : null}
-    </div>
+    </main>
   );
 });
 

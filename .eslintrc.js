@@ -129,6 +129,12 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
 
     /*
+     * a11y
+     */
+    // aタグにhref必須 無効 NextのLinkタグの都合
+    'jsx-a11y/anchor-is-valid': 'off',
+
+    /*
      * typescript
      */
     // publicとかprivateなどのアクセス修飾子を強要 無効化 JSに寄せたいし、そもそもなるべくなくてもいいように書きたい

@@ -27,5 +27,7 @@ module.exports = {
     ],
     // @extendは難しいから禁止
     'at-rule-blacklist': ['extend'],
+    // CSS Modules用の記法を許可
+    'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global', 'local'] }],
   },
 };
