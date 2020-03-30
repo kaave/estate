@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs-extra');
 const DotenvWebpack = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
@@ -52,6 +53,19 @@ const nextOptions = {
   ...analyzerOptions,
   ...optimizedImagesOptions,
   // ...workboxOptions,
+  // exportPathMap: async (defaultPathMap) => {
+  //   const posts = await fs.readJson(path.join(__dirname, 'public', 'static', 'posts', 'all.json'));
+  //   const paths = posts.map(({ sys: { id } }) => ({ params: { id } }));
+
+  //   return {
+  //     ...defaultPathMap,
+  //     ...posts.reduce((acc, { sys: { id } }) => ({ ...acc, [`/posts/${id}`]: { page: '/posts/[id]' } }), {}),
+  //     // '/about': { page: '/about' },
+  //     // '/p/hello-nextjs': { page: '/post', query: { title: 'hello-nextjs' } },
+  //     // '/p/learn-nextjs': { page: '/post', query: { title: 'learn-nextjs' } },
+  //     // '/p/deploy-nextjs': { page: '/post', query: { title: 'deploy-nextjs' } },
+  //   };
+  // },
 };
 
 module.exports = [withOptimizedImages, withBundleAnalyzer].reduce(

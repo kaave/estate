@@ -14,17 +14,17 @@ const Posts = React.memo((props: Props) => {
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   if (!ctx.params?.id) return { props: {} };
-  const { default: post } = await import(`../../../public/static/posts/${ctx.params.id}.json`);
+  const { default: post } = await import(`../../../../public/static/posts/${ctx.params.id}.json`);
 
   return { props: { post } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { default: posts } = await import('../../../public/static/posts/all.json');
+  const { default: posts } = await import('../../../../public/static/posts/all.json');
   const paths = posts.map(({ sys: { id } }) => ({ params: { id } }));
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 

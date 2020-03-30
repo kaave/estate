@@ -24,7 +24,7 @@ const Page = React.memo(({ posts }: Props) => {
         <ul>
           {posts.map(({ sys, fields }) => (
             <li key={sys.id}>
-              <Link href={`/posts/${sys.id}`}>
+              <Link href="/posts/[id]" as={`/posts/${sys.id}`}>
                 <a>{fields.title}</a>
               </Link>
             </li>
