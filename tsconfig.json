@@ -13,11 +13,13 @@
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
+            "@components/*": ["./src/components/*"],
             "@domains/*": ["./src/domains/*"],
             "@posts/*": ["./public/static/posts/*"],
             "@utils/*": ["./src/utils/*"],
             "@styles/*": ["./src/styles/*"],
             "@images/*": ["./public/static/images/*"],
+            "@layouts/*": ["./src/layouts/*"],
             "~/*": ["./src/*"],
             "@/*": ["./*"]
         },
