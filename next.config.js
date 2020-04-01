@@ -7,7 +7,7 @@ const withOptimizedImages = require('next-optimized-images');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-function webpack(config, options) {
+function webpack(config, { dev, isServer }) {
   config.resolve = config.resolve || {};
   config.resolve.plugins = config.resolve.plugins || [];
 
@@ -20,6 +20,20 @@ function webpack(config, options) {
       systemvars: true,
     }),
   ];
+
+  if (dev && !isServer) {
+    const originalEntry = config.entry;
+    config.entry = async () => {
+      const entries = await originalEntry();
+      const entryFile = 'main.js';
+      const whyDidYouRenderPath = './tools/whyDidYouRender.js';
+      if (entries[entryFile] && !entries[entryFile].includes(whyDidYouRenderPath)) {
+        entries[entryFile].unshift(whyDidYouRenderPath);
+      }
+
+      return entries;
+    };
+  }
 
   return config;
 }
