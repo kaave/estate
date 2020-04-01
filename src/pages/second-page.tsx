@@ -8,7 +8,7 @@ import { Layout } from '@layouts/default';
 // type Props = {};
 
 const Page = React.memo(() => (
-  <Layout description="セカンドページ">
+  <Layout appendTitles={['セカンドページ']} description="セカンドページ">
     <h1>Hello, World!</h1>
     <img src={unsplashImage} alt="" />
     <img src={omoriImage} alt="" />

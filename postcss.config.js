@@ -17,7 +17,7 @@ const plugins = {
   'postcss-calc': {},
   'postcss-flexbugs-fixes': {},
   'postcss-url': {},
-  autoprefixer: {},
+  autoprefixer: { grid: 'autoplace' },
 };
 
 module.exports = { plugins };
