@@ -5,8 +5,6 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const withOptimizedImages = require('next-optimized-images');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 function webpack(config, { dev, isServer }) {
   config.resolve = config.resolve || {};
   config.resolve.plugins = config.resolve.plugins || [];
