@@ -1,0 +1,14 @@
+@import "./variables";
+
+/* major breakpoints */
+@mixin sp {
+    @media (max-width: ($sizeIpadShort - 1)) {
+        @content;
+    }
+}
+
+@mixin notSp {
+    @media (min-width: ($sizeIpadShort)) {
+        @content;
+    }
+}

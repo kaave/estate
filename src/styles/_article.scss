@@ -1,0 +1,215 @@
+/* stylelint-disable selector-max-specificity */
+
+// WIP
+
+@import "./variables";
+@import "./mixins";
+
+// .Content {
+//     position: relative;
+//     display: block;
+//     font-size: 4.286vw;
+//     line-height: 1.8;
+//     color: $colorWhite;
+//     letter-spacing: 0.05em;
+
+//     $pc-font-size: 1.8;
+//     @include notSp {
+//         @include responsiveFontSize($pc-font-size);
+//     }
+
+//     @include maxSize {
+//         font-size: $pc-font-size + rem;
+//     }
+
+//     & > * {
+//         position: relative;
+//         display: block;
+//         width: 100%;
+//         padding-right: $horizontalPaddingSp;
+//         padding-left: $horizontalPaddingSp;
+
+//         @include notSp {
+//             padding-right: $horizontalPadding;
+//             padding-left: $horizontalPadding;
+//         }
+//     }
+
+//     & > [class*="language-"] {
+//         width: 100%;
+//         margin: 2.5em auto;
+//     }
+
+//     @include sp {
+//         & > [class*="language-"] {
+//             max-width: none;
+//         }
+//     }
+
+//     p {
+//         margin-top: 1em;
+//         font-size: 3.75vw;
+
+//         $pc-font-size: 1.6;
+//         @include notSp {
+//             @include responsiveFontSize($pc-font-size);
+//             margin: 1em auto auto;
+//         }
+
+//         @include maxSize {
+//             font-size: $pc-font-size + rem;
+//         }
+//     }
+
+//     .header-anchor {
+//         display: none;
+//     }
+
+//     a:not(.header-anchor) {
+//         color: currentColor;
+//         text-decoration: solid underline $colorBrand;
+
+//         @include notSp {
+//             &:hover {
+//                 text-decoration-color: currentColor;
+//             }
+//         }
+//     }
+
+//     a:not(.header-anchor):not([target="_blank"]) {
+//         &::before {
+//             width: 100%;
+//         }
+//     }
+
+//     a:not(.header-anchor) .icon {
+//         margin: auto 0.2em;
+//     }
+
+//     h2 {
+//         margin: 1.5em auto 0.5em;
+//         font-size: 1.2em;
+//     }
+
+//     h3 {
+//         margin: 1.5em auto auto;
+//         font-size: 1.1em;
+//         line-height: 1.4;
+//         text-indent: 0.5em;
+
+//         &::before {
+//             position: absolute;
+//             top: 50%;
+//             left: $horizontalPaddingSp;
+//             display: block;
+//             width: 0.2em;
+//             height: 80%;
+//             content: "";
+//             background: rgba($colorWhite, 0.8);
+//             transform: translateY(-50%);
+
+//             @include notSp {
+//                 left: $horizontalPadding;
+//             }
+//         }
+//     }
+
+//     h4 {
+//         margin: 1.5em auto auto;
+//         font-size: 0.9em;
+//         text-indent: 0.6em;
+
+//         &::before {
+//             position: absolute;
+//             top: 50%;
+//             left: $horizontalPaddingSp;
+//             display: block;
+//             width: 0.2em;
+//             height: 80%;
+//             content: "";
+//             background: rgba($colorWhite, 0.6);
+//             transform: translateY(-50%);
+
+//             @include notSp {
+//                 left: $horizontalPadding;
+//             }
+//         }
+//     }
+
+//     h5 {
+//         margin: 1.5em auto 0.5em;
+//         font-size: 1em;
+//     }
+
+//     h6 {
+//         margin: 1.5em auto 0.5em;
+//         font-size: 0.9em;
+//     }
+
+//     > ul,
+//     > ul > li {
+//         padding: 0;
+//     }
+
+//     > ul {
+//         width: calc(100% - #{$horizontalPaddingSp} * 2);
+//         padding-left: 1.2em;
+//         margin: 0.5em $horizontalPaddingSp auto $horizontalPaddingSp;
+
+//         @include notSp {
+//             width: calc(100% - #{$horizontalPadding} * 2);
+//             padding: 1.5em 0 0 1.3em;
+//             margin: auto $horizontalPadding;
+//         }
+//     }
+
+//     > ul li {
+//         width: 100%;
+//         font-size: 3.75vw;
+//         list-style-type: disc;
+
+//         $pc-font-size: 1.6;
+//         @include notSp {
+//             @include responsiveFontSize($pc-font-size);
+//             margin: auto;
+//         }
+
+//         @include maxSize {
+//             font-size: $pc-font-size + rem;
+//         }
+//     }
+
+//     > ul ul {
+//         width: 100%;
+//         padding-left: 1.3em;
+//     }
+
+//     li > p {
+//         margin: 0.5em 0;
+//     }
+
+//     hr {
+//         height: 1px;
+//         padding: 0;
+//         margin: 1.5em auto;
+//         background: $colorWhite;
+//         border: 0;
+//     }
+
+//     code {
+//         padding: 0 0.2em;
+//         margin: auto 0.2em;
+//         line-height: 1.4;
+//         background: rgba($colorWhite, 0.2);
+
+//         @include notSp {
+//             font-size: 1.2em;
+//         }
+//     }
+
+//     pre[class*="language-"] code {
+//         padding: 0;
+//         overflow: scroll;
+//         background: transparent;
+//     }
+// }
