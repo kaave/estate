@@ -31,7 +31,7 @@
     "fields": {
         "published": "2018-03-01T00:00+09:00",
         "title": "2020/3/1です",
-        "post": "2020/3/1ですよ",
+        "post": "<p>2020/3/1ですよ</p>\n",
         "thumbnail": {
             "sys": {
                 "space": {
@@ -71,6 +71,7 @@
                     "contentType": "image/jpeg"
                 }
             }
-        }
+        },
+        "rawPost": "2020/3/1ですよ"
     }
 }

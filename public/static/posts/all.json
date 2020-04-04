@@ -32,7 +32,7 @@
         "fields": {
             "published": "2020-03-28T00:00+09:00",
             "title": "2020/3/28",
-            "post": "あいうえ",
+            "post": "<p>あいうえ</p>\n",
             "tags": [
                 "Test"
             ],
@@ -74,7 +74,8 @@
                         "contentType": "image/jpeg"
                     }
                 }
-            }
+            },
+            "rawPost": "あいうえ"
         }
     },
     {
@@ -110,7 +111,7 @@
         "fields": {
             "published": "2019-12-01T00:00+09:00",
             "title": "12/1です",
-            "post": "こらっ\n\n# agileアジャイル\n## agileアジャイル\n### agileアジャイル\n#### agileアジャイル\n##### agileアジャイル\n###### agileアジャイル\n\nあｋ\nあｓｆｌｋじゃｓｆ\n\n```tsx\n// あいうえお\nconst Page = () => <div>ページ</div>\n```\n\n__太字__\n*斜体*\n__*太字アンド斜体*__\n\n> これは引用文です。\n> エレガント！！\n\n- リスト\n- です\n  - 階層構造\n  - はこんな感じです\n    - いけてます\n  - かね？\n\n↓`document.querySelectorAll('iframe[src^=\"https://www.youtube.com\"]')`\n<iframe src=\"https://www.youtube.com/embed/ww2lgKMI-w4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n\n1. 順番リスト\n2. でーす\n3. これは使わない\n\n[kaave/gatsby-ts-test: 検証用](https://github.com/kaave/gatsby-ts-test)\n\n---\n\nコード→ `どんなもん` すかね？\n\n![久永小太郎][1]\n\n\n[1]: //images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg",
+            "post": "<p>こらっ</p>\n<h1>agileアジャイル</h1>\n<h2>agileアジャイル</h2>\n<h3>agileアジャイル</h3>\n<h4>agileアジャイル</h4>\n<h5>agileアジャイル</h5>\n<h6>agileアジャイル</h6>\n<p>あｋ\nあｓｆｌｋじゃｓｆ</p>\n<pre class=\"language-tsx\"><code class=\"language-tsx\"><span class=\"token comment\">// あいうえお</span>\n<span class=\"token keyword\">const</span> <span class=\"token function-variable function\">Page</span> <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>ページ<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n<p><strong>太字</strong>\n<em>斜体</em>\n<strong><em>太字アンド斜体</em></strong></p>\n<blockquote>\n<p>これは引用文です。\nエレガント！！</p>\n</blockquote>\n<ul>\n<li>リスト</li>\n<li>です\n<ul>\n<li>階層構造</li>\n<li>はこんな感じです\n<ul>\n<li>いけてます</li>\n</ul>\n</li>\n<li>かね？</li>\n</ul>\n</li>\n</ul>\n<p>↓<code>document.querySelectorAll('iframe[src^=&quot;https://www.youtube.com&quot;]')</code></p>\n<iframe src=\"https://www.youtube.com/embed/ww2lgKMI-w4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<ol>\n<li>順番リスト</li>\n<li>でーす</li>\n<li>これは使わない</li>\n</ol>\n<p><a href=\"https://github.com/kaave/gatsby-ts-test\">kaave/gatsby-ts-test: 検証用</a></p>\n<hr>\n<p>コード→ <code>どんなもん</code> すかね？</p>\n<p><img src=\"//images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg\" alt=\"久永小太郎\"></p>\n",
             "thumbnail": {
                 "sys": {
                     "space": {
@@ -150,7 +151,8 @@
                         "contentType": "image/jpeg"
                     }
                 }
-            }
+            },
+            "rawPost": "こらっ\n\n# agileアジャイル\n## agileアジャイル\n### agileアジャイル\n#### agileアジャイル\n##### agileアジャイル\n###### agileアジャイル\n\nあｋ\nあｓｆｌｋじゃｓｆ\n\n```tsx\n// あいうえお\nconst Page = () => <div>ページ</div>\n```\n\n__太字__\n*斜体*\n__*太字アンド斜体*__\n\n> これは引用文です。\n> エレガント！！\n\n- リスト\n- です\n  - 階層構造\n  - はこんな感じです\n    - いけてます\n  - かね？\n\n↓`document.querySelectorAll('iframe[src^=\"https://www.youtube.com\"]')`\n<iframe src=\"https://www.youtube.com/embed/ww2lgKMI-w4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n\n1. 順番リスト\n2. でーす\n3. これは使わない\n\n[kaave/gatsby-ts-test: 検証用](https://github.com/kaave/gatsby-ts-test)\n\n---\n\nコード→ `どんなもん` すかね？\n\n![久永小太郎][1]\n\n\n[1]: //images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg"
         }
     },
     {
@@ -186,7 +188,7 @@
         "fields": {
             "published": "2018-03-01T00:00+09:00",
             "title": "2020/3/1です",
-            "post": "2020/3/1ですよ",
+            "post": "<p>2020/3/1ですよ</p>\n",
             "thumbnail": {
                 "sys": {
                     "space": {
@@ -226,7 +228,8 @@
                         "contentType": "image/jpeg"
                     }
                 }
-            }
+            },
+            "rawPost": "2020/3/1ですよ"
         }
     }
 ]
