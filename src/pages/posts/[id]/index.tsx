@@ -7,9 +7,9 @@ type Props = {
   post?: Post;
 };
 
-const Posts = React.memo((props: Props) => {
-  console.log(props);
-  return <div>hello world!</div>;
+const Posts = React.memo(({ post }: Props) => {
+  // eslint-disable-next-line react/no-danger
+  return <div dangerouslySetInnerHTML={{ __html: post?.fields.post ?? '' }} />;
 });
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {

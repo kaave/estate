@@ -10,10 +10,7 @@ import 'normalize.css';
 import '@styles/index.scss';
 
 if (configs.googleAnalytics) {
-  Router.events.on('routeChangeComplete', (url: string) => {
-    console.log('routeChangeComplete', url);
-    pageView(url);
-  });
+  Router.events.on('routeChangeComplete', (url: string) => pageView(url));
 }
 
 const App = ({ Component, pageProps, router }: AppProps) => (
