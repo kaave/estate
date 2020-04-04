@@ -1,8 +1,7 @@
 {
-  "name": "next-js-template",
-  "version": "1.0.0",
-  "license": "MIT",
-  "main": "index.js",
+  "name": "next-template",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "analyze": "cross-env BUNDLE_ANALYZE=both next build",
     "prebuild": "npm run createPostData",
