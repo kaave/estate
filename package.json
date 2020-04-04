@@ -92,6 +92,7 @@
     "jest": "^25.2.7",
     "lint-staged": "^10.0.9",
     "next-optimized-images": "^2.5.5",
+    "now": "^17.1.1",
     "npm-run-all": "^4.1.5",
     "postcss-calc": "^7.0.2",
     "postcss-color-hex-alpha": "^5.0.3",
