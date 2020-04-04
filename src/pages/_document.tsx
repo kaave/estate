@@ -1,3 +1,5 @@
+/* eslint-disable react/no-danger */
+
 import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
@@ -18,6 +20,23 @@ class ModifiedDocument extends Document {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <script src={`https://polyfill.io/v3/polyfill.min.js?features=${configs.polyfills}&flags=gated`} defer />
+          {configs.googleAnalytics ? (
+            <>
+              <script src={`https://www.googletagmanager.com/gtag/js?id=${configs.googleAnalytics}`} async />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${configs.googleAnalytics}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+                }}
+              />
+            </>
+          ) : null}
         </Head>
         <body>
           <Main />
