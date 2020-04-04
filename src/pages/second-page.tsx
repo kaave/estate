@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import omoriImage from '@images/omori_futan_woman.png';
 import unsplashImage from '@images/sai-de-silva-4-gFGb12hFA-unsplash.jpg';
-import { Layout } from '@layouts/default';
+import { Layout } from '@layouts/Default';
 
 // type Props = {};
 
