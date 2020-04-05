@@ -3,7 +3,7 @@ const markdownIt = require('markdown-it');
 const prism = require('markdown-it-prism');
 const attrs = require('markdown-it-attrs');
 
-const md = markdownIt({ html: true, linkify: true });
+const md = markdownIt({ html: true, linkify: true, breaks: true });
 // md.use(prism, options);
 md.use(prism);
 md.use(attrs);
