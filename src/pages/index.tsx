@@ -3,7 +3,8 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
 import { Layout } from '@layouts/Default';
-import type { Post } from '@domains/responses/Post';
+import { normalizePost } from '@domains/valueObjects/Post';
+import type { Post } from '@domains/valueObjects/Post';
 import omoriImage from '@images/omori_futan_woman.png';
 import unsplashImage from '@images/sai-de-silva-4-gFGb12hFA-unsplash.jpg';
 
@@ -21,10 +22,10 @@ const Page = React.memo(({ posts }: Props) => (
     </Link>
     {!!posts?.length ? (
       <ul>
-        {posts.map(({ sys, fields }) => (
-          <li key={sys.id}>
-            <Link href="/posts/[id]" as={`/posts/${sys.id}`}>
-              <a>{fields.title}</a>
+        {posts.map(({ id, title }) => (
+          <li key={id}>
+            <Link href="/posts/[id]" as={`/posts/${id}`}>
+              <a>{title}</a>
             </Link>
           </li>
         ))}
@@ -36,7 +37,7 @@ const Page = React.memo(({ posts }: Props) => (
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: posts } = await import(`../../public/static/posts/all.json`);
 
-  return { props: { posts } };
+  return { props: { posts: posts.map((post) => normalizePost(post)) } };
 };
 
 export default Page;

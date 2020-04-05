@@ -1,6 +1,6 @@
-import type { Thumbnail } from './Thumbnail';
+import type { RawThumbnail } from './RawThumbnail';
 
-export type Post = {
+export type RawPost = {
   sys: {
     id: string;
   };
@@ -8,7 +8,7 @@ export type Post = {
     published: string;
     title: string;
     post: string;
-    thumbnail: Thumbnail;
+    thumbnail: RawThumbnail;
     tags?: string[];
   };
 };

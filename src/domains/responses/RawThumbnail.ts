@@ -1,7 +1,6 @@
-export type Thumbnail = {
+export type RawThumbnail = {
   fields: {
     title: string;
-    description?: string;
     file: {
       url: string;
       details: {
@@ -14,5 +13,6 @@ export type Thumbnail = {
       fileName: string;
       contentType: string;
     };
+    description?: string;
   };
 };
