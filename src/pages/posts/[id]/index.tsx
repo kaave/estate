@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import { useRouter } from 'next/router';
 
 import type { RawPost } from '@domains/responses/RawPost';
 import { normalizePost, getMockPost } from '@domains/valueObjects/Post';
@@ -11,8 +12,10 @@ type Props = {
 };
 
 const Posts = React.memo(({ post }: Props) => {
+  const { asPath } = useRouter();
+
   return (
-    <Layout appendTitles={[post.title, 'POSTS']} description={post.title}>
+    <Layout appendTitles={[post.title, 'POSTS']} description={post.title} path={asPath}>
       {/* eslint-disable-next-line react/no-danger */}
       <div dangerouslySetInnerHTML={{ __html: post.post ?? '' }} />
     </Layout>

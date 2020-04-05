@@ -8,15 +8,16 @@ import styles from './default.module.scss';
 type Props = {
   appendTitles?: string[];
   description?: string;
+  path?: string;
   children?: React.ReactNode;
 };
 
-export const Layout = React.memo(({ appendTitles = [], description = configs.description, children }: Props) => {
+export const Layout = React.memo(({ appendTitles = [], description = configs.description, path, children }: Props) => {
   const title = React.useMemo(() => [...appendTitles, configs.title].join(' | '), [appendTitles]);
 
   return (
     <ErrorBoundary>
-      <Head title={title} description={description} />
+      <Head title={title} description={description} url={`${configs.baseUrl}${path ?? ''}`} />
       <div className={styles.Inner}>
         <header id="header" className={styles.Header} role="banner">
           Header
