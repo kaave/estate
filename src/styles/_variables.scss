@@ -53,6 +53,16 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* http://easings.net/ja#
 $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* http://easings.net/ja#easeInOutBack */
 
 /*
+ * color
+ * https://www.palettable.io/FF8587-F83A36-2F1B1C-74C09F-F4ECDF
+ */
+$colorWhite: #f4ecdf;
+$colorBrand: #f83a36;
+$colorSecond: #ff8587;
+$colorAccent: #74c09f;
+$colorBlack: #2f1b1c;
+
+/*
  * famous layouts
  */
 $sizeIpadLong: 1024px;
