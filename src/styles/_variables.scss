@@ -61,15 +61,14 @@ $colorLight: #dbd4c8;
 $colorGray: #b5afa5;
 $colorDark: #75716b;
 $colorBlack: #2f1b1c;
-$colorBrand: #f83a36;
-$colorSecond: #ff8587;
+$colorBrandLight: #f98381;
+$colorBrandDefault: #f83a36;
+$colorBrandDark: #783f3e;
 $colorAccent: #74c09f;
+$colorHighlight: #f7d54f;
 
 /*
  * famous layouts
  */
-$sizeIpadLong: 1024px;
-$sizeIpadShort: 768px;
-// $sizeIpadPro10inchLong: 1112px;
-// $sizeIpadPro10inchShort: 834px;
-// $sizeModernDesktop: 1024px;
+$breakPointMax: 1280px;
+$breakPointMin: 768px;
