@@ -18,7 +18,7 @@ const Posts = React.memo(({ post: { title, post, published, thumbnail, tags } = 
   const { asPath } = useRouter();
 
   return (
-    <Layout appendTitles={[title, 'POSTS']} description={title} path={asPath}>
+    <Layout appendTitles={[title, 'POSTS']} descriptionArgv={title} path={asPath}>
       <h2 className={styles.header}>
         {title}
         <time className={styles.published} dateTime={datetime}>
