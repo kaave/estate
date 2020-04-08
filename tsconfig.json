@@ -17,9 +17,10 @@
             "@domains/*": ["./src/domains/*"],
             "@posts/*": ["./public/static/posts/*"],
             "@utils/*": ["./src/utils/*"],
+            "@templates/*": ["./src/templates/*"],
             "@styles/*": ["./src/styles/*"],
             "@images/*": ["./public/static/images/*"],
-            "@layouts/*": ["./src/layouts/*"],
+            "@layouts/*": ["./src/templates/layouts/*"],
             "~/*": ["./src/*"],
             "@/*": ["./*"]
         },

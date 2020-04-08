@@ -6,39 +6,17 @@ import format from 'date-fns/format';
 import type { RawPost } from '@domains/responses/RawPost';
 import { normalizePost, getMockPost } from '@domains/valueObjects/Post';
 import type { Post } from '@domains/valueObjects/Post';
-import { Layout } from '@layouts/Default';
-import styles from './index.module.scss';
+import { PostTemplate } from '@templates/Post';
 
 type Props = {
   post?: Post;
 };
 
-const Posts = React.memo(({ post: { title, post, published, thumbnail, tags } = getMockPost() }: Props) => {
+export default React.memo(({ post: { published, ...rest } = getMockPost() }: Props) => {
   const datetime = React.useMemo(() => format(new Date(published), 'yyyy/MM/dd'), [published]);
   const { asPath } = useRouter();
 
-  return (
-    <Layout appendTitles={[title, 'POSTS']} descriptionArgv={title} path={asPath}>
-      <article className={styles.root}>
-        <h2 className={styles.header}>
-          {title}
-          <time className={styles.published} dateTime={datetime}>
-            {datetime}
-          </time>
-        </h2>
-        <img src={thumbnail.url} alt={thumbnail.title} />
-        {tags.length > 0 ? (
-          <ul>
-            {tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
-        ) : null}
-        {/* eslint-disable-next-line react/no-danger */}
-        <div className={styles.content} dangerouslySetInnerHTML={{ __html: post }} />
-      </article>
-    </Layout>
-  );
+  return <PostTemplate post={{ published: datetime, ...rest }} pathname={asPath} />;
 });
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
@@ -62,5 +40,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: true,
   };
 };
-
-export default Posts;

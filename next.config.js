@@ -11,31 +11,6 @@ function webpack(config, { dev, isServer }) {
 
   config.resolve.plugins.push(new TsconfigPathsPlugin());
 
-  // @FIXME getLocalIdentとDynamic routesを併用すると不正なclass名となり動作しないため、
-  // 妥協してディレクトリ名を命名から排除する
-  // https://github.com/zeit/next.js/issues/10468
-  config.module.rules.forEach(
-    (rule) =>
-      rule.oneOf &&
-      rule.oneOf.forEach(
-        (rule) =>
-          rule.test instanceof RegExp &&
-          rule.use instanceof Array &&
-          rule.use
-            .filter(
-              (use) =>
-                typeof use.loader === 'string' &&
-                use.loader.includes('/css-loader') &&
-                !!use.options &&
-                !!use.options.modules,
-            )
-            .forEach((use) => {
-              const { getLocalIdent, ...rest } = use.options.modules;
-              use.options.modules = { ...rest, localIdentName: '[local]___[hash:base64:5]' };
-            }),
-      ),
-  );
-
   config.plugins = [
     ...config.plugins,
     new DotenvWebpack({
