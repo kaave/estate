@@ -7,27 +7,32 @@ module.exports = ({ config }) => {
       use: [{ loader: require.resolve('babel-loader') }, { loader: require.resolve('react-docgen-typescript-loader') }],
     },
     {
-      test: /\.css$/,
-      use: [
-        { loader: 'style-loader', options: { sourceMap: true } },
-        { loader: 'css-loader', options: { sourceMap: true } },
-      ],
-    },
-    {
       test: /\.scss$/,
-      use: [
-        { loader: 'style-loader', options: { sourceMap: true } },
+      oneOf: [
         {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1,
-            localIdentName: '[name]--[local]___[hash:base64:5]',
-            modules: true,
-            sourceMap: true,
-          },
+          test: /\.module\.scss$/,
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2,
+                sourceMap: true,
+                modules: { localIdentName: '[name]--[local]___[hash:base64:5]' },
+              },
+            },
+            { loader: 'postcss-loader', options: { sourceMap: true } },
+            { loader: 'sass-loader', options: { sourceMap: true } },
+          ],
         },
-        { loader: 'postcss-loader', options: { sourceMap: true } },
-        { loader: 'sass-loader', options: { sourceMap: true } },
+        {
+          use: [
+            'style-loader',
+            { loader: 'css-loader', options: { sourceMap: true, importLoaders: 2 } },
+            { loader: 'postcss-loader', options: { sourceMap: true } },
+            { loader: 'sass-loader', options: { sourceMap: true } },
+          ],
+        },
       ],
     },
   );
