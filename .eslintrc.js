@@ -64,6 +64,8 @@ module.exports = {
         ],
       },
     ],
+    // optional chainingと相性が悪いので無効化
+    'no-unused-expressions': 'off',
     // yoda記法をrangeに限り有効化
     yoda: ['error', 'never', { exceptRange: true }],
     // default exportを押す 無効化

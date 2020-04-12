@@ -15,6 +15,7 @@
         "paths": {
             "@components/*": ["./src/components/*"],
             "@domains/*": ["./src/domains/*"],
+            "@hooks/*": ["./src/utils/hooks/*"],
             "@posts/*": ["./public/static/posts/*"],
             "@utils/*": ["./src/utils/*"],
             "@templates/*": ["./src/templates/*"],
