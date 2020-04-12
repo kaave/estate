@@ -5,14 +5,14 @@ import { useFocusedOnOutside } from '@hooks/useFocusedOnOutside';
 
 type Props = {
   children: React.ReactNode;
-  onOutside?: () => void;
+  onFocusOutside?: () => void;
 };
 
-export const FocusGuardrail = ({ onOutside, children }: Props) => {
+export const FocusGuardrail = ({ onFocusOutside, children }: Props) => {
   const ref = React.useRef<HTMLDivElement>(null);
-  const handleFocusedOnOutside = React.useCallback(() => onOutside?.(), [onOutside]);
+  const handleFocusedOnOutside = React.useCallback(() => onFocusOutside?.(), [onFocusOutside]);
 
-  useFocusedOnOutside(ref, handleFocusedOnOutside, { active: !!onOutside });
+  useFocusedOnOutside(ref, handleFocusedOnOutside, { active: !!onFocusOutside });
 
   return (
     <div ref={ref}>
