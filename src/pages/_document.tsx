@@ -23,6 +23,7 @@ class ModifiedDocument extends Document {
           <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png" />
           <link rel="icon" type="image/png" href="/icon-192x192.png" />
           <script src={`https://polyfill.io/v3/polyfill.min.js?features=${configs.polyfills}&flags=gated`} defer />
+          <script src="https://platform.twitter.com/widgets.js" defer />
           {configs.googleAnalytics ? (
             <>
               <script src={`https://www.googletagmanager.com/gtag/js?id=${configs.googleAnalytics}`} async />
