@@ -5,13 +5,13 @@
                 "sys": {
                     "type": "Link",
                     "linkType": "Space",
-                    "id": "ktdo3l6vthkl"
+                    "id": "wc9q326cpg8b"
                 }
             },
-            "id": "7FatEOzcQftgYZVl7NzpMo",
+            "id": "uRchln7GeqPHyyKIJM0Ej",
             "type": "Entry",
-            "createdAt": "2020-03-28T02:46:59.494Z",
-            "updatedAt": "2020-03-28T02:46:59.494Z",
+            "createdAt": "2020-04-12T03:53:58.050Z",
+            "updatedAt": "2020-04-12T04:36:41.595Z",
             "environment": {
                 "sys": {
                     "id": "master",
@@ -19,36 +19,33 @@
                     "linkType": "Environment"
                 }
             },
-            "revision": 1,
+            "revision": 5,
             "contentType": {
                 "sys": {
                     "type": "Link",
                     "linkType": "ContentType",
-                    "id": "post"
+                    "id": "published"
                 }
             },
-            "locale": "ja-JP"
+            "locale": "en-US"
         },
         "fields": {
-            "published": "2020-03-28T00:00+09:00",
-            "title": "2020/3/28",
-            "post": "<p>あいうえ</p>\n",
-            "tags": [
-                "Test"
-            ],
+            "published": "2020-04-09",
+            "title": "2020/4/9のエントリー レイアウト調整用サンプルエントリーです",
+            "post": "<h2>#タイh2トル</h2>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。</p>\n<h3>タイh3トル</h3>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。</p>\n<h4>タイh4トル</h4>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h5>タイh5トル</h5>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h6>タイh6トル</h6>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。</p>\n<hr>\n<ul>\n<li>li リスト</li>\n<li>表示\n<ul>\n<li>子</li>\n<li>子2\n<ul>\n<li>孫</li>\n<li>孫2</li>\n</ul>\n</li>\n<li>子3</li>\n</ul>\n</li>\n</ul>\n<p>つづけてol</p>\n<ol>\n<li>li リスト</li>\n<li>表示</li>\n<li>子</li>\n<li>子2<br>\n1. 孫<br>\n1. 孫2</li>\n<li>子3</li>\n</ol>\n<p>以下は <code>TypeScriptReact</code> (tsx)なコード↓</p>\n<pre class=\"language-tsx\"><code class=\"language-tsx\"><span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> useEffect <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'react'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">export</span> <span class=\"token keyword\">function</span> <span class=\"token function\">useGlobalKeydown</span><span class=\"token punctuation\">(</span><span class=\"token parameter\">callback<span class=\"token operator\">?</span><span class=\"token operator\">:</span> <span class=\"token punctuation\">(</span><span class=\"token parameter\">key<span class=\"token operator\">:</span> <span class=\"token builtin\">string</span></span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token keyword\">void</span></span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token function\">useEffect</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>callback<span class=\"token punctuation\">)</span> <span class=\"token keyword\">return</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token keyword\">const</span> args <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token string\">'keydown'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">(</span><span class=\"token parameter\">e<span class=\"token operator\">:</span> KeyboardEvent</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">.</span>key<span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">]</span> <span class=\"token keyword\">as</span> <span class=\"token keyword\">const</span><span class=\"token punctuation\">;</span>\n    window<span class=\"token punctuation\">.</span><span class=\"token function\">addEventListener</span><span class=\"token punctuation\">(</span><span class=\"token operator\">...</span>args<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token comment\">// eslint-disable-next-line consistent-return</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> window<span class=\"token punctuation\">.</span><span class=\"token function\">removeEventListener</span><span class=\"token punctuation\">(</span><span class=\"token operator\">...</span>args<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">[</span>callback<span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n</code></pre>\n<h2>改行しつついろいろなテキスト効果</h2>\n<p>これは__太字__です<br>\nこれは<em>斜体</em>です<br>\nこれは<s>打ち消し線</s>です<br>\nこれは<a href=\"https://twitter.com/\" title=\"リンクタイトル\">リンク</a>です</p>\n<h2>引用文</h2>\n<p>以下、引用</p>\n<blockquote>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。とﾄﾉｺﾄこ</p>\n</blockquote>\n<h2>🎬 埋め込む</h2>\n<p>画像</p>\n<p><img src=\"//images.ctfassets.net/wc9q326cpg8b/7jhDVrCF2EVVnVS263drUl/49fbdb76c803f324a8fe782f81b3865e/L-5352-1459109751-1790.jpeg.jpg\" alt=\"deathchant\"></p>\n<p>YouTube</p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/dUl-iHKGgck\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<p>Twitter</p>\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">【新作完成】<br>FF7R発売記念<br>鉛筆の芯でバスターソードを作りました。 <a href=\"https://t.co/0T0BkxrIsn\">pic.twitter.com/0T0BkxrIsn</a></p>&mdash; シロイ/鉛筆彫刻人✏ (@shiroi003) <a href=\"https://twitter.com/shiroi003/status/1248580582264602624?ref_src=twsrc%5Etfw\">April 10, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">東京クロノスっぽくなってきた(　´･‿･｀) <a href=\"https://t.co/Ni2H9ZMG7o\">https://t.co/Ni2H9ZMG7o</a></p>&mdash; mono 🎯 @自宅 💙 (@_mono) <a href=\"https://twitter.com/_mono/status/1249188605811142657?ref_src=twsrc%5Etfw\">April 12, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
             "thumbnail": {
                 "sys": {
                     "space": {
                         "sys": {
                             "type": "Link",
                             "linkType": "Space",
-                            "id": "ktdo3l6vthkl"
+                            "id": "wc9q326cpg8b"
                         }
                     },
-                    "id": "1LfkSSxEIZHBHTWUo90ldG",
+                    "id": "55lZeGML7xAezJirfjbTng",
                     "type": "Asset",
-                    "createdAt": "2020-03-28T02:46:47.577Z",
-                    "updatedAt": "2020-03-28T02:46:47.577Z",
+                    "createdAt": "2020-04-12T04:06:45.306Z",
+                    "updatedAt": "2020-04-12T04:06:45.306Z",
                     "environment": {
                         "sys": {
                             "id": "master",
@@ -57,106 +54,29 @@
                         }
                     },
                     "revision": 1,
-                    "locale": "ja-JP"
+                    "locale": "en-US"
                 },
                 "fields": {
-                    "title": "MocheGoldNecklace",
+                    "title": "dummy-cinemascope",
                     "file": {
-                        "url": "//images.ctfassets.net/ktdo3l6vthkl/1LfkSSxEIZHBHTWUo90ldG/91b14d7b8a17fb161d51b6706d7e5c9a/MocheGoldNecklace.jpg",
+                        "url": "//images.ctfassets.net/wc9q326cpg8b/55lZeGML7xAezJirfjbTng/27c1a14dae444d1de9f93a3827ae686e/dummy-cinemascope.png",
                         "details": {
-                            "size": 50431,
+                            "size": 9376,
                             "image": {
-                                "width": 425,
-                                "height": 297
+                                "width": 2350,
+                                "height": 1000
                             }
                         },
-                        "fileName": "MocheGoldNecklace.jpg",
-                        "contentType": "image/jpeg"
+                        "fileName": "dummy-cinemascope.png",
+                        "contentType": "image/png"
                     }
                 }
             },
-            "rawPost": "あいうえ"
-        }
-    },
-    {
-        "sys": {
-            "space": {
-                "sys": {
-                    "type": "Link",
-                    "linkType": "Space",
-                    "id": "ktdo3l6vthkl"
-                }
-            },
-            "id": "3E1STfQ4LQEz3AjOzOsHTS",
-            "type": "Entry",
-            "createdAt": "2019-12-14T10:32:28.902Z",
-            "updatedAt": "2020-04-05T10:40:16.680Z",
-            "environment": {
-                "sys": {
-                    "id": "master",
-                    "type": "Link",
-                    "linkType": "Environment"
-                }
-            },
-            "revision": 8,
-            "contentType": {
-                "sys": {
-                    "type": "Link",
-                    "linkType": "ContentType",
-                    "id": "post"
-                }
-            },
-            "locale": "ja-JP"
-        },
-        "fields": {
-            "published": "2019-12-01T00:00+09:00",
-            "title": "Example Pageです 2019/12/1です",
-            "post": "<p>こらっ</p>\n<h1>agileアジャイル</h1>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h2>agileアジャイル</h2>\n<p>複素数体であれば、任意のCM-タイプの A は、実際、数体である定義体（英語版）(field of definition)を持っている。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosati involution）をもつ環として既に分類されていて、CM-タイプのアーベル多様体の分類を導き出す。楕円曲線と同じような方法でCM-タイプの多様体を構成するには、Cd の中の格子 Λ から始め、アーベル多様体のリーマンの関係式（英語版）(Riemann relations)を考えに入れる必要がある。 CM-タイプ(CM-type)は、単位元での A の正則接空間上にある EndQ(A) の（最大）可換部分環 L の作用を記述したものである。単純な種類のスペクトル理論が適応され、L が固有ベクトルの基底を通して作用することを示すことができる。言い換えると、L は A の正則ベクトル場の上の対角行列を通した作用を持っている。L 自体がある複数の体の積というよりも数体であるという単純な場合には、CM-タイプは L の複素埋め込み（英語版）(complex embedding)のリストである。複素共役をなすペアとして、2d 個の複素埋め込みがあり、CM-タイプは各々のペアのから一つを選択する。そのようなCM-タイプの全てが実現されることが知られている。</p>\n<h3>agileアジャイル</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h4>agileアジャイル</h4>\n<p>複素数体であれば、任意のCM-タイプの A は、実際、数体である定義体（英語版）(field of definition)を持っている。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosati involution）をもつ環として既に分類されていて、CM-タイプのアーベル多様体の分類を導き出す。楕円曲線と同じような方法でCM-タイプの多様体を構成するには、Cd の中の格子 Λ から始め、アーベル多様体のリーマンの関係式（英語版）(Riemann relations)を考えに入れる必要がある。 CM-タイプ(CM-type)は、単位元での A の正則接空間上にある EndQ(A) の（最大）可換部分環 L の作用を記述したものである。単純な種類のスペクトル理論が適応され、L が固有ベクトルの基底を通して作用することを示すことができる。言い換えると、L は A の正則ベクトル場の上の対角行列を通した作用を持っている。L 自体がある複数の体の積というよりも数体であるという単純な場合には、CM-タイプは L の複素埋め込み（英語版）(complex embedding)のリストである。複素共役をなすペアとして、2d 個の複素埋め込みがあり、CM-タイプは各々のペアのから一つを選択する。そのようなCM-タイプの全てが実現されることが知られている。</p>\n<h5>agileアジャイル</h5>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h6>agileアジャイル</h6>\n<p>あｋ<br>\nあｓｆｌｋじゃｓｆ</p>\n<pre class=\"language-tsx\"><code class=\"language-tsx\"><span class=\"token comment\">// あいうえお</span>\n<span class=\"token keyword\">const</span> <span class=\"token function-variable function\">Page</span> <span class=\"token operator\">=</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>div</span><span class=\"token punctuation\">></span></span>ページ<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>div</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n<p><strong>太字</strong><br>\n<em>斜体</em><br>\n<strong><em>太字アンド斜体</em></strong></p>\n<blockquote>\n<p>これは引用文です。<br>\nエレガント！！</p>\n</blockquote>\n<ul>\n<li>リスト</li>\n<li>です\n<ul>\n<li>階層構造</li>\n<li>はこんな感じです\n<ul>\n<li>いけてます</li>\n</ul>\n</li>\n<li>かね？</li>\n</ul>\n</li>\n</ul>\n<p>YouTube埋め込み↓<code>document.querySelectorAll('iframe[src^=&quot;https://www.youtube.com&quot;]')</code></p>\n<iframe src=\"https://www.youtube.com/embed/ww2lgKMI-w4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<ol>\n<li>順番リスト</li>\n<li>でーす</li>\n<li>これは使わないだろう</li>\n</ol>\n<p><a href=\"https://github.com/kaave/gatsby-ts-test\">kaave/gatsby-ts-test: 検証用</a></p>\n<hr>\n<p>コード→ <code>どんなもん</code> すかね？</p>\n<p><img src=\"//images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg\" alt=\"久永小太郎\"></p>\n",
             "tags": [
-                "test",
-                "Frontend"
+                "example",
+                "deathchant"
             ],
-            "thumbnail": {
-                "sys": {
-                    "space": {
-                        "sys": {
-                            "type": "Link",
-                            "linkType": "Space",
-                            "id": "ktdo3l6vthkl"
-                        }
-                    },
-                    "id": "aDlhqazGsMJrf08UOkZ8v",
-                    "type": "Asset",
-                    "createdAt": "2019-12-14T10:32:06.301Z",
-                    "updatedAt": "2019-12-14T10:32:06.301Z",
-                    "environment": {
-                        "sys": {
-                            "id": "master",
-                            "type": "Link",
-                            "linkType": "Environment"
-                        }
-                    },
-                    "revision": 1,
-                    "locale": "ja-JP"
-                },
-                "fields": {
-                    "title": "久永小太郎",
-                    "description": "久永小太郎さん",
-                    "file": {
-                        "url": "//images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg",
-                        "details": {
-                            "size": 48074,
-                            "image": {
-                                "width": 720,
-                                "height": 405
-                            }
-                        },
-                        "fileName": "久永小太郎.jpg",
-                        "contentType": "image/jpeg"
-                    }
-                }
-            },
-            "rawPost": "こらっ\n\n# agileアジャイル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n## agileアジャイル\n\n複素数体であれば、任意のCM-タイプの A は、実際、数体である定義体（英語版）(field of definition)を持っている。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosati involution）をもつ環として既に分類されていて、CM-タイプのアーベル多様体の分類を導き出す。楕円曲線と同じような方法でCM-タイプの多様体を構成するには、Cd の中の格子 Λ から始め、アーベル多様体のリーマンの関係式（英語版）(Riemann relations)を考えに入れる必要がある。 CM-タイプ(CM-type)は、単位元での A の正則接空間上にある EndQ(A) の（最大）可換部分環 L の作用を記述したものである。単純な種類のスペクトル理論が適応され、L が固有ベクトルの基底を通して作用することを示すことができる。言い換えると、L は A の正則ベクトル場の上の対角行列を通した作用を持っている。L 自体がある複数の体の積というよりも数体であるという単純な場合には、CM-タイプは L の複素埋め込み（英語版）(complex embedding)のリストである。複素共役をなすペアとして、2d 個の複素埋め込みがあり、CM-タイプは各々のペアのから一つを選択する。そのようなCM-タイプの全てが実現されることが知られている。\n\n### agileアジャイル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n#### agileアジャイル\n\n複素数体であれば、任意のCM-タイプの A は、実際、数体である定義体（英語版）(field of definition)を持っている。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosati involution）をもつ環として既に分類されていて、CM-タイプのアーベル多様体の分類を導き出す。楕円曲線と同じような方法でCM-タイプの多様体を構成するには、Cd の中の格子 Λ から始め、アーベル多様体のリーマンの関係式（英語版）(Riemann relations)を考えに入れる必要がある。 CM-タイプ(CM-type)は、単位元での A の正則接空間上にある EndQ(A) の（最大）可換部分環 L の作用を記述したものである。単純な種類のスペクトル理論が適応され、L が固有ベクトルの基底を通して作用することを示すことができる。言い換えると、L は A の正則ベクトル場の上の対角行列を通した作用を持っている。L 自体がある複数の体の積というよりも数体であるという単純な場合には、CM-タイプは L の複素埋め込み（英語版）(complex embedding)のリストである。複素共役をなすペアとして、2d 個の複素埋め込みがあり、CM-タイプは各々のペアのから一つを選択する。そのようなCM-タイプの全てが実現されることが知られている。\n\n##### agileアジャイル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n###### agileアジャイル\n\nあｋ\nあｓｆｌｋじゃｓｆ\n\n```tsx\n// あいうえお\nconst Page = () => <div>ページ</div>\n```\n\n__太字__\n*斜体*\n__*太字アンド斜体*__\n\n> これは引用文です。\n> エレガント！！\n\n- リスト\n- です\n  - 階層構造\n  - はこんな感じです\n    - いけてます\n  - かね？\n\nYouTube埋め込み↓`document.querySelectorAll('iframe[src^=\"https://www.youtube.com\"]')`\n<iframe src=\"https://www.youtube.com/embed/ww2lgKMI-w4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n\n1. 順番リスト\n2. でーす\n3. これは使わないだろう\n\n[kaave/gatsby-ts-test: 検証用](https://github.com/kaave/gatsby-ts-test)\n\n---\n\nコード→ `どんなもん` すかね？\n\n![久永小太郎][1]\n\n\n[1]: //images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg"
+            "rawPost": "## #タイh2トル \n\nロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。\n\n### タイh3トル\n\nロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。\n\n#### タイh4トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n##### タイh5トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n###### タイh6トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。\n\n---\n\n- li リスト\n- 表示\n  - 子\n  - 子2\n    - 孫\n    - 孫2\n  - 子3\n\nつづけてol\n\n1. li リスト\n1. 表示\n  1. 子\n  1. 子2\n    1. 孫\n    1. 孫2\n  1. 子3\n\n以下は `TypeScriptReact` (tsx)なコード↓\n\n```tsx\nimport { useEffect } from 'react';\n\nexport function useGlobalKeydown(callback?: (key: string) => void) {\n  useEffect(() => {\n    if (!callback) return;\n\n    const args = ['keydown', (e: KeyboardEvent) => callback(e.key), true] as const;\n    window.addEventListener(...args);\n\n    // eslint-disable-next-line consistent-return\n    return () => window.removeEventListener(...args);\n  }, [callback]);\n}\n```\n\n## 改行しつついろいろなテキスト効果\n\nこれは__太字__です\nこれは*斜体*です\nこれは~~打ち消し線~~です\nこれは[リンク](https://twitter.com/ \"リンクタイトル\")です\n\n## 引用文\n\n以下、引用\n\n> ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。とﾄﾉｺﾄこ\n\n## 🎬 埋め込む\n\n画像\n\n![deathchant](//images.ctfassets.net/wc9q326cpg8b/7jhDVrCF2EVVnVS263drUl/49fbdb76c803f324a8fe782f81b3865e/L-5352-1459109751-1790.jpeg.jpg)\n\nYouTube\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/dUl-iHKGgck\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n\nTwitter\n\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">【新作完成】<br>FF7R発売記念<br>鉛筆の芯でバスターソードを作りました。 <a href=\"https://t.co/0T0BkxrIsn\">pic.twitter.com/0T0BkxrIsn</a></p>&mdash; シロイ/鉛筆彫刻人✏ (@shiroi003) <a href=\"https://twitter.com/shiroi003/status/1248580582264602624?ref_src=twsrc%5Etfw\">April 10, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">東京クロノスっぽくなってきた(　´･‿･｀) <a href=\"https://t.co/Ni2H9ZMG7o\">https://t.co/Ni2H9ZMG7o</a></p>&mdash; mono 🎯 @自宅 💙 (@_mono) <a href=\"https://twitter.com/_mono/status/1249188605811142657?ref_src=twsrc%5Etfw\">April 12, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
         }
     },
     {
@@ -165,13 +85,13 @@
                 "sys": {
                     "type": "Link",
                     "linkType": "Space",
-                    "id": "ktdo3l6vthkl"
+                    "id": "wc9q326cpg8b"
                 }
             },
-            "id": "7v1qCVtjTP7JKfUQbdQAjp",
+            "id": "72gE1Mk1uNwoF3bFZJijVI",
             "type": "Entry",
-            "createdAt": "2020-03-28T02:47:52.920Z",
-            "updatedAt": "2020-04-05T10:42:29.008Z",
+            "createdAt": "2020-04-12T04:07:55.304Z",
+            "updatedAt": "2020-04-12T04:08:16.600Z",
             "environment": {
                 "sys": {
                     "id": "master",
@@ -184,28 +104,28 @@
                 "sys": {
                     "type": "Link",
                     "linkType": "ContentType",
-                    "id": "post"
+                    "id": "published"
                 }
             },
-            "locale": "ja-JP"
+            "locale": "en-US"
         },
         "fields": {
-            "published": "2018-03-01T00:00+09:00",
-            "title": "2018/3/1です",
-            "post": "<p>2018/3/1ですよ</p>\n",
+            "published": "2019-12-30",
+            "title": "📅 2019/12/30です",
+            "post": "<p>2019年 大晦日前日</p>\n",
             "thumbnail": {
                 "sys": {
                     "space": {
                         "sys": {
                             "type": "Link",
                             "linkType": "Space",
-                            "id": "ktdo3l6vthkl"
+                            "id": "wc9q326cpg8b"
                         }
                     },
-                    "id": "aDlhqazGsMJrf08UOkZ8v",
+                    "id": "55lZeGML7xAezJirfjbTng",
                     "type": "Asset",
-                    "createdAt": "2019-12-14T10:32:06.301Z",
-                    "updatedAt": "2019-12-14T10:32:06.301Z",
+                    "createdAt": "2020-04-12T04:06:45.306Z",
+                    "updatedAt": "2020-04-12T04:06:45.306Z",
                     "environment": {
                         "sys": {
                             "id": "master",
@@ -214,26 +134,104 @@
                         }
                     },
                     "revision": 1,
-                    "locale": "ja-JP"
+                    "locale": "en-US"
                 },
                 "fields": {
-                    "title": "久永小太郎",
-                    "description": "久永小太郎さん",
+                    "title": "dummy-cinemascope",
                     "file": {
-                        "url": "//images.ctfassets.net/ktdo3l6vthkl/aDlhqazGsMJrf08UOkZ8v/514d3f8be43764313597d2ad3f47d68d/_______________.jpg",
+                        "url": "//images.ctfassets.net/wc9q326cpg8b/55lZeGML7xAezJirfjbTng/27c1a14dae444d1de9f93a3827ae686e/dummy-cinemascope.png",
                         "details": {
-                            "size": 48074,
+                            "size": 9376,
                             "image": {
-                                "width": 720,
-                                "height": 405
+                                "width": 2350,
+                                "height": 1000
                             }
                         },
-                        "fileName": "久永小太郎.jpg",
-                        "contentType": "image/jpeg"
+                        "fileName": "dummy-cinemascope.png",
+                        "contentType": "image/png"
                     }
                 }
             },
-            "rawPost": "2018/3/1ですよ"
+            "tags": [
+                "example"
+            ],
+            "rawPost": "2019年 大晦日前日"
+        }
+    },
+    {
+        "sys": {
+            "space": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "wc9q326cpg8b"
+                }
+            },
+            "id": "3hkPeKg4xuqCi7yfgEN2RE",
+            "type": "Entry",
+            "createdAt": "2020-04-12T04:10:44.509Z",
+            "updatedAt": "2020-04-12T04:10:44.509Z",
+            "environment": {
+                "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                }
+            },
+            "revision": 1,
+            "contentType": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "ContentType",
+                    "id": "published"
+                }
+            },
+            "locale": "en-US"
+        },
+        "fields": {
+            "published": "2018-04-01",
+            "title": "2018/4/1です タグなし",
+            "post": "<p>新年度</p>\n",
+            "thumbnail": {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "wc9q326cpg8b"
+                        }
+                    },
+                    "id": "xqafoUb5l6cSX7LyMqlbN",
+                    "type": "Asset",
+                    "createdAt": "2020-04-12T04:06:45.314Z",
+                    "updatedAt": "2020-04-12T04:06:45.314Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "revision": 1,
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "title": "dummy-4x3",
+                    "file": {
+                        "url": "//images.ctfassets.net/wc9q326cpg8b/xqafoUb5l6cSX7LyMqlbN/cf9deb2cd31adde96222ad27affeaa88/dummy-4x3.png",
+                        "details": {
+                            "size": 2224,
+                            "image": {
+                                "width": 640,
+                                "height": 480
+                            }
+                        },
+                        "fileName": "dummy-4x3.png",
+                        "contentType": "image/png"
+                    }
+                }
+            },
+            "rawPost": "新年度"
         }
     }
 ]

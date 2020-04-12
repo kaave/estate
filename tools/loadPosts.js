@@ -15,7 +15,7 @@ async function loadPosts(spaceId, accessToken) {
   });
 
   const entries = await client.getEntries({
-    content_type: 'post',
+    content_type: 'published',
     order: '-fields.published',
   });
 
