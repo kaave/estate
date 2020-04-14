@@ -109,6 +109,8 @@ module.exports = {
     'unicorn/prefer-query-selector': 'off',
     // 組み込み型は必ずnewでインスタンス生成 無効化 range作るのがだるい
     'unicorn/new-for-builtins': 'off',
+    // Array.fromの代わりにspread operatorを使う 無効化 使えない場合もある…よね？
+    'unicorn/prefer-spread': 'off',
 
     /*
      * react
