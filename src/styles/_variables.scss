@@ -6,14 +6,10 @@ $zLevels: 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000
 /*
  * font
  */
-@font-face {
-    font-family: YuGothicM;
-    src: local("Yu Gothic Medium");
-}
-$fontFamilyBase: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
+$fontFamilySansSerif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
     sans-serif;
-$fontFamilyMincho: Georgia, "Hiragino Mincho ProN", HGS明朝E, Meiryo, serif;
-$fontFamilyMono: monospace, serif;
+$fontFamilySerif: Georgia, "Hiragino Mincho ProN", HGS明朝E, Meiryo, serif;
+$fontFamilyMonospace: monospace, serif;
 $fontWeightThin: 100;
 $fontWeightExtraLight: 200;
 $fontWeightLight: 300;
