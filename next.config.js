@@ -4,6 +4,8 @@ const DotenvWebpack = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const withOptimizedImages = require('next-optimized-images');
+const dartSass = require('sass');
+const fibers = require('fibers');
 
 function webpack(config, { dev, isServer }) {
   config.resolve = config.resolve || {};
@@ -32,6 +34,30 @@ function webpack(config, { dev, isServer }) {
       return entries;
     };
   }
+
+  // use dart-sass
+  config.module.rules
+    .filter((rule) => Array.isArray(rule.oneOf))
+    .forEach((rule) =>
+      rule.oneOf
+        .filter((rule) => rule.test && rule.test.test && rule.test.test('test.module.scss') && Array.isArray(rule.use))
+        .forEach((rule) =>
+          rule.use
+            .filter((rule) => rule.loader.includes('sass-loader'))
+            .forEach(
+              (rule) =>
+                (rule.options = {
+                  ...rule.options,
+                  implementation: dartSass,
+                  sassOptions: {
+                    ...(rule.options.sassOptions ? rule.options.sassOptions : {}),
+                    fiber: fibers,
+                    includePaths: [path.resolve(__dirname, 'src', 'styles')],
+                  },
+                }),
+            ),
+        ),
+    );
 
   return config;
 }

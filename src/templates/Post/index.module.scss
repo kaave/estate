@@ -1,12 +1,12 @@
+@use "variables";
+@use "mixins";
+
 .root {
     width: 100%;
 }
 
 /* stylelint-disable selector-max-specificity */
 // WIP
-
-@import "../../styles/variables";
-@import "../../styles/mixins";
 
 $horizontalPaddingSp: 2vw;
 $horizontalPadding: 1rem;
@@ -16,7 +16,7 @@ $horizontalPadding: 1rem;
     display: block;
     font-size: 4.286vw;
     line-height: 1.8;
-    color: $colorWhite;
+    color: variables.$colorWhite;
     letter-spacing: 0.05em;
 
     & > * {
@@ -26,7 +26,7 @@ $horizontalPadding: 1rem;
         padding-right: $horizontalPaddingSp;
         padding-left: $horizontalPaddingSp;
 
-        @include notSp {
+        @include mixins.notSp {
             padding-right: $horizontalPadding;
             padding-left: $horizontalPadding;
         }
@@ -37,7 +37,7 @@ $horizontalPadding: 1rem;
         margin: 2.5em auto;
     }
 
-    @include sp {
+    @include mixins.sp {
         & > [class*="language-"] {
             max-width: none;
         }
@@ -54,9 +54,9 @@ $horizontalPadding: 1rem;
 
     a:not(.header-anchor) {
         color: currentColor;
-        text-decoration: solid underline $colorBrandDefault;
+        text-decoration: solid underline variables.$colorBrandDefault;
 
-        @include notSp {
+        @include mixins.notSp {
             &:hover {
                 text-decoration-color: currentColor;
             }
@@ -92,10 +92,10 @@ $horizontalPadding: 1rem;
             width: 0.2em;
             height: 80%;
             content: "";
-            background: rgba($colorWhite, 0.8);
+            background: rgba(variables.$colorWhite, 0.8);
             transform: translateY(-50%);
 
-            @include notSp {
+            @include mixins.notSp {
                 left: $horizontalPadding;
             }
         }
@@ -114,10 +114,10 @@ $horizontalPadding: 1rem;
             width: 0.2em;
             height: 80%;
             content: "";
-            background: rgba($colorWhite, 0.6);
+            background: rgba(variables.$colorWhite, 0.6);
             transform: translateY(-50%);
 
-            @include notSp {
+            @include mixins.notSp {
                 left: $horizontalPadding;
             }
         }
@@ -143,7 +143,7 @@ $horizontalPadding: 1rem;
         padding-left: 1.2em;
         margin: 0.5em $horizontalPaddingSp auto $horizontalPaddingSp;
 
-        @include notSp {
+        @include mixins.notSp {
             width: calc(100% - #{$horizontalPadding} * 2);
             padding: 1.5em 0 0 1.3em;
             margin: auto $horizontalPadding;
@@ -169,7 +169,7 @@ $horizontalPadding: 1rem;
         height: 1px;
         padding: 0;
         margin: 1.5em auto;
-        background: $colorWhite;
+        background: variables.$colorWhite;
         border: 0;
     }
 
@@ -177,9 +177,9 @@ $horizontalPadding: 1rem;
         padding: 0 0.2em;
         margin: auto 0.2em;
         line-height: 1.4;
-        background: rgba($colorWhite, 0.2);
+        background: rgba(variables.$colorWhite, 0.2);
 
-        @include notSp {
+        @include mixins.notSp {
             font-size: 1.2em;
         }
     }

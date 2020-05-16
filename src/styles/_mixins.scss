@@ -2,31 +2,31 @@
 
 /* major breakpoints */
 @mixin sp {
-    @media (max-width: $breakPointMin - 1) {
+    @media screen and (width < $breakPointMin) {
         @content;
     }
 }
 
 @mixin notSp {
-    @media (min-width: $breakPointMin) {
+    @media screen and (width >= $breakPointMin) {
         @content;
     }
 }
 
 @mixin mid {
-    @media (min-width: $breakPointMin) and (max-width: $breakPointMax - 1) {
+    @media screen and ($breakPointMin <= width < $breakPointMax) {
         @content;
     }
 }
 
 @mixin notXl {
-    @media (max-width: $breakPointMax - 1) {
+    @media screen and (width < $breakPointMax - 1) {
         @content;
     }
 }
 
 @mixin xl {
-    @media (min-width: $breakPointMax) {
+    @media screen and (width >= $breakPointMax) {
         @content;
     }
 }

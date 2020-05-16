@@ -10,6 +10,8 @@ const plugins = {
   'postcss-initial': {},
   // https://cssdb.org/#image-set-function
   'postcss-image-set-function': {},
+  // https://cssdb.org/#media-query-ranges
+  'postcss-media-minmax': {},
 
   /*
    * modifiers
