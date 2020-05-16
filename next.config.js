@@ -35,15 +35,13 @@ function webpack(config, { dev, isServer }) {
     };
   }
 
-  config.module.rules.forEach(
-    (rule) =>
-      Array.isArray(rule.oneOf) &&
-      rule.oneOf.forEach(
-        (rule) =>
-          rule.test &&
-          rule.test.test &&
-          rule.test.test('test.module.scss') &&
-          Array.isArray(rule.use) &&
+  // use dart-sass
+  config.module.rules
+    .filter((rule) => Array.isArray(rule.oneOf))
+    .forEach((rule) =>
+      rule.oneOf
+        .filter((rule) => rule.test && rule.test.test && rule.test.test('test.module.scss') && Array.isArray(rule.use))
+        .forEach((rule) =>
           rule.use
             .filter((rule) => rule.loader.includes('sass-loader'))
             .forEach(
@@ -54,11 +52,12 @@ function webpack(config, { dev, isServer }) {
                   sassOptions: {
                     ...(rule.options.sassOptions ? rule.options.sassOptions : {}),
                     fiber: fibers,
+                    includePaths: [path.resolve(__dirname, 'src', 'styles')],
                   },
                 }),
             ),
-      ),
-  );
+        ),
+    );
 
   return config;
 }
