@@ -44,19 +44,19 @@ function webpack(config, { dev, isServer }) {
           rule.test.test &&
           rule.test.test('test.module.scss') &&
           Array.isArray(rule.use) &&
-          rule.use.forEach((rule) => {
-            if (rule.loader.includes('sass-loader')) {
-              rule.options = {
-                ...rule.options,
-                implementation: dartSass,
-                sassOptions: {
-                  ...(rule.options.sassOptions ? rule.options.sassOptions : {}),
-                  fiber: fibers,
-                },
-              };
-              console.log(rule.loader, rule.options);
-            }
-          }),
+          rule.use
+            .filter((rule) => rule.loader.includes('sass-loader'))
+            .forEach(
+              (rule) =>
+                (rule.options = {
+                  ...rule.options,
+                  implementation: dartSass,
+                  sassOptions: {
+                    ...(rule.options.sassOptions ? rule.options.sassOptions : {}),
+                    fiber: fibers,
+                  },
+                }),
+            ),
       ),
   );
 
