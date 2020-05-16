@@ -1,32 +1,32 @@
-@import "./variables";
+@use "variables";
 
 /* major breakpoints */
 @mixin sp {
-    @media screen and (width < $breakPointMin) {
+    @media screen and (width < variables.$breakPointMin) {
         @content;
     }
 }
 
 @mixin notSp {
-    @media screen and (width >= $breakPointMin) {
+    @media screen and (width >= variables.$breakPointMin) {
         @content;
     }
 }
 
 @mixin mid {
-    @media screen and ($breakPointMin <= width < $breakPointMax) {
+    @media screen and (variables.$breakPointMin <= width < variables.$breakPointMax) {
         @content;
     }
 }
 
 @mixin notXl {
-    @media screen and (width < $breakPointMax - 1) {
+    @media screen and (width < variables.$breakPointMax - 1) {
         @content;
     }
 }
 
 @mixin xl {
-    @media screen and (width >= $breakPointMax) {
+    @media screen and (width >= variables.$breakPointMax) {
         @content;
     }
 }

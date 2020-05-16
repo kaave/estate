@@ -40,7 +40,13 @@ function webpack(config, { dev, isServer }) {
     .filter((rule) => Array.isArray(rule.oneOf))
     .forEach((rule) =>
       rule.oneOf
-        .filter((rule) => rule.test && rule.test.test && rule.test.test('test.module.scss') && Array.isArray(rule.use))
+        .filter(
+          (rule) =>
+            rule.test &&
+            rule.test.test &&
+            (rule.test.test('index.scss') || rule.test.test('index.module.scss')) &&
+            Array.isArray(rule.use),
+        )
         .forEach((rule) =>
           rule.use
             .filter((rule) => rule.loader.includes('sass-loader'))

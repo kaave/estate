@@ -1,13 +1,13 @@
-@import "./variables";
+@use "mixins";
 
 .-hidden-pc {
-    @include notSp {
+    @include mixins.notSp {
         display: none !important;
     }
 }
 
 .-hidden-sp {
-    @include sp {
+    @include mixins.sp {
         display: none !important;
     }
 }

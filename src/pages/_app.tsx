@@ -6,7 +6,6 @@ import { PageTransition } from 'next-page-transitions';
 import { pageView } from '@utils/gtag';
 import * as configs from '@utils/configs';
 
-import 'normalize.css';
 import '@styles/index.scss';
 
 if (configs.googleAnalytics) {
