@@ -1,4 +1,7 @@
+const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const dartSass = require('sass');
+const fibers = require('fibers');
 
 module.exports = ({ config }) => {
   config.module.rules.push(
@@ -22,7 +25,17 @@ module.exports = ({ config }) => {
               },
             },
             { loader: 'postcss-loader', options: { sourceMap: true } },
-            { loader: 'sass-loader', options: { sourceMap: true } },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                implementation: dartSass,
+                sassOptions: {
+                  fiber: fibers,
+                  includePaths: [path.resolve(__dirname, '..', 'src', 'styles')],
+                },
+              },
+            },
           ],
         },
         {
@@ -30,7 +43,17 @@ module.exports = ({ config }) => {
             'style-loader',
             { loader: 'css-loader', options: { sourceMap: true, importLoaders: 2 } },
             { loader: 'postcss-loader', options: { sourceMap: true } },
-            { loader: 'sass-loader', options: { sourceMap: true } },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                implementation: dartSass,
+                sassOptions: {
+                  fiber: fibers,
+                  includePaths: [path.resolve(__dirname, '..', 'src', 'styles')],
+                },
+              },
+            },
           ],
         },
       ],

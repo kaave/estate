@@ -1,0 +1,26 @@
+/* crimson-text-regular - latin */
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/crimson-text-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Crimson Text Regular'), local('CrimsonText-Regular'),
+       url('/static/fonts/crimson-text-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/crimson-text-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/crimson-text-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/static/fonts/crimson-text-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/crimson-text-v10-latin-regular.svg#CrimsonText') format('svg'); /* Legacy iOS */
+}
+/* crimson-text-600 - latin */
+@font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/static/fonts/crimson-text-v10-latin-600.eot'); /* IE9 Compat Modes */
+  src: local('Crimson Text SemiBold'), local('CrimsonText-SemiBold'),
+       url('/static/fonts/crimson-text-v10-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/crimson-text-v10-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/crimson-text-v10-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('/static/fonts/crimson-text-v10-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/crimson-text-v10-latin-600.svg#CrimsonText') format('svg'); /* Legacy iOS */
+}
