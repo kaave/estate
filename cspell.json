@@ -1,0 +1,30 @@
+{
+    "ignorePaths": [".next/**", ".now/**", "coverage/**", "node_modules/**", "out/**", "public/**"],
+    "words": [
+        // 名詞
+        "kaave",
+        "mincho",
+        "meiryo",
+        "hiragino",
+        "glsl",
+        "kaku",
+        "Martijn",
+        "Swaagman",
+        // external scopes
+        "stylelint",
+        "monokai",
+        "gtag",
+        "noninteractive",
+        "omori",
+        "futan",
+        // web words
+        "tabindex",
+        // engineering words
+        "camelcase",
+        "palt",
+        "mixins",
+        "atrule",
+        // 造語
+        "aiue"
+    ]
+}
