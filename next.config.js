@@ -96,7 +96,7 @@ const optimizedImagesOptions = {
 
 const purgeCssOptions = {
   purgeCss: {
-    paths: glob.sync(path.join(__dirname, 'src'), { nodir: true }),
+    paths: glob.sync(path.join(__dirname, 'src', '**', '*'), { nodir: true }),
   },
 };
 

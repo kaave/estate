@@ -29,15 +29,12 @@ export const Layout = React.memo(
       <ErrorBoundary>
         <Head title={title} description={description} url={`${configs.baseUrl}${path ?? ''}`} />
         <div className={styles.Inner}>
-          <header id="header" className={styles.Header} role="banner">
+          <header id="header" className={styles.Header}>
             Header
           </header>
           <main id="main" className={styles.Main} role="main">
             {children}
           </main>
-          <footer id="footer" className={styles.Footer}>
-            Footer
-          </footer>
         </div>
       </ErrorBoundary>
     );

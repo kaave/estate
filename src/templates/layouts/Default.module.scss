@@ -1,25 +1,15 @@
 .Inner {
-    display: grid;
-    grid-template:
-        "GlobalHeader" 40px
-        "GlobalMain" 1fr
-        "GlobalFooter" 40px /
-        100vw;
-    height: 100%;
-}
-
-.Header {
-    grid-area: GlobalHeader;
-}
-
-.Main {
-    grid-area: GlobalMain;
+    height: 100vh;
     -webkit-overflow-scrolling: touch;
     overflow: hidden auto;
 }
 
-.Footer {
-    grid-area: GlobalFooter;
+.Header {
+    // grid-area: GlobalHeader;
+}
+
+.Main {
+    // grid-area: GlobalMain;
 }
 
 /*
