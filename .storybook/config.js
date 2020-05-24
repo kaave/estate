@@ -26,13 +26,12 @@ addDecorator(
         },
       },
       infoBody: {
-        backgroundColor: '#eee',
         padding: '0px 5px',
         lineHeight: '2',
       },
     },
-    inline: true,
-    source: false,
+    inline: false,
+    source: true,
   }),
 );
 
@@ -40,7 +39,7 @@ addDecorator(withKnobs());
 addDecorator(withA11y());
 addParameters({
   backgrounds: [
-    { name: 'white', value: '#f0f0f0', default: true },
+    // { name: 'white', value: '#f0f0f0', default: true },
     { name: 'twitter', value: '#00aced' },
     { name: 'facebook', value: '#3b5998' },
   ],

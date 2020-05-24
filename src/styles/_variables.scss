@@ -8,8 +8,9 @@ $zLevels: 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000
  */
 $fontFamilySansSerif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
     sans-serif;
-$fontFamilySerif: Georgia, "Hiragino Mincho ProN", HGS明朝E, Meiryo, serif;
+$fontFamilySerif: "Crimson Text", Georgia, "Hiragino Mincho ProN", HGS明朝E, Meiryo, serif;
 $fontFamilyMonospace: monospace, serif;
+$fontFamilyBase: $fontFamilySerif;
 $fontWeightThin: 100;
 $fontWeightExtraLight: 200;
 $fontWeightLight: 300;
