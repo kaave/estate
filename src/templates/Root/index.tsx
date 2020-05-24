@@ -20,9 +20,9 @@ export const RootTemplate = ({ posts }: Props) => (
     </Link>
     {posts.length > 0 ? (
       <ul>
-        {posts.map(({ id, title }) => (
-          <li key={id}>
-            <Link href="/posts/[id]" as={`/posts/${id}`}>
+        {posts.map(({ title, published }) => (
+          <li key={published}>
+            <Link href="/posts/[published]" as={`/posts/${published}`}>
               <a>{title}</a>
             </Link>
           </li>

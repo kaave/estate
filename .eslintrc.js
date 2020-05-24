@@ -111,6 +111,10 @@ module.exports = {
     'unicorn/new-for-builtins': 'off',
     // Array.fromの代わりにspread operatorを使う 無効化 使えない場合もある…よね？
     'unicorn/prefer-spread': 'off',
+    // reduceを全面的に禁止する 無効化 やかましい
+    'unicorn/no-reduce': 'off',
+    // nullではあくundefinedを使おう 無効化 言いたいことはわかるけどわかって使ってる
+    'unicorn/no-null': 'off',
 
     /*
      * react

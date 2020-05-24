@@ -11,8 +11,8 @@ import { PostTemplate } from '@templates/Post';
 type Props = {
   post?: Post;
 };
-
-export default React.memo(({ post: { published, ...rest } = getMockPost() }: Props) => {
+export default React.memo(({ post = getMockPost() }: Props) => {
+  const { published, ...rest } = post;
   const datetime = React.useMemo(() => format(new Date(published), 'yyyy/MM/dd'), [published]);
   const { asPath } = useRouter();
 
@@ -20,10 +20,9 @@ export default React.memo(({ post: { published, ...rest } = getMockPost() }: Pro
 });
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
-  if (!ctx.params?.id) return { props: { post: getMockPost() } };
-  const { default: post } = (await import(`../../../../public/static/posts/${ctx.params.id}.json`)) as {
-    default: RawPost;
-  };
+  const published = ctx.params?.published;
+  if (!published) return { props: { post: getMockPost() } };
+  const { default: post } = (await import(`../../../../public/static/posts/${published}.json`)) as { default: RawPost };
 
   return {
     props: {
@@ -34,7 +33,7 @@ export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { default: posts } = await import('../../../../public/static/posts/all.json');
-  const paths = posts.map(({ sys: { id } }) => ({ params: { id } }));
+  const paths = posts.map(({ fields: { published } }) => ({ params: { published } }));
   return {
     paths,
     fallback: true,

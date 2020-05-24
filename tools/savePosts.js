@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs-extra');
+const format = require('date-fns/format');
 
 async function savePosts(entries) {
   const savePath = path.join(__dirname, '..', 'public', 'static', 'posts');
@@ -10,8 +11,9 @@ async function savePosts(entries) {
   await fs.mkdirp(savePath);
 
   const writeJsonPromises = entries.map((item) => {
-    const { id } = item.sys;
-    const filePath = path.join(savePath, `${id}.json`);
+    const { published } = item.fields;
+    const filePath = path.join(savePath, `${published}.json`);
+
     return fs.writeJson(filePath, item, { spaces: 4 });
   });
 

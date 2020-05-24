@@ -2,6 +2,7 @@ import React from 'react';
 
 import type { Post } from '@domains/valueObjects/Post';
 import { Layout } from '@layouts/Default';
+import Link from 'next/link';
 import styles from './index.module.scss';
 
 type Props = {
@@ -22,7 +23,11 @@ export const PostTemplate = ({ post: { title, post, published, thumbnail, tags }
       {tags.length > 0 ? (
         <ul>
           {tags.map((tag) => (
-            <li key={tag}>{tag}</li>
+            <li key={tag}>
+              <Link href="/tags/[tag]" as={`/tags/${tag}`}>
+                <a>#{tag}</a>
+              </Link>
+            </li>
           ))}
         </ul>
       ) : null}
