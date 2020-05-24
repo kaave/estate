@@ -2,8 +2,8 @@ import React, { memo, useMemo } from 'react';
 import type { ReactNode } from 'react';
 
 import * as configs from '@utils/configs';
-import { Head } from '@components/shared/Head';
-import { ErrorBoundary } from '@components/shared/ErrorBoundary';
+import { Head } from '@components/utils/Head';
+import { ErrorBoundary } from '@components/utils/ErrorBoundary';
 import { formatString } from '@utils/formatString';
 import styles from './default.module.scss';
 
