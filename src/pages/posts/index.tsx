@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import type { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import getYear from 'date-fns/getYear';
@@ -12,8 +12,8 @@ type Props = {
   posts: Posts;
 };
 
-export default React.memo(({ posts }: Props) => {
-  const orderedPosts = React.useMemo(() => Object.entries(posts).sort().reverse(), [posts]);
+export default memo(({ posts }: Props) => {
+  const orderedPosts = useMemo(() => Object.entries(posts).sort().reverse(), [posts]);
   const { asPath } = useRouter();
 
   return <PostsTemplate posts={orderedPosts} pathname={asPath} />;

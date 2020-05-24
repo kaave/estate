@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import NextHead from 'next/head';
 
 import * as configs from '@utils/configs';
@@ -14,7 +14,7 @@ type Props = {
   children?: HTMLMetaElement[];
 };
 
-export const Head = React.memo(
+export const Head = memo(
   ({
     title = configs.title,
     description = configs.description,

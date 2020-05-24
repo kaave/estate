@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import type { ErrorInfo } from 'react';
 
 type Props = {};
 type State = {
@@ -9,7 +10,7 @@ function ErrorComponent() {
   return <h1>Something went wrong.</h1>;
 }
 
-export class ErrorBoundary extends React.Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   state = { error: false };
 
   static getDerivedStateFromError(error: Error) {
@@ -17,7 +18,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
     return { error: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // You can also log the error to an error reporting service
     console.error(error, errorInfo);
   }

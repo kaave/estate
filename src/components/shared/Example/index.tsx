@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import styles from './index.module.scss';
 
@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const Example = ({ message, onClick }: Props) => {
-  const handleClick = React.useCallback(() => onClick?.(message), [message, onClick]);
+  const handleClick = useCallback(() => onClick?.(message), [message, onClick]);
 
   return (
     <section>

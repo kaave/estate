@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
+import type { ReactNode } from 'react';
 
 import * as configs from '@utils/configs';
 import { Head } from '@components/shared/Head';
@@ -11,10 +12,10 @@ type Props = {
   description?: string;
   descriptionArgv?: string;
   path?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
-export const Layout = React.memo(
+export const Layout = memo(
   ({
     appendTitles = [],
     description: rawDescription = configs.description,
@@ -22,7 +23,7 @@ export const Layout = React.memo(
     path,
     children,
   }: Props) => {
-    const title = React.useMemo(() => [...appendTitles, configs.title].join(' | '), [appendTitles]);
+    const title = useMemo(() => [...appendTitles, configs.title].join(' | '), [appendTitles]);
     const description = descriptionArgv ? formatString(configs.descriptionTemplate, descriptionArgv) : rawDescription;
 
     return (

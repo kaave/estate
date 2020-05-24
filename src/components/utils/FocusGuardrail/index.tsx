@@ -1,16 +1,17 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React from 'react';
+import React, { useRef, useCallback } from 'react';
+import type { ReactNode } from 'react';
 
 import { useFocusedOnOutside } from '@hooks/useFocusedOnOutside';
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
   onFocusOutside?: () => void;
 };
 
 export const FocusGuardrail = ({ onFocusOutside, children }: Props) => {
-  const ref = React.useRef<HTMLDivElement>(null);
-  const handleFocusedOnOutside = React.useCallback(() => onFocusOutside?.(), [onFocusOutside]);
+  const ref = useRef<HTMLDivElement>(null);
+  const handleFocusedOnOutside = useCallback(() => onFocusOutside?.(), [onFocusOutside]);
 
   useFocusedOnOutside(ref, handleFocusedOnOutside, { active: !!onFocusOutside });
 

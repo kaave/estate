@@ -1,5 +1,5 @@
-import React from 'react';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import React, { memo, useMemo } from 'react';
+import type { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import format from 'date-fns/format';
 
@@ -11,9 +11,9 @@ import { PostTemplate } from '@templates/Post';
 type Props = {
   post?: Post;
 };
-export default React.memo(({ post = getMockPost() }: Props) => {
+export default memo(({ post = getMockPost() }: Props) => {
   const { published, ...rest } = post;
-  const datetime = React.useMemo(() => format(new Date(published), 'yyyy/MM/dd'), [published]);
+  const datetime = useMemo(() => format(new Date(published), 'yyyy/MM/dd'), [published]);
   const { asPath } = useRouter();
 
   return <PostTemplate post={{ published: datetime, ...rest }} pathname={asPath} />;

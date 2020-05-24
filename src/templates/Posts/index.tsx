@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import Link from 'next/link';
 import format from 'date-fns/format';
 
@@ -10,7 +10,7 @@ type Props = {
   pathname: string;
 };
 
-export const PostsTemplate = React.memo(({ posts, pathname }: Props) => (
+export const PostsTemplate = memo(({ posts, pathname }: Props) => (
   <Layout appendTitles={['POSTS']} descriptionArgv="投稿一覧ページです。" path={pathname}>
     {posts.map(([year, postList]) => (
       <section key={year}>
@@ -28,7 +28,7 @@ export const PostsTemplate = React.memo(({ posts, pathname }: Props) => (
 type RowProps = Pick<Post, 'title' | 'published'>;
 
 const Row = ({ title, published }: RowProps) => {
-  const datetime = React.useMemo(() => format(new Date(published), 'MMM, dd'), [published]);
+  const datetime = useMemo(() => format(new Date(published), 'MMM, dd'), [published]);
 
   return (
     <li>
