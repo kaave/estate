@@ -3,27 +3,33 @@ import Link from 'next/link';
 
 import { Layout } from '@layouts/Default';
 import type { Post } from '@domains/valueObjects/Post';
-import omoriImage from '@images/omori_futan_woman.png';
-import unsplashImage from '@images/sai-de-silva-4-gFGb12hFA-unsplash.jpg';
 
 type Props = {
   posts: Post[];
+  tags: { tag: string; count: number }[];
 };
 
-export const RootTemplate = ({ posts }: Props) => (
+export const RootTemplate = ({ posts, tags }: Props) => (
   <Layout>
-    <h1>Hello, World!</h1>
-    <img src={omoriImage} alt="" />
-    <img src={unsplashImage} alt="" />
-    <Link href="/second-page">
-      <a>Goto Second Page</a>
-    </Link>
     {posts.length > 0 ? (
       <ul>
         {posts.map(({ title, published }) => (
           <li key={published}>
             <Link href="/posts/[published]" as={`/posts/${published}`}>
               <a>{title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    ) : null}
+    {tags.length > 0 ? (
+      <ul>
+        {tags.map(({ tag, count }) => (
+          <li key={tag}>
+            <Link href="/tags/[tag]" as={`/tags/${tag}`}>
+              <a>
+                #{tag} ({count})
+              </a>
             </Link>
           </li>
         ))}
