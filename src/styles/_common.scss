@@ -16,6 +16,8 @@ body {
     min-height: -webkit-fill-available; // mobile viewport bug fix
     font-family: variables.$fontFamilyBase;
     font-size: 1.4rem;
+    color: variables.$colorBlack;
+    background: variables.$colorWhite;
 }
 
 /* stylelint-disable selector-max-specificity */

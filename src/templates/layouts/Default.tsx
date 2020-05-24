@@ -5,6 +5,7 @@ import * as configs from '@utils/configs';
 import { Head } from '@components/utils/Head';
 import { ErrorBoundary } from '@components/utils/ErrorBoundary';
 import { formatString } from '@utils/formatString';
+import { GlobalHeader } from '@components/shared/GlobalHeader';
 import styles from './default.module.scss';
 
 type Props = {
@@ -30,9 +31,7 @@ export const Layout = memo(
       <ErrorBoundary>
         <Head title={title} description={description} url={`${configs.baseUrl}${path ?? ''}`} />
         <div className={styles.Inner}>
-          <header id="header" className={styles.Header}>
-            Header
-          </header>
+          <GlobalHeader />
           <main id="main" className={styles.Main} role="main">
             {children}
           </main>
