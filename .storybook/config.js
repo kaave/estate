@@ -3,7 +3,6 @@ import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 
-import 'normalize.css';
 import '@styles/index.scss';
 
 // Globally in your .storybook/config.js, or alternatively, per-chapter

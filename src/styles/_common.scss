@@ -1,5 +1,5 @@
-// stylelint-disable-next-line selector-max-specificity
-@use "variables";
+@use "variables/color";
+@use "variables/font";
 
 html {
     width: 100%;
@@ -14,10 +14,10 @@ body {
     width: 100%;
     min-height: 100vh;
     min-height: -webkit-fill-available; // mobile viewport bug fix
-    font-family: variables.$fontFamilyBase;
+    font-family: font.$familyBase;
     font-size: 1.4rem;
-    color: variables.$colorBlack;
-    background: variables.$colorWhite;
+    color: color.$black;
+    background: color.$white;
 }
 
 /* stylelint-disable selector-max-specificity */

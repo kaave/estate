@@ -1,4 +1,4 @@
-@use "variables";
+@use "variables/color";
 @use "mixins";
 
 .root {
@@ -16,7 +16,7 @@ $horizontalPadding: 1rem;
     display: block;
     font-size: 4.286vw;
     line-height: 1.8;
-    color: variables.$colorWhite;
+    color: color.$white;
     letter-spacing: 0.05em;
 
     & > * {
@@ -54,7 +54,7 @@ $horizontalPadding: 1rem;
 
     a:not(.header-anchor) {
         color: currentColor;
-        text-decoration: solid underline variables.$colorBrandDefault;
+        text-decoration: solid underline color.$brandDefault;
 
         @include mixins.notSp {
             &:hover {
@@ -92,7 +92,7 @@ $horizontalPadding: 1rem;
             width: 0.2em;
             height: 80%;
             content: "";
-            background: rgba(variables.$colorWhite, 0.8);
+            background: rgba(color.$white, 0.8);
             transform: translateY(-50%);
 
             @include mixins.notSp {
@@ -114,7 +114,7 @@ $horizontalPadding: 1rem;
             width: 0.2em;
             height: 80%;
             content: "";
-            background: rgba(variables.$colorWhite, 0.6);
+            background: rgba(color.$white, 0.6);
             transform: translateY(-50%);
 
             @include mixins.notSp {
@@ -169,7 +169,7 @@ $horizontalPadding: 1rem;
         height: 1px;
         padding: 0;
         margin: 1.5em auto;
-        background: variables.$colorWhite;
+        background: color.$white;
         border: 0;
     }
 
@@ -177,7 +177,7 @@ $horizontalPadding: 1rem;
         padding: 0 0.2em;
         margin: auto 0.2em;
         line-height: 1.4;
-        background: rgba(variables.$colorWhite, 0.2);
+        background: rgba(color.$white, 0.2);
 
         @include mixins.notSp {
             font-size: 1.2em;
