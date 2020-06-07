@@ -1,0 +1,28 @@
+@use "mixins";
+@use "variables/color";
+@use "variables/font";
+@use "variables/ease";
+@use "variables/breakPoint";
+
+.root {
+    display: block;
+}
+
+.inner {
+    position: relative;
+    display: grid;
+    grid-template:
+        "first-view-left first-view-right" auto /
+        60% 40%;
+    max-width: breakPoint.$max;
+    padding: 0 1.6rem 0 0;
+    margin: auto;
+}
+
+.left {
+    grid-area: first-view-left;
+}
+
+.right {
+    grid-area: first-view-right;
+}

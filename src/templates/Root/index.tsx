@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { Layout } from '@layouts/Default';
 import type { Post } from '@domains/valueObjects/Post';
+import { FirstView } from './parts/FirstView';
 
 type Props = {
   posts: Post[];
@@ -11,17 +12,7 @@ type Props = {
 
 export const RootTemplate = ({ posts, tags }: Props) => (
   <Layout>
-    {posts.length > 0 ? (
-      <ul>
-        {posts.map(({ title, published }) => (
-          <li key={published}>
-            <Link href="/posts/[published]" as={`/posts/${published}`}>
-              <a>{title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    ) : null}
+    <FirstView post={posts[0]} />
     {tags.length > 0 ? (
       <ul>
         {tags.map(({ tag, count }) => (

@@ -15,8 +15,9 @@ type Props = {
 export const GlobalHeader = memo(({ current }: Props) => (
   <header id="header" className={styles.root}>
     <div className={styles.bg} role="presentation">
-      {spans.map((width) => (
-        <span className={styles.bgLine} style={{ width, height }} />
+      {spans.map((width, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <span key={i} className={styles.bgLine} style={{ width, height }} />
       ))}
     </div>
     <div className={styles.inner}>

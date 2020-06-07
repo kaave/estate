@@ -109,6 +109,7 @@ const nextOptions = {
     // importLoaders: 1,
     localIdentName: '[local]___[hash:base64:5]',
   },
+  reactStrictMode: true,
   // ...workboxOptions,
   // exportPathMap: async (defaultPathMap) => {
   //   const posts = await fs.readJson(path.join(__dirname, 'public', 'static', 'posts', 'all.json'));
