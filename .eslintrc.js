@@ -51,6 +51,8 @@ module.exports = {
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     // !! でbooleanへキャストするのを警告
     'no-extra-boolean-cast': ['off'],
+    // スコープ外で宣言済みの命名を使い回すの禁止 無効化 わかってます
+    'no-shadow': 'off',
     // useDispatchとuseSelectorは強すぎるので警告
     'no-restricted-imports': [
       'warn',
@@ -115,6 +117,8 @@ module.exports = {
     'unicorn/no-reduce': 'off',
     // nullではあくundefinedを使おう 無効化 言いたいことはわかるけどわかって使ってる
     'unicorn/no-null': 'off',
+    // ぶん回す際に関数を直接渡さない 無効化 わかってます
+    'unicorn/no-fn-reference-in-iterator': 'off',
 
     /*
      * react

@@ -11,12 +11,10 @@ module.exports = {
     /*
      * Manual
      */
-    // �コメント記号とコメント本文の間にスペースを強要する 無効化 IntelliJと相性が悪い
+    // コメント記号とコメント本文の間にスペースを強要する 無効化 IntelliJと相性が悪い
     'comment-whitespace-inside': null,
-    // @なにがしで意味不明なものを無効化 dart-sass & mixin関係を通す
-    'at-rule-no-unknown': [true, { ignoreAtRules: ['use', 'mixin', 'include'] }],
-    // 複雑すぎる指定はNG ただし属性っぽいものはだいたいOK
-    'selector-max-specificity': ['0,2,0', { ignoreSelectors: ['/:.*/', '/-[^-].*/', '/ + /'] }],
+    // 複雑すぎる指定は良くないけどツールで管理しきれないので良しとする
+    'selector-max-specificity': null,
     // コメントの前には空行
     'comment-empty-line-before': [
       'always',
@@ -25,9 +23,11 @@ module.exports = {
         ignore: ['after-comment', 'stylelint-commands'],
       },
     ],
+    // @なにがしで意味不明なものを無効化 dart-sass & mixin & loop 関係を通す
+    'at-rule-no-unknown': [true, { ignoreAtRules: ['use', 'mixin', 'include', 'each', 'for'] }],
     // @extendは難しいから禁止
     'at-rule-blacklist': ['extend'],
-    // CSS Modules用の記法を許可
+    // CSS Modules, loop各種用の記法を許可
     'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global', 'local', 'export'] }],
     // 不正なCSSはNGだが、exportの中はなんでもあり
     'property-no-unknown': [true, { ignoreSelectors: [':export'] }],

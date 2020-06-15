@@ -3,6 +3,8 @@
     "words": [
         // 名詞
         "kaave",
+        "kyousuke",
+        "junkjunctions",
         "mincho",
         "meiryo",
         "hiragino",
@@ -10,6 +12,7 @@
         "kaku",
         "Martijn",
         "Swaagman",
+        "Wantedly",
         // external scopes
         "stylelint",
         "monokai",
