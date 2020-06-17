@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 const links = ['about', 'posts', 'slides', 'contact'] as const;
 
 const height = 4;
-const spans = [...Array(56 / height).keys()].map(() => `${70 + Math.floor(Math.random() * 30)}%`);
+const spans = [...Array(56 / height).keys()];
 
 type Props = {
   current?: typeof links[number];
@@ -15,9 +15,9 @@ type Props = {
 export const GlobalHeader = memo(({ current }: Props) => (
   <header id="header" className={styles.root}>
     <div className={styles.bg} role="presentation">
-      {spans.map((width, i) => (
+      {spans.map((i) => (
         // eslint-disable-next-line react/no-array-index-key
-        <span key={i} className={styles.bgLine} style={{ width, height }} />
+        <span key={i} className={styles.bgLine} style={{ height }} />
       ))}
     </div>
     <div className={styles.inner}>

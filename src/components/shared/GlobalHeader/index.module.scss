@@ -23,6 +23,15 @@
     background: color.$whiteLight;
 }
 
+$percentList: 79, 88, 78, 90, 99, 98, 89, 97, 94, 82, 73, 93, 84, 98;
+@each $percent in $percentList {
+    $i: index($percentList, $percent);
+
+    .bgLine:nth-child(#{$i}) {
+        width: $percent * 1%;
+    }
+}
+
 .inner {
     position: relative;
     z-index: 1;
