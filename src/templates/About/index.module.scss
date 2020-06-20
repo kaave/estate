@@ -1,0 +1,15 @@
+@use "variables/color";
+@use "variables/ease";
+@use "variables/font";
+@use "variables/layout";
+@use "mixins";
+
+.inner {
+    max-width: layout.$inner;
+    padding-top: layout.$gutter * 8;
+    margin: auto;
+}
+
+.desc {
+    margin: #{layout.$gutter * 8} 0 #{layout.$gutter * 6};
+}

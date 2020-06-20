@@ -83,48 +83,39 @@
     transform: scale3d(0, 1, 1);
 }
 
-$pxList: 47, 29, 13, 48, 53, 37, 41, 23;
-@each $px in $pxList {
-    $i: index($pxList, $px);
-
-    .backgroundLine:nth-child(8n + #{$i}) {
-        left: -#{$px}px;
-        transition-delay: ($i - 1) * 40ms;
+$pxList: 47, 29, 13, 48, 53, 37, 41, 23, 40, 57, 22, 8, 34, 16, 53, 19;
+@for $i from 1 through length($pxList) {
+    .backgroundLine:nth-child(#{length($pxList)}n + #{$i}) {
+        left: -#{nth($pxList, $i)}px;
+        transition-delay: ($i - 1) * 20ms;
     }
 }
 
 .root[data-background-pattern="1"] {
-    $pxList: 40, 57, 22, 8, 34, 16, 53, 19;
-    @each $px in $pxList {
-        $i: index($pxList, $px);
-
-        .backgroundLine:nth-child(8n + #{$i}) {
-            left: -#{$px}px;
-            transition-delay: (length($pxList) - $i - 1) * 30ms;
+    $pxList: 40, 57, 22, 8, 34, 16, 53, 19, 42, 34, 49, 12, 47, 59, 22, 14;
+    @for $i from 1 through length($pxList) {
+        .backgroundLine:nth-child(#{length($pxList)}n + #{$i}) {
+            left: -#{nth($pxList, $i)}px;
+            // transition-delay: (length($pxList) - $i - 1) * 20ms;
         }
     }
 }
 
 .root[data-background-pattern="2"] {
-    $pxList: 42, 34, 49, 12, 47, 59, 22, 14;
-    @each $px in $pxList {
-        $i: index($pxList, $px);
-        $length: length($pxList);
-
-        .backgroundLine:nth-child(8n + #{$i}) {
-            left: -#{$px}px;
-            transition-delay: ($length * 2 - $i) % ($length / 2) * 30ms;
+    $pxList: 42, 34, 49, 12, 47, 59, 22, 14, 16, 57, 22, 19, 40, 53, 34, 8;
+    @for $i from 1 through length($pxList) {
+        .backgroundLine:nth-child(#{length($pxList)}n + #{$i}) {
+            left: -#{nth($pxList, $i)}px;
+            // transition-delay: ($length * 2 - $i) % ($length / 2) * 30ms;
         }
     }
 }
 
 .root[data-background-pattern="3"] {
-    $pxList: 16, 57, 22, 19, 40, 53, 34, 8;
-    @each $px in $pxList {
-        $i: index($pxList, $px);
-
-        .backgroundLine:nth-child(8n + #{$i}) {
-            left: -#{$px}px;
+    $pxList: 16, 57, 22, 19, 40, 53, 34, 8, 47, 29, 13, 48, 53, 37, 41, 23;
+    @for $i from 1 through length($pxList) {
+        .backgroundLine:nth-child(#{length($pxList)}n + #{$i}) {
+            left: -#{nth($pxList, $i)}px;
         }
     }
 }

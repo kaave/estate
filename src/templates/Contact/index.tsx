@@ -28,7 +28,9 @@ type Props = {
 export const ContactTemplate = ({ pathname }: Props) => (
   <Layout appendTitles={['CONTACT']} descriptionArgv="お問い合わせ" path={pathname}>
     <div className={styles.inner}>
-      <RouteHeader transition>Contact</RouteHeader>
+      <RouteHeader lineCount={16} hidden>
+        Contact
+      </RouteHeader>
       <p className={styles.desc}>各種SNSよりお問い合わせくださいませ。</p>
       <ul className={styles.snsList}>
         {sns.map(({ key, url, desc, icon: Component }) => (
