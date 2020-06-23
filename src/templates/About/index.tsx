@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Layout } from '@layouts/Default';
 import { RouteHeader } from '@components/shared/RouteHeader';
+import { SectionHeader } from '@components/shared/SectionHeader';
 
 import styles from './index.module.scss';
 
@@ -12,17 +13,11 @@ type Props = {
 export const AboutTemplate = ({ pathname }: Props) => (
   <Layout appendTitles={['ABOUT']} descriptionArgv="概要" path={pathname}>
     <div className={styles.inner}>
-      <RouteHeader hidden lineCount={16}>
-        About
-      </RouteHeader>
+      <RouteHeader lineCount={16}>About</RouteHeader>
       <p className={styles.desc}>うんたらかんたら</p>
-      <RouteHeader hidden lineCount={16} pattern={2}>
-        Skills
-      </RouteHeader>
+      <SectionHeader>Skills</SectionHeader>
       <p className={styles.desc}>うんたらかんたら</p>
-      <RouteHeader hidden lineCount={16} pattern={3}>
-        Likes
-      </RouteHeader>
+      <SectionHeader>Likes</SectionHeader>
       <p className={styles.desc}>うんたらかんたら</p>
     </div>
   </Layout>

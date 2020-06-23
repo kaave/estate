@@ -15,16 +15,6 @@
     display: block;
 }
 
-.root::after {
-    position: absolute;
-    bottom: layout.$gutter * -3;
-    display: block;
-    width: 0.8em;
-    height: 2px;
-    content: "";
-    background: currentColor;
-}
-
 .textContainer {
     position: relative;
 }

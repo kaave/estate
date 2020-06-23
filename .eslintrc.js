@@ -135,6 +135,8 @@ module.exports = {
     'react/state-in-constructor': ['error', 'never'],
     // propsを渡す際にspread operatorで渡すやり方を一部コンポーネントを除いて禁止 初見殺しなので
     'react/jsx-props-no-spreading': ['error', { exceptions: ['Head', 'Component'] }],
+    // keyにindex使用禁止 わかってるけど使わざるを得ない場面が多い
+    'react/no-array-index-key': 'off',
     // Checks rules of Hooks
     'react-hooks/rules-of-hooks': 'error',
     // Checks effect dependencies
