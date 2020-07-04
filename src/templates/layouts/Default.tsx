@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import type { ReactNode } from 'react';
 
 import * as configs from '@utils/configs';
@@ -16,27 +16,25 @@ type Props = {
   children?: ReactNode;
 };
 
-export const Layout = memo(
-  ({
-    appendTitles = [],
-    description: rawDescription = configs.description,
-    descriptionArgv,
-    path,
-    children,
-  }: Props) => {
-    const title = useMemo(() => [...appendTitles, configs.title].join(' | '), [appendTitles]);
-    const description = descriptionArgv ? formatString(configs.descriptionTemplate, descriptionArgv) : rawDescription;
+export const Layout = ({
+  appendTitles = [],
+  description: rawDescription = configs.description,
+  descriptionArgv,
+  path,
+  children,
+}: Props) => {
+  const title = useMemo(() => [...appendTitles, configs.title].join(' | '), [appendTitles]);
+  const description = descriptionArgv ? formatString(configs.descriptionTemplate, descriptionArgv) : rawDescription;
 
-    return (
-      <ErrorBoundary>
-        <Head title={title} description={description} url={`${configs.baseUrl}${path ?? ''}`} />
-        <div className={styles.Inner}>
-          <GlobalHeader />
-          <main id="main" className={styles.Main} role="main">
-            {children}
-          </main>
-        </div>
-      </ErrorBoundary>
-    );
-  },
-);
+  return (
+    <ErrorBoundary>
+      <Head title={title} description={description} url={`${configs.baseUrl}${path ?? ''}`} />
+      <div className={styles.Inner}>
+        <GlobalHeader />
+        <main id="main" className={styles.Main} role="main">
+          {children}
+        </main>
+      </div>
+    </ErrorBoundary>
+  );
+};

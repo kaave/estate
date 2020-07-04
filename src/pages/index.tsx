@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import type { GetStaticProps } from 'next';
 
 import { normalizePost } from '@domains/valueObjects/Post';
@@ -10,7 +10,7 @@ type Props = {
   tags?: { tag: string; count: number }[];
 };
 
-export default memo(({ posts = [], tags = [] }: Props) => <RootTemplate posts={posts} tags={tags} />);
+export default ({ posts = [], tags = [] }: Props) => <RootTemplate posts={posts} tags={tags} />;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: posts } = await import(`../../public/static/posts/all.json`);

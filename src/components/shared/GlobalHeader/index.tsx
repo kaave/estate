@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 import styles from './index.module.scss';
@@ -12,7 +12,7 @@ type Props = {
   current?: typeof links[number];
 };
 
-export const GlobalHeader = memo(({ current }: Props) => (
+export const GlobalHeader = ({ current }: Props) => (
   <header id="header" className={styles.root}>
     <div className={styles.bg} role="presentation">
       {spans.map((i) => (
@@ -43,4 +43,4 @@ export const GlobalHeader = memo(({ current }: Props) => (
       </div>
     </div>
   </header>
-));
+);

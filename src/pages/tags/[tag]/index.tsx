@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import type { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 
@@ -11,10 +11,10 @@ type Props = {
   posts: Post[];
 };
 
-export default memo(({ tag = '', posts = [] }: Props) => {
+export default ({ tag = '', posts = [] }: Props) => {
   const { asPath } = useRouter();
   return <TagTemplate tag={tag} posts={posts} pathname={asPath} />;
-});
+};
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   const tag = ctx.params?.tag;

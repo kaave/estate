@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import type { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import getYear from 'date-fns/getYear';
@@ -12,12 +12,12 @@ type Props = {
   posts: Posts;
 };
 
-export default memo(({ posts }: Props) => {
+export default ({ posts }: Props) => {
   const orderedPosts = useMemo(() => Object.entries(posts).sort().reverse(), [posts]);
   const { asPath } = useRouter();
 
   return <PostsTemplate posts={orderedPosts} pathname={asPath} />;
-});
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: rawPosts } = await import('../../../public/static/posts/all.json');

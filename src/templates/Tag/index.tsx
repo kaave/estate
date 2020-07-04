@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 import format from 'date-fns/format';
 
@@ -11,7 +11,7 @@ type Props = {
   pathname: string;
 };
 
-export const TagTemplate = memo(({ tag, posts, pathname }: Props) => (
+export const TagTemplate = ({ tag, posts, pathname }: Props) => (
   <Layout appendTitles={[tag, 'TAG']} descriptionArgv={tag} path={pathname}>
     <section>
       <h3>{tag}</h3>
@@ -22,7 +22,7 @@ export const TagTemplate = memo(({ tag, posts, pathname }: Props) => (
       </ul>
     </section>
   </Layout>
-));
+);
 
 type RowProps = Pick<Post, 'title' | 'published'>;
 

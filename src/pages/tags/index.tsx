@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import type { GetStaticProps } from 'next';
 
 import type { Post } from '@domains/valueObjects/Post';
@@ -11,12 +11,12 @@ type Props = {
   tags: Tags;
 };
 
-export default memo(({ tags }: Props) => {
+export default ({ tags }: Props) => {
   const orderedTags = useMemo(() => Object.entries(tags).sort().reverse(), [tags]);
   const { asPath } = useRouter();
 
   return <TagsTemplate tags={orderedTags} pathname={asPath} />;
-});
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: rawPosts } = await import('../../../public/static/posts/all.json');
