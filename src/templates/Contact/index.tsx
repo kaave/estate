@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { Layout } from '@layouts/Default';
 import { Facebook } from '@components/icon/Facebook';
@@ -25,27 +25,32 @@ type Props = {
   pathname: string;
 };
 
-export const ContactTemplate = ({ pathname }: Props) => (
-  <Layout appendTitles={['CONTACT']} descriptionArgv="お問い合わせ" path={pathname}>
-    <div className={styles.inner}>
-      <RouteHeader lineCount={16} hidden>
-        Contact
-      </RouteHeader>
-      <p className={styles.desc}>各種SNSよりお問い合わせくださいませ。</p>
-      <ul className={styles.snsList}>
-        {sns.map(({ key, url, desc, icon: Component }) => (
-          <li key={key} className={styles.snsCell}>
-            <a href={url} className={styles.snsLink}>
-              <span className={styles.snsLinkInner}>
-                <span className={styles.snsLinkIconWrapper}>
-                  <Component width="1em" height="1em" />
+export const ContactTemplate = ({ pathname }: Props) => {
+  const [hiddenHeader, setHiddenHeader] = useState(true);
+  const handleIntersectHeader = useCallback(() => setHiddenHeader(false), []);
+
+  return (
+    <Layout appendTitles={['CONTACT']} descriptionArgv="お問い合わせ" path={pathname}>
+      <div className={styles.inner}>
+        <RouteHeader lineCount={16} hidden={hiddenHeader} onIntersect={handleIntersectHeader}>
+          Contact
+        </RouteHeader>
+        <p className={styles.desc}>各種SNSよりお問い合わせくださいませ。</p>
+        <ul className={styles.snsList}>
+          {sns.map(({ key, url, desc, icon: Component }) => (
+            <li key={key} className={styles.snsCell}>
+              <a href={url} className={styles.snsLink}>
+                <span className={styles.snsLinkInner}>
+                  <span className={styles.snsLinkIconWrapper}>
+                    <Component width="1em" height="1em" />
+                  </span>
+                  {desc}
                 </span>
-                {desc}
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </Layout>
-);
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Layout>
+  );
+};

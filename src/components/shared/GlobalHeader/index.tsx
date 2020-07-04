@@ -32,7 +32,7 @@ export const GlobalHeader = ({ current }: Props) => (
         <ul className={styles.linkList}>
           {links.map((link) => (
             <li key={link} className={styles.linkCell}>
-              <Link href={link}>
+              <Link href={`/${link}`}>
                 <a className={styles.link} aria-current={link === current ? 'page' : undefined}>
                   {link}
                 </a>
