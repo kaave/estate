@@ -6,16 +6,28 @@
 
 .inner {
     max-width: layout.$inner;
-    padding-top: layout.$gutter * 8;
+    padding: #{layout.$gutter * 8} #{layout.$gutter * 2};
     margin: auto;
+
+    @include mixins.sp {
+        padding: #{layout.$gutter * 3} #{layout.$gutter * 2};
+    }
 }
 
 .desc {
     margin: #{layout.$gutter * 8} 0 #{layout.$gutter * 6};
+
+    @include mixins.sp {
+        margin: #{layout.$gutter * 4} 0 #{layout.$gutter * 6};
+    }
 }
 
 .snsList {
     font-size: font.$sizeXL;
+
+    @include mixins.sp {
+        font-size: font.$sizeL;
+    }
 }
 
 .snsList:empty {

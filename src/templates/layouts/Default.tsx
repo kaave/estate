@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback, useState } from 'react';
 import type { ReactNode } from 'react';
 
 import * as configs from '@utils/configs';
@@ -24,13 +24,18 @@ export const Layout = ({
   children,
 }: Props) => {
   const title = useMemo(() => [...appendTitles, configs.title].join(' | '), [appendTitles]);
-  const description = descriptionArgv ? formatString(configs.descriptionTemplate, descriptionArgv) : rawDescription;
+  const description = useMemo(
+    () => (descriptionArgv ? formatString(configs.descriptionTemplate, descriptionArgv) : rawDescription),
+    [descriptionArgv, rawDescription],
+  );
+  const [visibleModalMenu, setVisibleModalMenu] = useState(false);
+  const handleClickHamburger = useCallback(() => setVisibleModalMenu((b) => !b), []);
 
   return (
     <ErrorBoundary>
       <Head title={title} description={description} url={`${configs.baseUrl}${path ?? ''}`} />
       <div className={styles.Inner}>
-        <GlobalHeader />
+        <GlobalHeader visibleModal={visibleModalMenu} onClickHamburger={handleClickHamburger} />
         <main id="main" className={styles.Main} role="main">
           {children}
         </main>

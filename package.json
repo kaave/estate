@@ -35,11 +35,11 @@
     }
   },
   "dependencies": {
-    "@welldone-software/why-did-you-render": "^4.2.1",
-    "clsx": "^1.1.0",
-    "date-fns": "^2.13.0",
+    "@welldone-software/why-did-you-render": "^4.2.5",
+    "clsx": "^1.1.1",
+    "date-fns": "^2.14.0",
     "fontfaceobserver": "^2.1.0",
-    "next": "^9.4.0",
+    "next": "^9.4.4",
     "next-page-transitions": "^1.0.0-beta.2",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",

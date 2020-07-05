@@ -1,5 +1,7 @@
 @use "variables/color";
 @use "variables/font";
+@use "variables/zIndex";
+@use "mixins";
 
 html {
     width: 100%;
@@ -39,24 +41,45 @@ body {
     &::before,
     &::after {
         position: fixed;
-        right: 0;
-        left: 0;
-        z-index: 1000000000;
+        z-index: zIndex.$lv10;
         display: block;
         content: "";
         background: color.$light;
         transition: transform 200ms linear;
+
+        @include mixins.notSp {
+            right: 0;
+            left: 0;
+        }
+
+        @include mixins.sp {
+            top: 0;
+            bottom: 0;
+        }
     }
 
     &::before {
-        top: 0;
-        bottom: 50%;
+        @include mixins.notSp {
+            top: 0;
+            bottom: 50%;
+        }
+
+        @include mixins.sp {
+            right: 50%;
+            left: 0;
+        }
     }
 
     &::after {
-        top: 50%;
-        bottom: 0;
-        transition-delay: 100ms;
+        @include mixins.notSp {
+            top: 50%;
+            bottom: 0;
+        }
+
+        @include mixins.sp {
+            right: 0;
+            left: 50%;
+        }
     }
 }
 
@@ -76,21 +99,45 @@ body {
 
 .page-transition-enter-active {
     &::before {
-        transform: translate3d(0, -100%, 0);
+        @include mixins.notSp {
+            transform: translate3d(0, -100%, 0);
+        }
+
+        @include mixins.sp {
+            transform: translate3d(-100%, 0, 0);
+        }
     }
 
     &::after {
-        transform: translate3d(0, 100%, 0);
+        @include mixins.notSp {
+            transform: translate3d(0, 100%, 0);
+        }
+
+        @include mixins.sp {
+            transform: translate3d(100%, 0, 0);
+        }
     }
 }
 
 .page-transition-exit {
     &::before {
-        transform: translate3d(-100%, 0, 0);
+        @include mixins.notSp {
+            transform: translate3d(-100%, 0, 0);
+        }
+
+        @include mixins.sp {
+            transform: translate3d(0, -100%, 0);
+        }
     }
 
     &::after {
-        transform: translate3d(100%, 0, 0);
+        @include mixins.notSp {
+            transform: translate3d(100%, 0, 0);
+        }
+
+        @include mixins.sp {
+            transform: translate3d(0, 100%, 0);
+        }
     }
 }
 

@@ -3,7 +3,7 @@
 @use "variables/layout";
 @use "mixins";
 
-$horizontalPaddingSp: 2vw;
+$horizontalPaddingSp: layout.$gutter * 2;
 $horizontalPadding: layout.$gutter * 2;
 
 .root {
@@ -29,8 +29,13 @@ $horizontalPadding: layout.$gutter * 2;
     }
 
     & > [class*="language-"] {
-        width: calc(100% - #{layout.$gutter * 4});
         margin: #{layout.$gutter * 3} auto;
+    }
+
+    @include mixins.notSp {
+        & > [class*="language-"] {
+            width: calc(100% - #{layout.$gutter * 4});
+        }
     }
 
     @include mixins.sp {
@@ -84,6 +89,10 @@ $horizontalPadding: layout.$gutter * 2;
         width: auto;
         margin: #{layout.$gutter * 12} auto auto;
         font-size: font.$sizeXL;
+
+        @include mixins.sp {
+            margin: #{layout.$gutter * 8} auto auto;
+        }
     }
 
     h3::before {
@@ -94,6 +103,10 @@ $horizontalPadding: layout.$gutter * 2;
         height: 2px;
         content: "";
         background: color.$gray;
+
+        @include mixins.sp {
+            top: layout.$gutter * -2;
+        }
     }
 
     h4 {
@@ -104,6 +117,10 @@ $horizontalPadding: layout.$gutter * 2;
         margin: #{layout.$gutter * 6} auto auto;
         font-size: font.$sizeL;
         line-height: 1.4;
+
+        @include mixins.sp {
+            margin: #{layout.$gutter * 4} auto auto;
+        }
     }
 
     h4::after {
@@ -186,7 +203,6 @@ $horizontalPadding: layout.$gutter * 2;
         padding: 0 #{layout.$gutter};
         margin: auto;
         line-height: 1.4;
-        background: color.$whiteGray;
         background: linear-gradient(
             to right,
             transparent,
@@ -207,6 +223,7 @@ $horizontalPadding: layout.$gutter * 2;
     }
 
     blockquote {
+        width: calc(100% - #{$horizontalPadding});
         margin: #{layout.$gutter * 3} auto #{layout.$gutter * 3} $horizontalPadding;
         font-style: italic;
         color: color.$dark;
@@ -234,6 +251,7 @@ $horizontalPadding: layout.$gutter * 2;
 
     img {
         display: block;
+        max-width: 100%;
         margin: auto;
     }
 }

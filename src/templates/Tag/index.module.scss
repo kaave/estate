@@ -6,8 +6,12 @@
 
 .inner {
     max-width: layout.$inner;
-    padding-top: layout.$gutter * 8;
+    padding: #{layout.$gutter * 8} #{layout.$gutter * 2};
     margin: auto;
+
+    @include mixins.sp {
+        padding: #{layout.$gutter * 3} #{layout.$gutter * 2};
+    }
 }
 
 .section {

@@ -3,10 +3,16 @@
 @use "variables/font";
 @use "variables/ease";
 @use "variables/breakPoint";
+@use "variables/layout";
+@use "variables/zIndex";
 
 .root {
     position: relative;
     width: 100%;
+
+    @include mixins.sp {
+        overflow: hidden;
+    }
 }
 
 .bg {
@@ -38,15 +44,20 @@ $percentList: 79, 88, 78, 90, 99, 98, 89, 97, 94, 82, 73, 93, 84, 98;
     display: flex;
     justify-content: space-between;
     max-width: breakPoint.$max;
-    padding: 0 1.6rem;
+    padding: 0 #{layout.$gutter * 2};
     margin: auto;
 }
 
-// .Header__left-pane
 .header {
-    font-size: 4rem;
+    font-size: font.$sizeHeaderPc;
     font-weight: font.$weightNormal;
     letter-spacing: 0.05em;
+
+    @include mixins.sp {
+        overflow: hidden;
+        font-size: font.$sizeHeader;
+        line-height: 1.8;
+    }
 }
 
 .headerLink {
@@ -55,18 +66,73 @@ $percentList: 79, 88, 78, 90, 99, 98, 89, 97, 94, 82, 73, 93, 84, 98;
 }
 
 .rightPane {
+    position: relative;
     display: flex;
     align-items: center;
 }
 
 .linkList {
     display: inline-flex;
-    font-size: 1.8rem;
+    font-size: font.$sizeL;
+
+    @include mixins.sp {
+        display: block;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 50%;
+    right: layout.$gutter * 2;
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    font-size: font.$sizeL;
+    transform: translateY(-50%);
+
+    @include mixins.notSp {
+        display: none;
+    }
+}
+
+.hamburger::before,
+.hamburger::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: currentColor;
+    transition: transform 100ms linear;
+    transform-origin: center;
+}
+
+.hamburger::before {
+    transform: translate3d(0, -2px, 0);
+}
+
+.hamburger::after {
+    transform: translate3d(0, 2px, 0);
+}
+
+.hamburger[aria-pressed]::before {
+    transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.hamburger[aria-pressed]::after {
+    transform: rotate3d(0, 0, 1, -45deg);
 }
 
 .linkCell {
+    @include mixins.sp {
+        display: block;
+    }
+
     & + & {
-        margin-left: 1.6rem;
+        @include mixins.notSp {
+            margin-left: 1.6rem;
+        }
     }
 }
 
@@ -76,31 +142,142 @@ $percentList: 79, 88, 78, 90, 99, 98, 89, 97, 94, 82, 73, 93, 84, 98;
     overflow: hidden;
     color: color.$black;
     text-decoration: none;
+
+    @include mixins.sp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: #{layout.$gutter * 2} 0;
+    }
 }
 
-.link::before {
-    opacity: 0.5;
+.linkInner {
+    position: relative;
+    display: inline-block;
+
+    @include mixins.sp {
+        transition: transform 200ms ease.$outExpo, opacity 200ms ease.$outExpo;
+    }
 }
 
-.link::after {
-    transition: transform 200ms ease.$outExpo;
-    transform: scale3d(0, 1, 1);
-    transform-origin: right;
+.modal[hidden] .linkInner {
+    opacity: 0;
+    transform: translate3d(-10vw, 0, 0);
 }
 
-.link:not([aria-current="page"])::before,
-.link:not([aria-current="page"])::after {
+@for $i from 1 through 4 {
+    .linkCell:nth-child(4n + #{$i}) .linkInner {
+        $transitionDelay: 60ms * ($i - 1) + 300ms;
+        transition-delay: #{$transitionDelay}, #{$transitionDelay};
+    }
+}
+
+.linkText {
+    position: relative;
+    z-index: 1;
+}
+
+@include mixins.notSp {
+    .linkText::before {
+        opacity: 0.5;
+    }
+
+    .linkText::after {
+        transition: transform 200ms ease.$outExpo;
+        transform: scale3d(0, 1, 1);
+        transform-origin: right;
+    }
+
+    .link:not([aria-current="page"]) .linkText::before,
+    .link:not([aria-current="page"]) .linkText::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        content: "";
+        background: currentColor;
+    }
+
+    .link:active .linkText::after,
+    .link:hover .linkText::after {
+        transform: none;
+        transform-origin: left;
+    }
+}
+
+.linkBg {
     position: absolute;
+    top: -2px;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.linkBgLine {
+    display: block;
+    flex: 1 1 auto;
+    width: calc(100% + 20px);
+    background: color.$white;
+}
+
+$pxList: 40, 22, 48, 8, 19, 53, 34, 13, 16, 57, 47, 29, 53, 34, 13, 16;
+@for $i from 1 through length($pxList) {
+    .linkBgLine:nth-child(#{length($pxList)}n + #{$i}) {
+        transform: translateX(-#{nth($pxList, $i) / 3}px);
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: layout.$gutter * 6;
+    left: 0;
+    z-index: zIndex.$lv9;
+    display: block;
+}
+
+.modal[hidden] {
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.modalBg {
+    position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 1px;
-    content: "";
-    background: currentColor;
+    z-index: 0;
+    display: flex;
 }
 
-.link:active::after,
-.link:hover::after {
+.modalBgLine {
+    position: relative;
+    display: inline-block;
+    flex: 1 1 auto;
+    background: color.$gray;
+    opacity: 0.7;
+    backdrop-filter: blur(3px);
+    transition: transform 100ms;
     transform: none;
-    transform-origin: left;
+}
+
+@for $i from 1 through length($pxList) {
+    .modalBgLine:nth-child(#{length($pxList)}n + #{$i}) {
+        height: calc(100% + #{nth($pxList, $i) * 1.5}px);
+        transition-delay: 10ms * ($i - 1);
+    }
+
+    .modalBgLine:nth-child(#{length($pxList) }n + #{$i + length($pxList)}) {
+        height: calc(100% + #{nth($pxList, $i) * 1.3}px);
+        transition-delay: 10ms * ($i + length($pxList) - 1);
+    }
+}
+
+.modal[hidden] .modalBgLine {
+    transform: translate3d(0, -100%, 0);
 }

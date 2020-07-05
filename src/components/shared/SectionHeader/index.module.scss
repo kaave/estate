@@ -9,6 +9,10 @@
     font-size: font.$sizeSectionHeaderPc;
     font-weight: font.$weightNormal;
     letter-spacing: 0.3em;
+
+    @include mixins.sp {
+        font-size: font.$sizeSectionHeader;
+    }
 }
 
 .root[hidden] {
