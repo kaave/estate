@@ -31,3 +31,72 @@ body {
     }
 }
 /* stylelint-enable */
+
+.page-transition-enter,
+.page-transition-enter-active,
+.page-transition-exit,
+.page-transition-exit-active {
+    &::before,
+    &::after {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1000000000;
+        display: block;
+        content: "";
+        background: color.$light;
+        transition: transform 200ms linear;
+    }
+
+    &::before {
+        top: 0;
+        bottom: 50%;
+    }
+
+    &::after {
+        top: 50%;
+        bottom: 0;
+        transition-delay: 100ms;
+    }
+}
+
+.page-transition-exit-done {
+    &::before,
+    &::after {
+        content: none;
+    }
+}
+
+.page-transition-enter {
+    &::before,
+    &::after {
+        transform: none;
+    }
+}
+
+.page-transition-enter-active {
+    &::before {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    &::after {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.page-transition-exit {
+    &::before {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    &::after {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+.page-transition-exit-active {
+    &::before,
+    &::after {
+        transform: none;
+    }
+}

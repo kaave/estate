@@ -11,32 +11,32 @@
 /*
  * page change animation
  */
-:global .page-transition-enter {
-    :local .Main {
-        opacity: 0;
-        transform: scale3d(0.95, 0.95, 1);
-    }
-}
+// :global .page-transition-enter {
+//     :local .Main {
+//         opacity: 0;
+//         transform: scale3d(0.95, 0.95, 1);
+//     }
+// }
 
-:global .page-transition-enter-active {
-    :local .Main {
-        opacity: 1;
-        transition: all 300ms;
-        transform: none;
-    }
-}
+// :global .page-transition-enter-active {
+//     :local .Main {
+//         opacity: 1;
+//         transition: all 300ms;
+//         transform: none;
+//     }
+// }
 
-:global .page-transition-exit {
-    :local .Main {
-        opacity: 1;
-        transform: none;
-    }
-}
+// :global .page-transition-exit {
+//     :local .Main {
+//         opacity: 1;
+//         transform: none;
+//     }
+// }
 
-:global .page-transition-exit-active {
-    :local .Main {
-        opacity: 0;
-        transition: all 300ms;
-        transform: scale3d(0.95, 0.95, 1);
-    }
-}
+// :global .page-transition-exit-active {
+//     :local .Main {
+//         opacity: 0;
+//         transition: all 300ms;
+//         transform: scale3d(0.95, 0.95, 1);
+//     }
+// }

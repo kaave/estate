@@ -1,0 +1,239 @@
+@use "variables/color";
+@use "variables/font";
+@use "variables/layout";
+@use "mixins";
+
+$horizontalPaddingSp: 2vw;
+$horizontalPadding: layout.$gutter * 2;
+
+.root {
+    position: relative;
+    display: block;
+    max-width: layout.$inner;
+    margin: auto;
+    font-size: font.$sizeM;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+
+    & > * {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-right: $horizontalPaddingSp;
+        padding-left: $horizontalPaddingSp;
+
+        @include mixins.notSp {
+            padding-right: $horizontalPadding;
+            padding-left: $horizontalPadding;
+        }
+    }
+
+    & > [class*="language-"] {
+        width: calc(100% - #{layout.$gutter * 4});
+        margin: #{layout.$gutter * 3} auto;
+    }
+
+    @include mixins.sp {
+        & > [class*="language-"] {
+            max-width: none;
+        }
+    }
+
+    p {
+        margin-top: layout.$gutter * 2;
+    }
+
+    .header-anchor {
+        display: none;
+    }
+
+    a:not(.header-anchor) {
+        position: relative;
+        color: currentColor;
+        text-decoration: none;
+
+        @include mixins.notSp {
+            &:hover {
+                text-decoration-color: currentColor;
+            }
+        }
+    }
+
+    a:not(.header-anchor)::after {
+        position: absolute;
+        right: 0.1em;
+        bottom: 0;
+        left: 0.1em;
+        height: 1px;
+        content: "";
+        background: currentColor;
+    }
+
+    a:not(.header-anchor):not([target="_blank"]) {
+        &::before {
+            width: 100%;
+        }
+    }
+
+    a:not(.header-anchor) .icon {
+        margin: auto 0.2em;
+    }
+
+    h3 {
+        position: relative;
+        width: auto;
+        margin: #{layout.$gutter * 12} auto auto;
+        font-size: font.$sizeXL;
+    }
+
+    h3::before {
+        position: absolute;
+        top: layout.$gutter * -3;
+        left: $horizontalPadding;
+        width: 1em;
+        height: 2px;
+        content: "";
+        background: color.$gray;
+    }
+
+    h4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin: #{layout.$gutter * 6} auto auto;
+        font-size: font.$sizeL;
+        line-height: 1.4;
+    }
+
+    h4::after {
+        flex: 0 0 2em;
+        height: 1px;
+        margin-left: layout.$gutter * 2;
+        content: "";
+        background: linear-gradient(to right, color.$gray 70%, transparent);
+    }
+
+    h5 {
+        margin: #{layout.$gutter * 3} auto auto;
+        font-size: font.$sizeM;
+        line-height: 1.4;
+    }
+
+    h6 {
+        margin: #{layout.$gutter * 3} auto auto;
+        font-size: font.$sizeM;
+        font-weight: font.$weightNormal;
+        line-height: 1.4;
+    }
+
+    > ul,
+    > ul > li {
+        padding: 0;
+    }
+
+    > ul,
+    > ol {
+        width: calc(100% - 0.6em);
+        padding-left: 1.3em;
+        margin-top: layout.$gutter * 3;
+        margin-left: auto;
+    }
+
+    > ul li,
+    > ol li {
+        width: 100%;
+    }
+
+    > ul > li {
+        list-style-type: disc;
+    }
+
+    > ol > li {
+        list-style-type: decimal;
+    }
+
+    > ul ul,
+    > ul ol,
+    > ol ul,
+    > ol ol {
+        width: 100%;
+        padding-left: 1.3em;
+    }
+
+    > ul ul > li {
+        list-style-type: circle;
+    }
+
+    > ul ul ul > li {
+        list-style-type: square;
+    }
+
+    li > p {
+        margin: 0.5em 0;
+    }
+
+    hr {
+        width: 5em;
+        height: 1px;
+        padding: 0;
+        margin: #{layout.$gutter * 7} auto;
+        background: color.$gray;
+        border: 0;
+    }
+
+    code {
+        padding: 0 #{layout.$gutter};
+        margin: auto;
+        line-height: 1.4;
+        background: color.$whiteGray;
+        background: linear-gradient(
+            to right,
+            transparent,
+            color.$whiteGray #{layout.$gutter},
+            color.$whiteGray calc(100% - #{layout.$gutter}),
+            transparent
+        );
+
+        @include mixins.notSp {
+            font-size: 1.2em;
+        }
+    }
+
+    pre[class*="language-"] code {
+        padding: 0;
+        overflow: scroll;
+        background: transparent;
+    }
+
+    blockquote {
+        margin: #{layout.$gutter * 3} auto #{layout.$gutter * 3} $horizontalPadding;
+        font-style: italic;
+        color: color.$dark;
+    }
+
+    blockquote::before,
+    blockquote::after {
+        position: absolute;
+        width: 2px;
+        content: "";
+        background: color.$gray;
+    }
+
+    blockquote::before {
+        top: 0;
+        bottom: layout.$gutter;
+        left: 0;
+    }
+
+    blockquote::after {
+        top: layout.$gutter;
+        bottom: 0;
+        left: 4px;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+}
