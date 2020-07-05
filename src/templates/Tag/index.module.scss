@@ -1,0 +1,82 @@
+@use "variables/color";
+@use "variables/ease";
+@use "variables/font";
+@use "variables/layout";
+@use "mixins";
+
+.inner {
+    max-width: layout.$inner;
+    padding-top: layout.$gutter * 8;
+    margin: auto;
+}
+
+.section {
+    margin: #{layout.$gutter * 3} 0 #{layout.$gutter * 6};
+}
+
+.list {
+    margin-top: layout.$gutter * 3;
+}
+
+.row {
+    font-size: font.$sizeL;
+
+    & + & {
+        margin-top: layout.$gutter * 2;
+    }
+}
+
+.link {
+    position: relative;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.date {
+    display: inline-block;
+    margin-right: layout.$gutter * 2;
+    text-align: center;
+}
+
+.linkLine {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+}
+
+.linkLine::before,
+.linkLine::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+    transition: transform 200ms ease.$outExpo;
+    transform: scale3d(0, 1, 1);
+    transform-origin: right;
+}
+
+.linkLine::before {
+    z-index: 0;
+    background: color.$whiteGray;
+}
+
+.linkLine::after {
+    z-index: 1;
+    background: currentColor;
+    transition-delay: 100ms;
+}
+
+.link:active,
+.link:hover {
+    .linkLine::before,
+    .linkLine::after {
+        transform: none;
+        transform-origin: left;
+    }
+}
