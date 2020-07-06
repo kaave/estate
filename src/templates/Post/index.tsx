@@ -4,6 +4,7 @@ import type { Post } from '@domains/valueObjects/Post';
 import { Layout } from '@layouts/Default';
 import Link from 'next/link';
 import { useIntersectionObserver } from '@hooks/useIntersectionObserver';
+import { TweetButton } from '@components/shared/TweetButton';
 import { Content } from './parts/Content';
 import styles from './index.module.scss';
 
@@ -51,6 +52,9 @@ export const PostTemplate = ({ post: { title, post, published, thumbnail, tags }
           ) : null}
         </header>
         <Content code={post} />
+        <footer>
+          <TweetButton path={pathname} text={title} />
+        </footer>
       </article>
     </Layout>
   );
