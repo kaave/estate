@@ -10,23 +10,38 @@ import { PostTemplate } from '@templates/Post';
 
 type Props = {
   post?: Post;
+  prev: Post | null;
+  next: Post | null;
 };
-export default ({ post = getMockPost() }: Props) => {
+export default ({ post = getMockPost(), prev, next }: Props) => {
   const { published, ...rest } = post;
   const datetime = useMemo(() => format(new Date(published), 'yyyy/MM/dd'), [published]);
   const { asPath } = useRouter();
 
-  return <PostTemplate post={{ published: datetime, ...rest }} pathname={asPath} />;
+  return (
+    <PostTemplate
+      post={{ published: datetime, ...rest }}
+      pathname={asPath}
+      prev={prev ?? undefined}
+      next={next ?? undefined}
+    />
+  );
 };
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   const published = ctx.params?.published;
-  if (!published) return { props: { post: getMockPost() } };
+  if (!published) return { props: { post: getMockPost(), prev: null, next: null } };
   const { default: post } = (await import(`../../../../public/static/posts/${published}.json`)) as { default: RawPost };
+  const { default: rawPosts } = await import('../../../../public/static/posts/all.json');
+
+  const posts = rawPosts.map((rawPost) => normalizePost(rawPost));
+  const currentIndex = posts.findIndex((post) => post.published === published);
 
   return {
     props: {
       post: normalizePost(post),
+      prev: posts[currentIndex - 1] ?? null,
+      next: posts[currentIndex + 1] ?? null,
     },
   };
 };

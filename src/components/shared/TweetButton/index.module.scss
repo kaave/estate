@@ -1,0 +1,16 @@
+@use "variables/color";
+@use "variables/ease";
+
+.root {
+    position: relative;
+    display: inline-block;
+    transition: color 400ms ease.$outExpo;
+}
+
+.root:hover {
+    color: #1da1f2;
+}
+
+.root > svg {
+    fill: currentColor;
+}

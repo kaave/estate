@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Twitter } from '@components/icon/Twitter';
 import * as configs from '@utils/configs';
+import styles from './index.module.scss';
 
 type Props = {
   path: string;
@@ -11,6 +12,7 @@ type Props = {
 
 export const TweetButton = ({ path, text, size = 24 }: Props) => (
   <a
+    className={styles.root}
     href={`https://twitter.com/share?url=${configs.baseUrl + path}${
       text ? `&text=${encodeURIComponent(`${text} | ${configs.title}`)}` : ''
     }`}

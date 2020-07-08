@@ -11,9 +11,11 @@ import styles from './index.module.scss';
 type Props = {
   post: Post;
   pathname: string;
+  prev?: Pick<Post, 'title' | 'published'>;
+  next?: Pick<Post, 'title' | 'published'>;
 };
 
-export const PostTemplate = ({ post: { title, post, published, thumbnail, tags }, pathname }: Props) => {
+export const PostTemplate = ({ post: { title, post, published, thumbnail, tags }, pathname, prev, next }: Props) => {
   const headingRef = useRef<HTMLElement>(null);
   const [headingHidden, setHeadingHidden] = useState(true);
   const { unobserve } = useIntersectionObserver(
@@ -52,8 +54,26 @@ export const PostTemplate = ({ post: { title, post, published, thumbnail, tags }
           ) : null}
         </header>
         <Content code={post} />
-        <footer>
-          <TweetButton path={pathname} text={title} />
+        <footer className={styles.footer}>
+          <div className={styles.sns}>
+            <TweetButton path={pathname} text={title} />
+          </div>
+          <nav className={styles.footerNav}>
+            {prev ? (
+              <Link href="/posts/[published]" as={`/posts/${prev.published}`}>
+                <a className={styles.move} data-to="prev">
+                  {prev.title}
+                </a>
+              </Link>
+            ) : undefined}
+            {next ? (
+              <Link href="/posts/[published]" as={`/posts/${next.published}`}>
+                <a className={styles.move} data-to="next">
+                  {next.title}
+                </a>
+              </Link>
+            ) : undefined}
+          </nav>
         </footer>
       </article>
     </Layout>
