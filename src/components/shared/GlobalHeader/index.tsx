@@ -1,10 +1,9 @@
 import React, { useMemo } from 'react';
 import Link from 'next/link';
-
 import { createPortal } from 'react-dom';
-import styles from './index.module.scss';
 
-const links = ['about', 'posts', 'slides', 'contact'] as const;
+import { links } from '@utils/links';
+import styles from './index.module.scss';
 
 const height = 4;
 const spans = [...Array(56 / height).keys()];

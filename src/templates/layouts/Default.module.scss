@@ -1,3 +1,8 @@
+@use "variables/color";
+// @use "variables/ease";
+// @use "variables/font";
+// @use "variables/layout";
+
 .Inner {
     height: 100vh;
     -webkit-overflow-scrolling: touch;
@@ -6,6 +11,7 @@
 
 .Main {
     // grid-area: GlobalMain;
+    min-height: calc(100vh - 150px); // header + footer分を雑に計算
 }
 
 /*
