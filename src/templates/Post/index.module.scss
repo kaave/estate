@@ -20,8 +20,16 @@
     position: relative;
     display: block;
     width: 100%;
-    font-size: 3vw;
     color: color.$white;
+
+    @include mixins.notSp {
+        min-height: 70vh;
+        font-size: 2.5vw;
+        background-color: color.$black;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
     @include mixins.sp {
         font-size: 4vw;
@@ -113,7 +121,7 @@
     @include mixins.sp {
         right: layout.$gutter;
         bottom: layout.$gutter;
-        font-size: font.$sizeM;
+        font-size: font.$sizeXS;
     }
 }
 
