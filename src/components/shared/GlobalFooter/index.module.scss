@@ -30,6 +30,11 @@
     letter-spacing: 0.05em;
 }
 
+.headerLink {
+    color: currentColor;
+    text-decoration: none;
+}
+
 .nav {
     display: block;
     grid-area: footer-nav;
