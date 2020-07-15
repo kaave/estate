@@ -7,7 +7,7 @@ import { ErrorBoundary } from '@components/utils/ErrorBoundary';
 import { formatString } from '@utils/formatString';
 import { GlobalFooter } from '@components/shared/GlobalFooter';
 import { GlobalHeader } from '@components/shared/GlobalHeader';
-import styles from './default.module.scss';
+import styles from './Default.module.scss';
 
 type Props = {
   appendTitles?: string[];
