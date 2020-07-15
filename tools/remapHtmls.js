@@ -14,9 +14,9 @@ async function main(targetFolder) {
     const savePath = path.join(__dirname, '..', to);
     const saveDir = path.dirname(savePath);
 
-    if (await fs.pathExists(saveDir)) {
-      await fs.remove(saveDir);
-    }
+    // if (await fs.pathExists(saveDir)) {
+    //   await fs.remove(saveDir);
+    // }
 
     await fs.mkdirp(saveDir);
     await fs.writeFile(savePath, source.toString());

@@ -5,9 +5,10 @@ const DotenvWebpack = require('dotenv-webpack');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const withOptimizedImages = require('next-optimized-images');
-const withPurgeCss = require('next-purgecss');
 const dartSass = require('sass');
 const fibers = require('fibers');
+
+const production = process.env.NODE_ENV === 'production';
 
 function webpack(config, { dev, isServer }) {
   config.resolve = config.resolve || {};
@@ -94,20 +95,13 @@ const optimizedImagesOptions = {
   },
 };
 
-const purgeCssOptions = {
-  purgeCss: {
-    paths: glob.sync(path.join(__dirname, 'src', '**', '*'), { nodir: true }),
-  },
-};
-
 const nextOptions = {
   webpack,
   ...analyzerOptions,
   ...optimizedImagesOptions,
-  ...purgeCssOptions,
   cssLoaderOptions: {
     // importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
+    localIdentName: `${!production ? '[local]___' : ''}[hash:base64:5]`,
   },
   reactStrictMode: true,
   // ...workboxOptions,
@@ -126,7 +120,7 @@ const nextOptions = {
   // },
 };
 
-module.exports = [withOptimizedImages, withBundleAnalyzer, withPurgeCss].reduce(
+module.exports = [withOptimizedImages, withBundleAnalyzer].reduce(
   (acc, fn) => (acc == null ? fn(nextOptions) : fn(acc)),
   null,
 );

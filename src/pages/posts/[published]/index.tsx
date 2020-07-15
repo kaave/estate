@@ -51,6 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = posts.map(({ fields: { published } }) => ({ params: { published } }));
   return {
     paths,
-    fallback: true,
+    // fallback: true,
+    fallback: false,
   };
 };
