@@ -14,20 +14,33 @@
 
 .inner {
     max-width: 1200px;
-    padding: #{layout.$gutter * 5} #{layout.$gutter * 2};
+    padding: #{layout.$gutter * 8} #{layout.$gutter * 5};
     margin: auto;
+
+    @include mixins.sp {
+        padding: #{layout.$gutter * 5} #{layout.$gutter * 3};
+    }
 }
 
 :global .-first-view {
     :local .inner {
         padding-top: layout.$gutter * 30;
         padding-bottom: layout.$gutter * 30;
+
+        @include mixins.sp {
+            padding-top: layout.$gutter * 20;
+            padding-bottom: layout.$gutter * 20;
+        }
     }
 }
 
 .postContainer {
     display: block;
     padding-top: layout.$gutter * 7;
+
+    @include mixins.sp {
+        padding-top: layout.$gutter * 3;
+    }
 }
 
 .post {
@@ -72,6 +85,10 @@
 .contentsList {
     padding: #{layout.$gutter * 3} 0;
     font-size: font.$sizeXL;
+
+    @include mixins.sp {
+        font-size: font.$sizeM;
+    }
 }
 
 .contentsList:empty {
@@ -90,6 +107,10 @@
 .contentsTitle {
     display: inline-block;
     width: layout.$gutter * 12;
+
+    @include mixins.sp {
+        width: layout.$gutter * 8;
+    }
 }
 
 .contentsDescription {

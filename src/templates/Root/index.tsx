@@ -14,7 +14,7 @@ import styles from './index.module.scss';
 const linkDescriptions: Record<typeof links[number], string> = {
   about: 'わたくしについてです',
   posts: '過去の投稿一覧です',
-  slides: '作ったスライド一覧です（工事中）',
+  slides: '（工事中）',
   contact: '連絡先一覧です',
 };
 
