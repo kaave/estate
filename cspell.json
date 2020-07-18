@@ -22,6 +22,7 @@
         "futan",
         "fontfaceobserver",
         "prismjs",
+        "clsx",
         // web words
         "tabindex",
         // engineering words

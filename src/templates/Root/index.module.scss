@@ -1,0 +1,106 @@
+@use "variables/color";
+@use "variables/ease";
+@use "variables/font";
+@use "variables/layout";
+@use "mixins";
+
+.section {
+    width: 100%;
+
+    & + & {
+        border-top: 1px solid #{color.$whiteDark};
+    }
+}
+
+.inner {
+    max-width: 1200px;
+    padding: #{layout.$gutter * 5} #{layout.$gutter * 2};
+    margin: auto;
+}
+
+:global .-first-view {
+    :local .inner {
+        padding-top: layout.$gutter * 30;
+        padding-bottom: layout.$gutter * 30;
+    }
+}
+
+.postContainer {
+    display: block;
+    padding-top: layout.$gutter * 7;
+}
+
+.post {
+    display: block;
+    width: 100%;
+    max-width: layout.$gutter * 45;
+    margin: auto;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.postThumbnailWrapper {
+    overflow: hidden;
+}
+
+.postThumbnail {
+    display: block;
+    transition: transform 600ms ease.$outExpo;
+}
+
+.post:hover .postThumbnail {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.postDate {
+    display: block;
+    margin: #{layout.$gutter * 2} auto #{layout.$gutter};
+}
+
+.postTitle {
+    background-image: linear-gradient(to right, currentColor 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 200% 1px;
+    transition: background-position 600ms ease.$outExpo;
+}
+
+.post:hover .postTitle {
+    background-position-x: 0;
+}
+
+.contentsList {
+    padding: #{layout.$gutter * 3} 0;
+    font-size: font.$sizeXL;
+}
+
+.contentsList:empty {
+    display: none;
+}
+
+.contentsCell {
+    margin: #{layout.$gutter} 0;
+}
+
+.contentsLink {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.contentsTitle {
+    display: inline-block;
+    width: layout.$gutter * 12;
+}
+
+.contentsDescription {
+    display: inline-block;
+    background-image: linear-gradient(to right, currentColor 50%, transparent 50%);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 200% 1px;
+    transition: background-position 600ms ease.$outExpo;
+}
+
+.contentsLink:hover .contentsDescription {
+    background-position-x: 0;
+}

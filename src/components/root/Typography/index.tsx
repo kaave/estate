@@ -36,7 +36,7 @@ export const Typography = ({
       <title id={id.title}>{source}</title>
       <defs>
         <filter id={id.filter} x="0" y="0">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="3 0.2" />
+          <feGaussianBlur in="SourceGraphic" stdDeviation="7 0.4" />
         </filter>
       </defs>
       <g fontSize={fontSize} fontFamily={fontFamily} fontWeight={fontWeight} strokeWidth={0.15} role="presentation">
