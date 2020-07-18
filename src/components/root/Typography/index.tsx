@@ -9,17 +9,10 @@ type Props = {
   fontSize?: number;
 } & SVGAttributes<SVGElement>;
 
-const source = `
-I'm kaave
-web engineer.
-`
-  .trim()
-  .split('\n');
-
-const offset = { height: 4 } as const;
+const source = `I'm kaave, web engineer.`;
 
 export const Typography = ({
-  trackColor = '#335',
+  trackColor = '#ddd',
   trackInterval = 0.8,
   trackCount = 5,
   fontSize = 20,
@@ -27,32 +20,48 @@ export const Typography = ({
   fontWeight = 700,
   ...rest
 }: Props) => {
+  const id = useMemo(() => {
+    const prefix = Math.floor(Math.random() * 100_000_000_000).toString(36);
+    const keys = ['title', 'filter'];
+    return keys.reduce<{ [K in typeof keys[number]]: string }>(
+      (acc, target) => ({ ...acc, [target]: `${prefix}-${target}` }),
+      {},
+    );
+  }, []);
   const gradient = useMemo(() => [...Array(trackCount).keys()], [trackCount]);
-  const h = useMemo(() => fontSize * source.length + (fontSize / 4) * (source.length - 1), [fontSize]);
+  const h = useMemo(() => fontSize + fontSize / 4, [fontSize]);
 
   return (
-    <svg fill="transparent" viewBox={`0 0 110 ${h - (source.length - 3) * 3}`} {...rest}>
+    <svg fill="transparent" viewBox={`0 0 250 ${h}`} aria-labelledby={id.title} role="img" {...rest}>
+      <title id={id.title}>{source}</title>
+      <defs>
+        <filter id={id.filter} x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3 0.2" />
+        </filter>
+      </defs>
       <g fontSize={fontSize} fontFamily={fontFamily} fontWeight={fontWeight} strokeWidth={0.15} role="presentation">
         {gradient.map((i) => (
-          <g
+          <text
             key={i}
-            opacity={i !== gradient.length - 1 ? 0.08 * (i + 1) : 1}
-            style={i !== gradient.length - 1 ? { userSelect: 'none' } : {}}
-            {...(i !== gradient.length - 1 ? { stroke: trackColor } : { fill: 'currentColor' })}
+            style={{ userSelect: 'none' }}
+            x={trackInterval * i ** 1.8}
+            y={h - fontSize / 4}
+            letterSpacing={1.5}
+            stroke="currentColor"
+            opacity={0.5}
+            filter={`url(#${id.filter})`}
           >
-            {source.map((text, j) => (
-              <text
-                key={`${text} ${j}`}
-                x={trackInterval * i ** 1.8}
-                y={(h / source.length - offset.height) * (j + 1) + offset.height}
-                letterSpacing={-1.5}
-              >
-                {text}
-              </text>
-            ))}
-            ,
-          </g>
+            {source}
+          </text>
         ))}
+        <text
+          x={trackInterval * (gradient.length / 2) ** 1.8}
+          y={h - fontSize / 4}
+          letterSpacing={1.5}
+          fill="currentColor"
+        >
+          {source}
+        </text>
       </g>
     </svg>
   );
