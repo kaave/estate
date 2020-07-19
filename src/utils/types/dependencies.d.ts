@@ -1,1 +1,1 @@
-declare module 'next-page-transitions';
+// declare module 'next-page-transitions';

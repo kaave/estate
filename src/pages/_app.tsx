@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Router from 'next/router';
-import { PageTransition } from 'next-page-transitions';
 import FontFaceObserver from 'fontfaceobserver';
 
 import { pageView } from '@utils/gtag';
 import * as configs from '@utils/configs';
 
 import '@styles/index.scss';
+import { PageTransition } from '@components/shared/PageTransition';
 
 if (configs.googleAnalytics) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return

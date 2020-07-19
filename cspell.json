@@ -23,6 +23,7 @@
         "fontfaceobserver",
         "prismjs",
         "clsx",
+        "Unmount",
         // web words
         "tabindex",
         // engineering words
