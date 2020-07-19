@@ -137,6 +137,8 @@ module.exports = {
     'react/jsx-props-no-spreading': ['error', { exceptions: ['Head', 'Component'] }],
     // keyにindex使用禁止 わかってるけど使わざるを得ない場面が多い
     'react/no-array-index-key': 'off',
+    // optional な値の場合、default propsを要求 古い
+    'react/require-default-props': 'off',
     // Checks rules of Hooks
     'react-hooks/rules-of-hooks': 'error',
     // Checks effect dependencies
@@ -169,5 +171,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     // interfaceでOKなものをtypeで書いてたら怒る 無効化 今っぽくない
     '@typescript-eslint/prefer-interface': 'off',
+    // 公開メソッドの戻り値を推論してたら怒る 無効化
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import type { ErrorInfo } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 type Props = {};
 type State = {
   error: boolean;

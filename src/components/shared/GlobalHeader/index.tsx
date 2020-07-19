@@ -78,7 +78,7 @@ const Modal = ({ visibleModal, current }: Pick<Props, 'visibleModal' | 'current'
   );
 };
 
-const LinkCell = ({ link, current, bgLine }: { link: string; current: boolean; bgLine?: boolean }) => (
+const LinkCell = ({ link, current, bgLine = false }: { link: string; current: boolean; bgLine?: boolean }) => (
   <li className={styles.linkCell}>
     <Link href={`/${link}`}>
       <a className={styles.link} aria-current={current ? 'page' : undefined}>

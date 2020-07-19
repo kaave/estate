@@ -30,7 +30,7 @@ export default ({ post = getMockPost(), prev, next }: Props) => {
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   const published = ctx.params?.published;
-  if (!published) return { props: { post: getMockPost(), prev: null, next: null } };
+  if (typeof published !== 'string') return { props: { post: getMockPost(), prev: null, next: null } };
   const { default: post } = (await import(`../../../../public/static/posts/${published}.json`)) as { default: RawPost };
   const { default: rawPosts } = await import('../../../../public/static/posts/all.json');
 
