@@ -13,6 +13,12 @@
         "Martijn",
         "Swaagman",
         "Wantedly",
+        "Googlebot",
+        "Bingbot",
+        "Baiduspider",
+        "YandexBot",
+        "Exabot",
+        "facebot",
         // external scopes
         "stylelint",
         "monokai",
