@@ -15,8 +15,14 @@ if (configs.googleAnalytics) {
   Router.events.on('routeChangeComplete', (url: string) => pageView(url));
 }
 
-const App = ({ Component, pageProps, router }: AppProps) => {
-  const nodeRef = useRef(null);
+type Props = AppProps & {
+  Component: AppProps['Component'] & {
+    onInit?: () => Promise<unknown>;
+  };
+};
+
+const App = ({ Component, pageProps, router }: Props) => {
+  const nodeRef = useRef<HTMLDivElement>(null);
   const [fontInitialized, setFontInitialized] = useState(false);
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -31,13 +37,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
 
   return (
     <SwitchTransition>
-      <CSSTransition
-        key={router.asPath}
-        nodeRef={nodeRef}
-        timeout={300}
-        classNames="page-transition"
-        // addEndListener={(c, cb) => console.log(c, cb)}
-      >
+      <CSSTransition key={router.asPath} nodeRef={nodeRef} timeout={300} classNames="page-transition">
         <div ref={nodeRef} className="wrapper" hidden={visible || undefined}>
           <Component {...pageProps} />
         </div>
