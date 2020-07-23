@@ -37,6 +37,9 @@ export const SectionHeader = ({ children: text, lineCount = 12, hidden = false, 
     threshold: [0, 1],
   });
   useEffect(() => {
+    if (!onIntersect) unobserve();
+  }, [onIntersect, unobserve]);
+  useEffect(() => {
     if (prevHidden.current && !hidden) {
       prevHidden.current = hidden;
       unobserve();

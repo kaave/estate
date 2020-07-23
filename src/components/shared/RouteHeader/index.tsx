@@ -29,6 +29,9 @@ export const RouteHeader = ({ children, pattern, lineCount = 16, hidden = false,
       unobserve();
     }
   }, [hidden, unobserve]);
+  useEffect(() => {
+    if (!onIntersect) unobserve();
+  }, [onIntersect, unobserve]);
 
   return (
     <h2 ref={ref} className={styles.root} data-background-pattern={pattern} hidden={hidden || undefined}>
