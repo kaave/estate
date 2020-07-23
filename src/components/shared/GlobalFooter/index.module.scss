@@ -12,12 +12,6 @@
 
 .inner {
     position: relative;
-    display: grid;
-    grid-template:
-        "footer-header footer-header" auto
-        "footer-nav footer-copyright" auto /
-        auto auto;
-    gap: #{layout.$gutter * 3} 0;
     max-width: breakPoint.$max;
     padding: 0 #{layout.$gutter * 2};
     margin: auto;
@@ -25,7 +19,6 @@
 }
 
 .header {
-    grid-area: footer-header;
     font-weight: font.$weightNormal;
     letter-spacing: 0.05em;
 }
@@ -35,9 +28,14 @@
     text-decoration: none;
 }
 
+.bottomPane {
+    display: flex;
+    justify-content: space-between;
+    margin-top: #{layout.$gutter * 3};
+}
+
 .nav {
     display: block;
-    grid-area: footer-nav;
 }
 
 .cell {
@@ -86,7 +84,6 @@
 }
 
 .copyright {
-    grid-area: footer-copyright;
     text-align: right;
 }
 

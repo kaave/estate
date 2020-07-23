@@ -17,22 +17,24 @@ export const GlobalFooter = ({ current }: Props) => (
           <a className={styles.headerLink}>{configs.title}</a>
         </Link>
       </h2>
-      <nav className={styles.nav}>
-        <ul className={styles.list}>
-          {links.map((link) => (
-            <li key={link} className={styles.cell}>
-              <Link href={`/${link}`}>
-                <a className={styles.link} aria-current={current === link ? 'page' : undefined}>
-                  <span className={styles.linkText}>{link}</span>
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <p className={styles.copyright}>
-        <small className={styles.copyrightText}>© kaave</small>
-      </p>
+      <div className={styles.bottomPane}>
+        <nav className={styles.nav}>
+          <ul className={styles.list}>
+            {links.map((link) => (
+              <li key={link} className={styles.cell}>
+                <Link href={`/${link}`}>
+                  <a className={styles.link} aria-current={current === link ? 'page' : undefined}>
+                    <span className={styles.linkText}>{link}</span>
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <p className={styles.copyright}>
+          <small className={styles.copyrightText}>© kaave</small>
+        </p>
+      </div>
     </div>
   </footer>
 );
