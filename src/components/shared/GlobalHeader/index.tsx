@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { createPortal } from 'react-dom';
 
 import { links } from '@utils/links';
+import * as configs from '@utils/configs';
 import styles from './index.module.scss';
 
 const height = 4;
@@ -27,7 +28,7 @@ export const GlobalHeader = ({ onClickHamburger, visibleModal, current }: Props)
         <div className={styles.leftPane}>
           <Link href="/">
             <a className={styles.headerLink}>
-              <h1 className={styles.header}>kaave.info</h1>
+              <h1 className={styles.header}>{configs.title}</h1>
             </a>
           </Link>
         </div>
