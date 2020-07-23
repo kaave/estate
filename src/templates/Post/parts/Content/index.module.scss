@@ -205,10 +205,10 @@ $horizontalPadding: layout.$gutter * 2;
         line-height: 1.4;
         background: linear-gradient(
             to right,
-            transparent,
+            color.$white,
             color.$whiteGray #{layout.$gutter},
             color.$whiteGray calc(100% - #{layout.$gutter}),
-            transparent
+            color.$white
         );
 
         @include mixins.notSp {

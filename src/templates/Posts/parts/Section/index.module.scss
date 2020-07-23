@@ -66,11 +66,13 @@
     transition-delay: 100ms;
 }
 
-.link:active,
-.link:hover {
-    .linkLine::before,
-    .linkLine::after {
-        transform: none;
-        transform-origin: left;
+@include mixins.notSp {
+    .link:active,
+    .link:hover {
+        .linkLine::before,
+        .linkLine::after {
+            transform: none;
+            transform-origin: left;
+        }
     }
 }

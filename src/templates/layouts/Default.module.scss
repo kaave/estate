@@ -1,9 +1,13 @@
+@use "mixins";
+
 .Inner {
     height: 100vh;
     -webkit-overflow-scrolling: touch;
     overflow: hidden auto;
 }
 
-.Main {
-    min-height: calc(100vh - 150px); // header + footer分を雑に計算
+@include mixins.notSp {
+    .Main {
+        min-height: calc(100vh - 150px); // header + footer分を雑に計算
+    }
 }

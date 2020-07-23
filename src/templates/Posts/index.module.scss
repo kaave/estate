@@ -9,6 +9,6 @@
     margin: auto;
 
     @include mixins.sp {
-        padding: #{layout.$gutter * 3} #{layout.$gutter * 2};
+        padding: #{layout.$gutter * 5} #{layout.$gutter * 2};
     }
 }
