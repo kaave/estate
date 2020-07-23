@@ -3,16 +3,15 @@
 import React, { useMemo, SVGAttributes } from 'react';
 
 type Props = {
-  trackColor?: string;
   trackInterval?: number;
   trackCount?: number;
   fontSize?: number;
 } & SVGAttributes<SVGElement>;
 
 const source = `I'm kaave, web engineer.`;
+const sourceJp = `安部亨佑です。Webエンジニアやってます。`;
 
 export const Typography = ({
-  trackColor = '#ddd',
   trackInterval = 0.8,
   trackCount = 5,
   fontSize = 20,
@@ -29,10 +28,12 @@ export const Typography = ({
     );
   }, []);
   const gradient = useMemo(() => [...Array(trackCount).keys()], [trackCount]);
+  const w = 250;
   const h = useMemo(() => fontSize + fontSize / 4, [fontSize]);
+  const jpOffsetHeight = fontSize * 0.7;
 
   return (
-    <svg fill="transparent" viewBox={`0 0 250 ${h}`} aria-labelledby={id.title} role="img" {...rest}>
+    <svg fill="transparent" viewBox={`0 0 ${w} ${h + jpOffsetHeight}`} aria-labelledby={id.title} role="img" {...rest}>
       <title id={id.title}>{source}</title>
       <defs>
         <filter id={id.filter} x="0" y="0">
@@ -61,6 +62,38 @@ export const Typography = ({
           fill="currentColor"
         >
           {source}
+        </text>
+      </g>
+      <g
+        fontSize={fontSize / 2.5}
+        fontFamily={fontFamily}
+        fontWeight={fontWeight}
+        strokeWidth={0.15}
+        role="presentation"
+        transform={`translate(${w * 0.1} 0)`}
+        style={{ color: '#4b5257' }}
+      >
+        {gradient.map((i) => (
+          <text
+            key={i}
+            style={{ userSelect: 'none' }}
+            x={trackInterval * i ** 1.8}
+            y={h - fontSize / 4 + jpOffsetHeight}
+            letterSpacing={1.5}
+            stroke="currentColor"
+            opacity={0.5}
+            filter={`url(#${id.filter})`}
+          >
+            {sourceJp}
+          </text>
+        ))}
+        <text
+          x={trackInterval * (gradient.length / 2) ** 1.8}
+          y={h - fontSize / 4 + jpOffsetHeight}
+          letterSpacing={1.5}
+          fill="currentColor"
+        >
+          {sourceJp}
         </text>
       </g>
     </svg>
