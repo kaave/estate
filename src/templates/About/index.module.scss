@@ -8,6 +8,7 @@
     max-width: layout.$inner;
     padding: #{layout.$gutter * 8} #{layout.$gutter * 2};
     margin: auto;
+    font-size: font.$sizeM;
 
     @include mixins.sp {
         padding: #{layout.$gutter * 5} #{layout.$gutter * 2};

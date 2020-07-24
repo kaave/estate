@@ -10,25 +10,30 @@ type Props = {
   pathname: string;
 };
 
+const reducer = (
+  state: { [K in 'hiddenAbout' | 'hiddenSkills' | 'hiddenLikes']: boolean },
+  action: { type: 'intersectAbout' | 'intersectSkills' | 'intersectLikes' },
+) => {
+  switch (action.type) {
+    case 'intersectAbout':
+      return { ...state, hiddenAbout: false };
+    case 'intersectSkills':
+      return { ...state, hiddenSkills: false };
+    case 'intersectLikes':
+      return { ...state, hiddenLikes: false };
+    default:
+      return state;
+  }
+};
+
+const initialState = {
+  hiddenAbout: true,
+  hiddenSkills: true,
+  hiddenLikes: true,
+} as const;
+
 export const AboutTemplate = ({ pathname }: Props) => {
-  const [{ hiddenAbout, hiddenSkills, hiddenLikes }, dispatch] = useReducer(
-    (
-      state: { [K in 'hiddenAbout' | 'hiddenSkills' | 'hiddenLikes']: boolean },
-      action: { type: 'intersectAbout' | 'intersectSkills' | 'intersectLikes' },
-    ) => {
-      switch (action.type) {
-        case 'intersectAbout':
-          return { ...state, hiddenAbout: false };
-        case 'intersectSkills':
-          return { ...state, hiddenSkills: false };
-        case 'intersectLikes':
-          return { ...state, hiddenLikes: false };
-        default:
-          return state;
-      }
-    },
-    { hiddenAbout: true, hiddenSkills: true, hiddenLikes: true },
-  );
+  const [{ hiddenAbout, hiddenSkills, hiddenLikes }, dispatch] = useReducer(reducer, initialState);
   const handleIntersectAbout = useCallback(() => dispatch({ type: 'intersectAbout' }), []);
   const handleIntersectSkills = useCallback(() => dispatch({ type: 'intersectSkills' }), []);
   const handleIntersectLikes = useCallback(() => dispatch({ type: 'intersectLikes' }), []);
