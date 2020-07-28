@@ -11,10 +11,12 @@ type Props = {
   posts: Post[];
 };
 
-export default ({ tag = '', posts = [] }: Props) => {
+const TagPage = ({ tag = '', posts = [] }: Props) => {
   const { asPath } = useRouter();
   return <TagTemplate tag={tag} posts={posts} pathname={asPath} />;
 };
+
+export default TagPage;
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   const tag = ctx.params?.tag;

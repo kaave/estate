@@ -10,7 +10,9 @@ type Props = {
   tags?: { tag: string; count: number }[];
 };
 
-export default ({ posts = [], tags = [] }: Props) => <RootTemplate posts={posts} tags={tags} />;
+const IndexPage = ({ posts = [], tags = [] }: Props) => <RootTemplate posts={posts} tags={tags} />;
+
+export default IndexPage;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: posts } = await import(`../../public/static/posts/all.json`);

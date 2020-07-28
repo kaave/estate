@@ -3,8 +3,10 @@ import { useRouter } from 'next/router';
 
 import { AboutTemplate } from '@templates/About';
 
-export default () => {
+const AboutPage = () => {
   const { asPath } = useRouter();
 
   return <AboutTemplate pathname={asPath} />;
 };
+
+export default AboutPage;

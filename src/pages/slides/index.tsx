@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { Layout } from '@layouts/Default';
 
-export default () => {
+const SlidesPage = () => {
   const { asPath } = useRouter();
 
   return (
@@ -21,3 +21,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default SlidesPage;

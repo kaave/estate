@@ -11,12 +11,14 @@ type Props = {
   tags: Tags;
 };
 
-export default ({ tags }: Props) => {
+const TagsPage = ({ tags }: Props) => {
   const orderedTags = useMemo(() => Object.entries(tags).sort().reverse(), [tags]);
   const { asPath } = useRouter();
 
   return <TagsTemplate tags={orderedTags} pathname={asPath} />;
 };
+
+export default TagsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: rawPosts } = await import('../../../public/static/posts/all.json');

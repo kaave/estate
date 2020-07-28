@@ -12,12 +12,14 @@ type Props = {
   posts: Posts;
 };
 
-export default ({ posts }: Props) => {
+const PostsPage = ({ posts }: Props) => {
   const orderedPosts = useMemo(() => Object.entries(posts).sort().reverse(), [posts]);
   const { asPath } = useRouter();
 
   return <PostsTemplate posts={orderedPosts} pathname={asPath} />;
 };
+
+export default PostsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const { default: rawPosts } = await import('../../../public/static/posts/all.json');

@@ -13,7 +13,8 @@ type Props = {
   prev: Post | null;
   next: Post | null;
 };
-export default ({ post = getMockPost(), prev, next }: Props) => {
+
+const PostPage = ({ post = getMockPost(), prev, next }: Props) => {
   const { published, ...rest } = post;
   const datetime = useMemo(() => format(new Date(published), 'yyyy/MM/dd'), [published]);
   const { asPath } = useRouter();
@@ -27,6 +28,8 @@ export default ({ post = getMockPost(), prev, next }: Props) => {
     />
   );
 };
+
+export default PostPage;
 
 export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   const published = ctx.params?.published;
