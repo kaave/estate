@@ -19,6 +19,10 @@
         "YandexBot",
         "Exabot",
         "facebot",
+        "stylis",
+        "nuxt",
+        "wasm",
+        "inno",
         // external scopes
         "stylelint",
         "monokai",

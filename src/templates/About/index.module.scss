@@ -9,12 +9,70 @@
     padding: #{layout.$gutter * 8} #{layout.$gutter * 2};
     margin: auto;
     font-size: font.$sizeM;
+    line-height: 1.8;
 
     @include mixins.sp {
         padding: #{layout.$gutter * 5} #{layout.$gutter * 2};
     }
 }
 
+.link {
+    color: currentColor;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, currentColor 0%, currentColor 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 1px;
+}
+
 .desc {
-    margin: #{layout.$gutter * 3} 0 #{layout.$gutter * 6};
+    margin-top: layout.$gutter * 2;
+}
+
+.section {
+    margin-top: layout.$gutter * 6;
+
+    @include mixins.sp {
+        margin: #{layout.$gutter * 4} auto auto;
+    }
+}
+
+.introduction {
+    margin-top: layout.$gutter * 2;
+}
+
+.skillHeading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: #{layout.$gutter * 6} auto auto;
+    font-size: font.$sizeL;
+    line-height: 1.4;
+
+    @include mixins.sp {
+        margin: #{layout.$gutter * 4} auto auto;
+    }
+}
+
+.skillHeading::after {
+    display: block;
+    flex: 1 0 auto;
+    height: 1px;
+    margin-left: layout.$gutter * 2;
+    content: "";
+    background: linear-gradient(to right, color.$gray 70%, transparent);
+}
+
+.skillSectionDescription {
+    margin-top: layout.$gutter * 2;
+}
+
+.subject {
+    margin-top: layout.$gutter * 3;
+    font-size: font.$sizeM;
+    line-height: 1.4;
+}
+
+.paragraph {
+    margin-top: layout.$gutter * 2;
 }
