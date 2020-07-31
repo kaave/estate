@@ -51,7 +51,7 @@ $percentList: 79, 88, 78, 90, 99, 98, 89, 97, 94, 82, 73, 93, 84, 98;
 .header {
     font-size: font.$sizeHeaderPc;
     font-weight: font.$weightNormal;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 
     @include mixins.sp {
         overflow: hidden;

@@ -9,6 +9,7 @@ import { crawlerAccess } from '@utils/crawlers';
 import * as configs from '@utils/configs';
 
 import '@styles/index.scss';
+import Head from 'next/head';
 
 if (configs.googleAnalytics) {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
@@ -36,13 +37,18 @@ const App = ({ Component, pageProps, router }: Props) => {
   const visible = crawlerAccess || !fontInitialized;
 
   return (
-    <SwitchTransition>
-      <CSSTransition key={router.asPath} nodeRef={nodeRef} timeout={300} classNames="page-transition">
-        <div ref={nodeRef} className="wrapper" hidden={visible || undefined}>
-          <Component {...pageProps} />
-        </div>
-      </CSSTransition>
-    </SwitchTransition>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+      </Head>
+      <SwitchTransition>
+        <CSSTransition key={router.asPath} nodeRef={nodeRef} timeout={300} classNames="page-transition">
+          <div ref={nodeRef} className="wrapper" hidden={visible || undefined}>
+            <Component {...pageProps} />
+          </div>
+        </CSSTransition>
+      </SwitchTransition>
+    </>
   );
 };
 

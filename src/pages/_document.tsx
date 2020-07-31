@@ -19,7 +19,6 @@ class ModifiedDocument extends Document {
         <Head>
           <meta charSet="UTF-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta name="format-detection" content="email=no,telephone=no,address=no" />
           <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png" />
           <link rel="icon" type="image/png" href="/icon-192x192.png" />
