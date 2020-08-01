@@ -31,12 +31,12 @@ export const Head = ({
     {/* Google */}
     <meta itemProp="name" content={title} />
     <meta itemProp="description" content={description} />
-    <meta itemProp="image" content={image} />
+    {image ? <meta itemProp="image" content={image} /> : null}
 
     {/* facebook */}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    {image ? <meta property="og:image" content={image} /> : null}
     <meta property="og:url" content={url} />
     <meta property="og:type" content={type} />
 
@@ -45,7 +45,7 @@ export const Head = ({
     {twitterAccount ? <meta name="twitter:site" content={twitterAccount} /> : null}
     <meta name="twitter:description" content={description} />
     <meta name="twitter:card" content={card} />
-    <meta name="twitter:image" content={image} />
+    {image ? <meta name="twitter:image" content={image} /> : null}
     {children}
   </NextHead>
 );
