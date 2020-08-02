@@ -11,6 +11,7 @@ type Props = {
   type?: 'website' | 'article';
   card?: 'summary' | 'summary_large_image';
   twitterAccount?: string;
+  canonical?: boolean;
   children?: HTMLMetaElement[];
 };
 
@@ -22,11 +23,13 @@ export const Head = ({
   type = 'website',
   card = 'summary',
   twitterAccount = configs.authorTwitter,
+  canonical = configs.production,
   children,
 }: Props) => (
   <NextHead>
     <title>{title}</title>
     <meta name="description" content={description} />
+    {canonical ? <link key="canonical" rel="canonical" href={url} /> : null}
 
     {/* Google */}
     <meta itemProp="name" content={title} />

@@ -7,7 +7,9 @@ export const ogp = process.env.SITE_OGP || '';
 export const authorName = process.env.AUTHOR_NAME || '__SET_YOUR_NAME__';
 export const authorTwitter = process.env.AUTHOR_TWITTER;
 export const googleAnalytics = production ? process.env.GOOGLE_ANALYTICS : undefined;
-export const robots = process.env.ROBOTS || undefined;
+export const robots = production ? process.env.ROBOTS : undefined;
 
 // https://polyfill.io/v3/url-builder/
-export const polyfills = ['default', 'es2015', 'es2016', 'es2017', 'IntersectionObserver'].join('%2C');
+export const polyfills = ['default', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'IntersectionObserver'].join(
+  '%2C',
+);
