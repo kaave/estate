@@ -16,20 +16,13 @@ if (configs.googleAnalytics) {
   Router.events.on('routeChangeComplete', (url: string) => pageView(url));
 }
 
-type Props = AppProps & {
-  Component: AppProps['Component'] & {
-    onInit?: () => Promise<unknown>;
-  };
-};
-
-const App = ({ Component, pageProps, router }: Props) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   const nodeRef = useRef<HTMLDivElement>(null);
   const [fontInitialized, setFontInitialized] = useState(false);
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     (async () => {
-      const ffo = new FontFaceObserver('Crimson Text');
-      await ffo.load();
+      await new FontFaceObserver('Crimson Text').load();
       setFontInitialized(true);
     })();
   }, []);
