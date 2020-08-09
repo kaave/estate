@@ -4,7 +4,7 @@ import Router from 'next/router';
 import FontFaceObserver from 'fontfaceobserver';
 import type { AppProps } from 'next/app';
 
-import { pageView } from '@utils/gtag';
+import { pageView, timing } from '@utils/gtag';
 import { crawlerAccess } from '@utils/crawlers';
 import * as configs from '@utils/configs';
 
@@ -53,3 +53,16 @@ const App = ({ Component, pageProps, router }: Props) => {
 };
 
 export default App;
+
+export function reportWebVitals(metrics: {
+  id: string;
+  name: string;
+  startTime: number;
+  value: number;
+  label: 'web-vital' | 'custom';
+}) {
+  if (!configs.production) console.table(metrics);
+
+  const { name, value } = metrics;
+  timing(name, name === 'CLS' ? value * 1000 : value);
+}
