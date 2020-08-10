@@ -8,169 +8,10 @@
                     "id": "wc9q326cpg8b"
                 }
             },
-            "id": "uRchln7GeqPHyyKIJM0Ej",
+            "id": "3rXRX93SnhCmIRe9YApKAx",
             "type": "Entry",
-            "createdAt": "2020-04-12T03:53:58.050Z",
-            "updatedAt": "2020-04-14T14:46:37.006Z",
-            "environment": {
-                "sys": {
-                    "id": "master",
-                    "type": "Link",
-                    "linkType": "Environment"
-                }
-            },
-            "revision": 12,
-            "contentType": {
-                "sys": {
-                    "type": "Link",
-                    "linkType": "ContentType",
-                    "id": "published"
-                }
-            },
-            "locale": "en-US"
-        },
-        "fields": {
-            "published": "2020-04-09",
-            "title": "2020/4/9のエントリー レイアウト調整用サンプルエントリーです",
-            "post": "<h3>タイh3トル</h3>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。</p>\n<h4>タイh4トル</h4>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h4>タイh4トル</h4>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h5>タイh5トル</h5>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<h3>タイh3トル アゲイン</h3>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。</p>\n<h6>タイh6トル</h6>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。</p>\n<hr>\n<ul>\n<li>ul リスト</li>\n<li>表示\n<ul>\n<li>子</li>\n<li>子2\n<ul>\n<li>孫</li>\n<li>孫2</li>\n</ul>\n</li>\n<li>子3</li>\n</ul>\n</li>\n</ul>\n<ol>\n<li>ol リスト</li>\n<li>表示</li>\n<li>子</li>\n<li>子2<br>\n1. 孫<br>\n2. 孫2</li>\n<li>子3</li>\n</ol>\n<p>以下は <code>TypeScriptReact</code> (tsx)なコード↓</p>\n<pre class=\"language-tsx\"><code class=\"language-tsx\"><span class=\"token keyword\">import</span> <span class=\"token punctuation\">{</span> useEffect <span class=\"token punctuation\">}</span> <span class=\"token keyword\">from</span> <span class=\"token string\">'react'</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token keyword\">export</span> <span class=\"token keyword\">function</span> <span class=\"token function\">useGlobalKeydown</span><span class=\"token punctuation\">(</span><span class=\"token parameter\">callback<span class=\"token operator\">?</span><span class=\"token operator\">:</span> <span class=\"token punctuation\">(</span><span class=\"token parameter\">key<span class=\"token operator\">:</span> <span class=\"token builtin\">string</span></span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token keyword\">void</span></span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n  <span class=\"token function\">useEffect</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">if</span> <span class=\"token punctuation\">(</span><span class=\"token operator\">!</span>callback<span class=\"token punctuation\">)</span> <span class=\"token keyword\">return</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token keyword\">const</span> args <span class=\"token operator\">=</span> <span class=\"token punctuation\">[</span><span class=\"token string\">'keydown'</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">(</span><span class=\"token parameter\">e<span class=\"token operator\">:</span> KeyboardEvent</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> <span class=\"token function\">callback</span><span class=\"token punctuation\">(</span>e<span class=\"token punctuation\">.</span>key<span class=\"token punctuation\">)</span><span class=\"token punctuation\">,</span> <span class=\"token boolean\">true</span><span class=\"token punctuation\">]</span> <span class=\"token keyword\">as</span> <span class=\"token keyword\">const</span><span class=\"token punctuation\">;</span>\n    window<span class=\"token punctuation\">.</span><span class=\"token function\">addEventListener</span><span class=\"token punctuation\">(</span><span class=\"token operator\">...</span>args<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n\n    <span class=\"token comment\">// eslint-disable-next-line consistent-return</span>\n    <span class=\"token keyword\">return</span> <span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">=></span> window<span class=\"token punctuation\">.</span><span class=\"token function\">removeEventListener</span><span class=\"token punctuation\">(</span><span class=\"token operator\">...</span>args<span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n  <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span> <span class=\"token punctuation\">[</span>callback<span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n</code></pre>\n<h3>改行しつついろいろなテキスト効果</h3>\n<p>これは<strong>太字</strong>です<br>\nこれは<em>斜体</em>です<br>\nこれは<s>打ち消し線</s>です<br>\nこれは<a href=\"https://twitter.com/\" title=\"リンクタイトル\">リンク</a>です</p>\n<h3>引用文</h3>\n<p>以下、引用</p>\n<blockquote>\n<p>ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。とﾄﾉｺﾄこ</p>\n</blockquote>\n<h3>🎬 埋め込む</h3>\n<p>画像</p>\n<p><img src=\"//images.ctfassets.net/wc9q326cpg8b/7jhDVrCF2EVVnVS263drUl/49fbdb76c803f324a8fe782f81b3865e/L-5352-1459109751-1790.jpeg.jpg\" alt=\"deathchant\"></p>\n<p>YouTube</p>\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/dUl-iHKGgck\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n<p>Twitter</p>\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">【新作完成】<br>FF7R発売記念<br>鉛筆の芯でバスターソードを作りました。 <a href=\"https://t.co/0T0BkxrIsn\">pic.twitter.com/0T0BkxrIsn</a></p>&mdash; シロイ/鉛筆彫刻人✏ (@shiroi003) <a href=\"https://twitter.com/shiroi003/status/1248580582264602624?ref_src=twsrc%5Etfw\">April 10, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">東京クロノスっぽくなってきた(　´･‿･｀) <a href=\"https://t.co/Ni2H9ZMG7o\">https://t.co/Ni2H9ZMG7o</a></p>&mdash; mono 🎯 @自宅 💙 (@_mono) <a href=\"https://twitter.com/_mono/status/1249188605811142657?ref_src=twsrc%5Etfw\">April 12, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-            "thumbnail": {
-                "sys": {
-                    "space": {
-                        "sys": {
-                            "type": "Link",
-                            "linkType": "Space",
-                            "id": "wc9q326cpg8b"
-                        }
-                    },
-                    "id": "55lZeGML7xAezJirfjbTng",
-                    "type": "Asset",
-                    "createdAt": "2020-04-12T04:06:45.306Z",
-                    "updatedAt": "2020-04-12T04:06:45.306Z",
-                    "environment": {
-                        "sys": {
-                            "id": "master",
-                            "type": "Link",
-                            "linkType": "Environment"
-                        }
-                    },
-                    "revision": 1,
-                    "locale": "en-US"
-                },
-                "fields": {
-                    "title": "dummy-cinemascope",
-                    "file": {
-                        "url": "//images.ctfassets.net/wc9q326cpg8b/55lZeGML7xAezJirfjbTng/27c1a14dae444d1de9f93a3827ae686e/dummy-cinemascope.png",
-                        "details": {
-                            "size": 9376,
-                            "image": {
-                                "width": 2350,
-                                "height": 1000
-                            }
-                        },
-                        "fileName": "dummy-cinemascope.png",
-                        "contentType": "image/png"
-                    }
-                }
-            },
-            "tags": [
-                "example",
-                "deathchant"
-            ],
-            "rawPost": "### タイh3トル\n\nロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。\n\n#### タイh4トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n#### タイh4トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n##### タイh5トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n### タイh3トル アゲイン\n\nロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。\n\n###### タイh6トル\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。\n\n---\n\n- ul リスト\n- 表示\n  - 子\n  - 子2\n    - 孫\n    - 孫2\n  - 子3\n\n1. ol リスト\n2. 表示\n  1. 子\n  2. 子2\n    1. 孫\n    2. 孫2\n  3. 子3\n\n以下は `TypeScriptReact` (tsx)なコード↓\n\n```tsx\nimport { useEffect } from 'react';\n\nexport function useGlobalKeydown(callback?: (key: string) => void) {\n  useEffect(() => {\n    if (!callback) return;\n\n    const args = ['keydown', (e: KeyboardEvent) => callback(e.key), true] as const;\n    window.addEventListener(...args);\n\n    // eslint-disable-next-line consistent-return\n    return () => window.removeEventListener(...args);\n  }, [callback]);\n}\n```\n\n### 改行しつついろいろなテキスト効果\n\nこれは**太字**です\nこれは*斜体*です\nこれは~~打ち消し線~~です\nこれは[リンク](https://twitter.com/ \"リンクタイトル\")です\n\n### 引用文\n\n以下、引用\n\n> ロレム・イプサムの嘆き、トマト大好き学部のエリット、しかし時と活力、そのような労働と悲しみ、ブラインド行うにはいくつかの重要な事柄に座ります。長年にわたり、私は学区と長寿であれば、そのような刺激の取り組み、彼女のうち、運動の利点を分注を邪魔されたする人が来ます。クピダタットのつるの痛みになりたい宿題に、批判されてきたら痛み、マグナ逃亡しても結果の喜びを生成しません。先例クピダタットブラックは先例していない、つまり、彼らはあなたの悩みに責任がある人の、一般的な義務を捨て、魂を癒しています。とﾄﾉｺﾄこ\n\n### 🎬 埋め込む\n\n画像\n\n![deathchant](//images.ctfassets.net/wc9q326cpg8b/7jhDVrCF2EVVnVS263drUl/49fbdb76c803f324a8fe782f81b3865e/L-5352-1459109751-1790.jpeg.jpg)\n\nYouTube\n\n<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/dUl-iHKGgck\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n\nTwitter\n\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">【新作完成】<br>FF7R発売記念<br>鉛筆の芯でバスターソードを作りました。 <a href=\"https://t.co/0T0BkxrIsn\">pic.twitter.com/0T0BkxrIsn</a></p>&mdash; シロイ/鉛筆彫刻人✏ (@shiroi003) <a href=\"https://twitter.com/shiroi003/status/1248580582264602624?ref_src=twsrc%5Etfw\">April 10, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n\n<blockquote class=\"twitter-tweet\"><p lang=\"ja\" dir=\"ltr\">東京クロノスっぽくなってきた(　´･‿･｀) <a href=\"https://t.co/Ni2H9ZMG7o\">https://t.co/Ni2H9ZMG7o</a></p>&mdash; mono 🎯 @自宅 💙 (@_mono) <a href=\"https://twitter.com/_mono/status/1249188605811142657?ref_src=twsrc%5Etfw\">April 12, 2020</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
-        }
-    },
-    {
-        "sys": {
-            "space": {
-                "sys": {
-                    "type": "Link",
-                    "linkType": "Space",
-                    "id": "wc9q326cpg8b"
-                }
-            },
-            "id": "72gE1Mk1uNwoF3bFZJijVI",
-            "type": "Entry",
-            "createdAt": "2020-04-12T04:07:55.304Z",
-            "updatedAt": "2020-04-12T04:08:16.600Z",
-            "environment": {
-                "sys": {
-                    "id": "master",
-                    "type": "Link",
-                    "linkType": "Environment"
-                }
-            },
-            "revision": 2,
-            "contentType": {
-                "sys": {
-                    "type": "Link",
-                    "linkType": "ContentType",
-                    "id": "published"
-                }
-            },
-            "locale": "en-US"
-        },
-        "fields": {
-            "published": "2019-12-30",
-            "title": "📅 2019/12/30です",
-            "post": "<p>2019年 大晦日前日</p>\n",
-            "thumbnail": {
-                "sys": {
-                    "space": {
-                        "sys": {
-                            "type": "Link",
-                            "linkType": "Space",
-                            "id": "wc9q326cpg8b"
-                        }
-                    },
-                    "id": "55lZeGML7xAezJirfjbTng",
-                    "type": "Asset",
-                    "createdAt": "2020-04-12T04:06:45.306Z",
-                    "updatedAt": "2020-04-12T04:06:45.306Z",
-                    "environment": {
-                        "sys": {
-                            "id": "master",
-                            "type": "Link",
-                            "linkType": "Environment"
-                        }
-                    },
-                    "revision": 1,
-                    "locale": "en-US"
-                },
-                "fields": {
-                    "title": "dummy-cinemascope",
-                    "file": {
-                        "url": "//images.ctfassets.net/wc9q326cpg8b/55lZeGML7xAezJirfjbTng/27c1a14dae444d1de9f93a3827ae686e/dummy-cinemascope.png",
-                        "details": {
-                            "size": 9376,
-                            "image": {
-                                "width": 2350,
-                                "height": 1000
-                            }
-                        },
-                        "fileName": "dummy-cinemascope.png",
-                        "contentType": "image/png"
-                    }
-                }
-            },
-            "tags": [
-                "example"
-            ],
-            "rawPost": "2019年 大晦日前日"
-        }
-    },
-    {
-        "sys": {
-            "space": {
-                "sys": {
-                    "type": "Link",
-                    "linkType": "Space",
-                    "id": "wc9q326cpg8b"
-                }
-            },
-            "id": "3hkPeKg4xuqCi7yfgEN2RE",
-            "type": "Entry",
-            "createdAt": "2020-04-12T04:10:44.509Z",
-            "updatedAt": "2020-04-12T04:10:44.509Z",
+            "createdAt": "2020-08-09T14:59:41.154Z",
+            "updatedAt": "2020-08-09T14:59:41.154Z",
             "environment": {
                 "sys": {
                     "id": "master",
@@ -189,9 +30,9 @@
             "locale": "en-US"
         },
         "fields": {
-            "published": "2018-04-01",
-            "title": "2018/4/1です タグなし",
-            "post": "<p>新年度</p>\n",
+            "published": "2020-08-10",
+            "title": "また作り直した（Next.js + contentful + vercel + 独自ドメイン）",
+            "post": "<p>タイトル読みゃわかるんですけど、懲りずに移行、というか作り直しました。</p>\n<h3>動機</h3>\n<p>前のサイトを作り直した当時は副業でもりもりVue.jsを使っていたからNuxtで組んだんですけど、転職のからみでVue.jsを触る機会がまったくなくなった結果、書き方を完全に忘れ去ってしまった、というのがまず1点。</p>\n<p>もうひとつはデザインが気に入らなくなってしまったのです。というか正直作って1ヶ月くらい、いや嘘ですね。1週間くらいでなんかやだなとなってました。なんか暗いんですけどって感じで。</p>\n<p>ポストロック寄りのハードコアっぽいデザインを狙ったんですが、自分のサイトに採用するもんじゃないなと。見てて疲れるし飽きるしアニメーションも全体的にとってつけたような感じだったし。なんで、やめたった。</p>\n<p>今回のでさすがにもう落ち着くかな〜と。</p>\n<h3>技術選定</h3>\n<h4>コア</h4>\n<p>まずReactは確定でした。普段から使ってるのももちろんあるんですが、テンプレ言語と違って</p>\n<ul>\n<li>DOMをJS(TS)で書ける</li>\n<li>Linter / Formatterがごく自然に走る\n<ul>\n<li>a11yチェックできるって素晴らしくないですか</li>\n</ul>\n</li>\n<li>pug / slim みたいな、Pythonインスパイア系ではない\n<ul>\n<li>あれらはhtmlから遠くに行き過ぎてて、「考えながら」でないと書けない</li>\n</ul>\n</li>\n</ul>\n<p>というのが静的サイトを作る上でも大きすぎまして。この3点が解決できるなら他のでもいいんですけど、他にないよなー少なくとも僕の知る限りはないわなーと。</p>\n<p>ほんでもってJAMstack構成でやるのもマスト。となると基盤になってくるのは以下の3つかなと。</p>\n<ol>\n<li>生でゴニョゴニョやって頑張る</li>\n<li>Gatsby</li>\n<li>Next.js</li>\n</ol>\n<p>1はあんまり勉強にならんなーということで除外。いや、間違いなく勉強にはなるんだけど、生で書くのはさんざんやっとるしフレームワークの経験も積みたかったので除外。</p>\n<p>で。そうすると2と3になるんですが、今のうちにNext.jsある程度触っといたほうが良さそうだなとつよく思ったので3にしました。ちなみに2ことGatsbyも<a href=\"https://github.com/kaave/gatsby-ts-test\">一応ある程度組んではみたです。</a>ぜんぜんいけるよなーと思ったけどNext.jsでいけるならそっちのほうがええわーでした。</p>\n<h4>スタイル</h4>\n<p>dart-sass + PostCSSでCSS Modulesです。CSS Modulesはぼちぼちやめて完全BEM移行でも別にかまわんなーと思うんですが、SCSS + PostCSSの組み合わせは自分にとっては一番考えることが少ないのでやっぱこれだなーCSS in JSもええんだけどやっぱ僕はこっちだなーって感じです。</p>\n<h4>原稿</h4>\n<p>contentful。理由は今のうちに触っておいてそのうち経験ありますよって言いたくて（こればっかですいません）。いけてるなぁという感じですね。</p>\n<p>一周回ってMarkdownを普通に書くのもありだったんですが、そのうちpushするの忘れてどこに最新があるのかわからんってなるに決まってるのでやめました。</p>\n<p>ちなみにまだWeb Hook仕込んでないので手作業でデプロイしてます。そのうちやります。あ、あとIncremental Static Regeneration仕込んだほうがいいかな。めった更新されないブログでいるかーって気はもちろんしてますけどやっといたほうが経験値あがるしなー。</p>\n<h4>配信</h4>\n<p>vercel。Next.js使うならこれしかないのでは？</p>\n<h3>Next.jsは便利</h3>\n<p>Nuxt.jsを先に触ったクチなので「なんだスカスカじゃないか」と思ったんですが、触ってくと抑えるべきポイントはきちんと押さえてあって便利やーんにあっさり手のひら返ししました。Reactのダルいとこだけうまくラップして、好きにしたいところはそのままにしてくれてるっていうか。</p>\n<p>なんでこうなん、ホントに仕様？という謎挙動もいくつか見受けられるのは事実ですが、トータルで見ればまぁプラス、新規にReactでWebアプリケーション作成するなら大抵のケースでマッチするんじゃないかと思います。</p>\n<h3>形になってよかった</h3>\n<p>やーほんと、形になってよかったです。作っちゃ飽きちゃを繰り返して半年近く時間がかかってしまった…。</p>\n<p>そのうちNext.jsで静的サイト作成する上でのだるかったネタもネチネチ書こうと思います。</p>\n",
             "thumbnail": {
                 "sys": {
                     "space": {
@@ -201,10 +42,10 @@
                             "id": "wc9q326cpg8b"
                         }
                     },
-                    "id": "xqafoUb5l6cSX7LyMqlbN",
+                    "id": "6hbzj2sf4Y7UxAXk1uP10H",
                     "type": "Asset",
-                    "createdAt": "2020-04-12T04:06:45.314Z",
-                    "updatedAt": "2020-04-12T04:06:45.314Z",
+                    "createdAt": "2020-08-09T14:59:06.469Z",
+                    "updatedAt": "2020-08-09T14:59:06.469Z",
                     "environment": {
                         "sys": {
                             "id": "master",
@@ -216,22 +57,26 @@
                     "locale": "en-US"
                 },
                 "fields": {
-                    "title": "dummy-4x3",
+                    "title": "20200810",
                     "file": {
-                        "url": "//images.ctfassets.net/wc9q326cpg8b/xqafoUb5l6cSX7LyMqlbN/cf9deb2cd31adde96222ad27affeaa88/dummy-4x3.png",
+                        "url": "//images.ctfassets.net/wc9q326cpg8b/6hbzj2sf4Y7UxAXk1uP10H/47a7c63e74542ee02e8b262b02673a37/3.png",
                         "details": {
-                            "size": 2224,
+                            "size": 201154,
                             "image": {
-                                "width": 640,
-                                "height": 480
+                                "width": 2000,
+                                "height": 1415
                             }
                         },
-                        "fileName": "dummy-4x3.png",
+                        "fileName": "3.png",
                         "contentType": "image/png"
                     }
                 }
             },
-            "rawPost": "新年度"
+            "tags": [
+                "next",
+                "frontend"
+            ],
+            "rawPost": "タイトル読みゃわかるんですけど、懲りずに移行、というか作り直しました。\n\n### 動機\n\n前のサイトを作り直した当時は副業でもりもりVue.jsを使っていたからNuxtで組んだんですけど、転職のからみでVue.jsを触る機会がまったくなくなった結果、書き方を完全に忘れ去ってしまった、というのがまず1点。\n\nもうひとつはデザインが気に入らなくなってしまったのです。というか正直作って1ヶ月くらい、いや嘘ですね。1週間くらいでなんかやだなとなってました。なんか暗いんですけどって感じで。\n\nポストロック寄りのハードコアっぽいデザインを狙ったんですが、自分のサイトに採用するもんじゃないなと。見てて疲れるし飽きるしアニメーションも全体的にとってつけたような感じだったし。なんで、やめたった。\n\n今回のでさすがにもう落ち着くかな〜と。\n\n### 技術選定\n\n#### コア\n\nまずReactは確定でした。普段から使ってるのももちろんあるんですが、テンプレ言語と違って\n\n- DOMをJS(TS)で書ける\n- Linter / Formatterがごく自然に走る\n  - a11yチェックできるって素晴らしくないですか\n- pug / slim みたいな、Pythonインスパイア系ではない\n  - あれらはhtmlから遠くに行き過ぎてて、「考えながら」でないと書けない\n\nというのが静的サイトを作る上でも大きすぎまして。この3点が解決できるなら他のでもいいんですけど、他にないよなー少なくとも僕の知る限りはないわなーと。\n\nほんでもってJAMstack構成でやるのもマスト。となると基盤になってくるのは以下の3つかなと。\n\n1. 生でゴニョゴニョやって頑張る\n2. Gatsby\n3. Next.js\n\n1はあんまり勉強にならんなーということで除外。いや、間違いなく勉強にはなるんだけど、生で書くのはさんざんやっとるしフレームワークの経験も積みたかったので除外。\n\nで。そうすると2と3になるんですが、今のうちにNext.jsある程度触っといたほうが良さそうだなとつよく思ったので3にしました。ちなみに2ことGatsbyも[一応ある程度組んではみたです。](https://github.com/kaave/gatsby-ts-test)ぜんぜんいけるよなーと思ったけどNext.jsでいけるならそっちのほうがええわーでした。\n\n#### スタイル\n\ndart-sass + PostCSSでCSS Modulesです。CSS Modulesはぼちぼちやめて完全BEM移行でも別にかまわんなーと思うんですが、SCSS + PostCSSの組み合わせは自分にとっては一番考えることが少ないのでやっぱこれだなーCSS in JSもええんだけどやっぱ僕はこっちだなーって感じです。\n\n#### 原稿\n\ncontentful。理由は今のうちに触っておいてそのうち経験ありますよって言いたくて（こればっかですいません）。いけてるなぁという感じですね。\n\n一周回ってMarkdownを普通に書くのもありだったんですが、そのうちpushするの忘れてどこに最新があるのかわからんってなるに決まってるのでやめました。\n\nちなみにまだWeb Hook仕込んでないので手作業でデプロイしてます。そのうちやります。あ、あとIncremental Static Regeneration仕込んだほうがいいかな。めった更新されないブログでいるかーって気はもちろんしてますけどやっといたほうが経験値あがるしなー。\n\n#### 配信\n\nvercel。Next.js使うならこれしかないのでは？\n\n### Next.jsは便利\n\nNuxt.jsを先に触ったクチなので「なんだスカスカじゃないか」と思ったんですが、触ってくと抑えるべきポイントはきちんと押さえてあって便利やーんにあっさり手のひら返ししました。Reactのダルいとこだけうまくラップして、好きにしたいところはそのままにしてくれてるっていうか。\n\nなんでこうなん、ホントに仕様？という謎挙動もいくつか見受けられるのは事実ですが、トータルで見ればまぁプラス、新規にReactでWebアプリケーション作成するなら大抵のケースでマッチするんじゃないかと思います。\n\n### 形になってよかった\n\nやーほんと、形になってよかったです。作っちゃ飽きちゃを繰り返して半年近く時間がかかってしまった…。\n\nそのうちNext.jsで静的サイト作成する上でのだるかったネタもネチネチ書こうと思います。"
         }
     }
 ]

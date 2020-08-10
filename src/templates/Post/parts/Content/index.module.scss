@@ -152,9 +152,20 @@ $horizontalPadding: layout.$gutter * 2;
     > ul,
     > ol {
         width: calc(100% - 0.6em);
-        padding-left: 1.3em;
         margin-top: layout.$gutter * 3;
         margin-left: auto;
+
+        @include mixins.sp {
+            margin-left: layout.$gutter * 2;
+        }
+    }
+
+    > ul {
+        padding-left: 1.3em;
+    }
+
+    > ol {
+        padding-left: 1.5em;
     }
 
     > ul li,
