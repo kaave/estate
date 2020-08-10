@@ -31,13 +31,9 @@ export const PostTemplate = ({ post: { title, post, published, thumbnail, tags }
   return (
     <Layout appendTitles={[title, 'POSTS']} descriptionArgv={title} path={pathname}>
       <article className={styles.root}>
-        <header
-          ref={headingRef}
-          className={styles.header}
-          hidden={headingHidden || undefined}
-          style={{ backgroundImage: `url(${thumbnail.url})` }}
-        >
-          <img className={`${styles.thumbnail} -hidden-pc`} src={thumbnail.url} alt={thumbnail.title} />
+        <header ref={headingRef} className={styles.header} hidden={headingHidden || undefined}>
+          <img className={styles.thumbnailBackground} src={thumbnail.url} alt={thumbnail.title} />
+          <img className={styles.thumbnail} src={thumbnail.url} alt={thumbnail.title} />
           <h2 className={styles.heading}>
             <span className={styles.headingTitle}>
               <span className={styles.headingTitleText}>{title}</span>

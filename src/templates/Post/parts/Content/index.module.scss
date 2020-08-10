@@ -28,6 +28,14 @@ $horizontalPadding: layout.$gutter * 2;
         }
     }
 
+    & > *:first-child {
+        margin: #{layout.$gutter * 12} auto auto;
+
+        @include mixins.sp {
+            margin: #{layout.$gutter * 8} auto auto;
+        }
+    }
+
     & > [class*="language-"] {
         margin: #{layout.$gutter * 3} auto;
     }
@@ -156,6 +164,7 @@ $horizontalPadding: layout.$gutter * 2;
         margin-left: auto;
 
         @include mixins.sp {
+            padding-right: layout.$gutter * 3;
             margin-left: layout.$gutter * 2;
         }
     }

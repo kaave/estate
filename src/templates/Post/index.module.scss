@@ -23,12 +23,8 @@
     color: color.$white;
 
     @include mixins.notSp {
-        min-height: 70vh;
+        height: 70vh;
         font-size: 2.5vw;
-        background-color: color.$black;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
     }
 
     @include mixins.sp {
@@ -53,10 +49,35 @@
     opacity: 0;
 }
 
-.thumbnail {
+.thumbnailBackground {
     z-index: 0;
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(20px);
+
+    @include mixins.sp {
+        display: none;
+    }
+}
+
+.thumbnail {
+    z-index: 0;
+    display: block;
+
+    @include mixins.notSp {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+        object-fit: contain;
+    }
+
+    @include mixins.sp {
+        width: 100%;
+    }
 }
 
 .heading {
