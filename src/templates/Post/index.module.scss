@@ -62,6 +62,12 @@
     }
 }
 
+:global .-ie {
+    :local .thumbnailBackground {
+        display: none;
+    }
+}
+
 .thumbnail {
     z-index: 0;
     display: block;

@@ -26,6 +26,13 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       setFontInitialized(true);
     })();
   }, []);
+  useEffect(() => {
+    const ie = typeof window !== 'undefined' && window.navigator.userAgent.toLowerCase().includes('trident');
+
+    if (ie) {
+      document.body.classList.add('-ie');
+    }
+  }, []);
 
   const visible = crawlerAccess || !fontInitialized;
 
