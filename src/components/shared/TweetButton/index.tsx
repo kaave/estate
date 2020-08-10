@@ -14,7 +14,7 @@ export const TweetButton = ({ path, text, size = 24 }: Props) => (
   <a
     className={styles.root}
     href={`https://twitter.com/share?url=${configs.baseUrl + path}${
-      text ? `&text=${encodeURIComponent(`${text} | ${configs.title}`)}` : ''
+      text ? `&text=${encodeURIComponent(`${text} |`)}` : ''
     }`}
     target="_blank"
     rel="noopener noreferrer"
