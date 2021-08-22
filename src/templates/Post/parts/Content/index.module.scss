@@ -220,7 +220,7 @@ $horizontalPadding: layout.$gutter * 2;
     }
 
     code {
-        padding: 0 #{layout.$gutter};
+        padding: 0.2em #{layout.$gutter};
         margin: auto;
         line-height: 1.4;
         background: linear-gradient(
@@ -232,7 +232,7 @@ $horizontalPadding: layout.$gutter * 2;
         );
 
         @include mixins.notSp {
-            font-size: 1.2em;
+            font-size: 0.9em;
         }
     }
 
